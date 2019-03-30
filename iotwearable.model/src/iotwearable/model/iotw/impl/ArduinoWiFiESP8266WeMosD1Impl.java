@@ -259,10 +259,11 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	protected ArduinoWiFiESP8266WeMosD1Impl() {
 		super();
+		this.name = "Arduino WiFi ESP8266 WeMos D1";
 	}
 
 	/**
