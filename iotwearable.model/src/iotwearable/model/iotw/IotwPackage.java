@@ -1269,13 +1269,76 @@ public interface IotwPackage extends EPackage {
 	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = MAINBOARD_FEATURE_COUNT + 9;
 
 	/**
+	 * The feature id for the '<em><b>Wifi Mode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE = MAINBOARD_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Ssid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID = MAINBOARD_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD = MAINBOARD_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP = MAINBOARD_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Dns</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS = MAINBOARD_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Gateway</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY = MAINBOARD_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Subnet</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET = MAINBOARD_FEATURE_COUNT + 16;
+
+	/**
 	 * The number of structural features of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_FEATURE_COUNT = MAINBOARD_FEATURE_COUNT + 10;
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_FEATURE_COUNT = MAINBOARD_FEATURE_COUNT + 17;
 
 	/**
 	 * The operation id for the '<em>Add Device</em>' operation.
@@ -1802,6 +1865,16 @@ public interface IotwPackage extends EPackage {
 	 * @generated
 	 */
 	int I2CLCD_TYPE = 30;
+
+	/**
+	 * The meta object id for the '{@link iotwearable.model.iotw.ESP8266WiFiMode <em>ESP8266 Wi Fi Mode</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iotwearable.model.iotw.ESP8266WiFiMode
+	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getESP8266WiFiMode()
+	 * @generated
+	 */
+	int ESP8266_WI_FI_MODE = 31;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.BuzzerImpl <em>Buzzer</em>}' class.
@@ -2906,7 +2979,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getRectangle()
 	 * @generated
 	 */
-	int RECTANGLE = 31;
+	int RECTANGLE = 32;
 
 
 	/**
@@ -2917,7 +2990,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getPoint()
 	 * @generated
 	 */
-	int POINT = 32;
+	int POINT = 33;
 
 
 	/**
@@ -2928,7 +3001,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getPin()
 	 * @generated
 	 */
-	int PIN = 33;
+	int PIN = 34;
 
 
 	/**
@@ -3404,6 +3477,83 @@ public interface IotwPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArduinoWiFiESP8266WeMosD1_PinD8();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getWifiMode <em>Wifi Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wifi Mode</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getWifiMode()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_WifiMode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSsid <em>Ssid</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ssid</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSsid()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Ssid();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPassword()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Password();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getIp <em>Ip</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Ip</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getIp()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Ip();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getDns <em>Dns</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Dns</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getDns()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Dns();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getGateway <em>Gateway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Gateway</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getGateway()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Gateway();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSubnet <em>Subnet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Subnet</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSubnet()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Subnet();
 
 	/**
 	 * Returns the meta object for class '{@link iotwearable.model.iotw.Connection <em>Connection</em>}'.
@@ -4476,6 +4626,16 @@ public interface IotwPackage extends EPackage {
 	EEnum getI2CLCDType();
 
 	/**
+	 * Returns the meta object for enum '{@link iotwearable.model.iotw.ESP8266WiFiMode <em>ESP8266 Wi Fi Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>ESP8266 Wi Fi Mode</em>'.
+	 * @see iotwearable.model.iotw.ESP8266WiFiMode
+	 * @generated
+	 */
+	EEnum getESP8266WiFiMode();
+
+	/**
 	 * Returns the meta object for class '{@link iotwearable.model.iotw.Buzzer <em>Buzzer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4944,6 +5104,62 @@ public interface IotwPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD8();
+
+		/**
+		 * The meta object literal for the '<em><b>Wifi Mode</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE = eINSTANCE.getArduinoWiFiESP8266WeMosD1_WifiMode();
+
+		/**
+		 * The meta object literal for the '<em><b>Ssid</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Ssid();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Password();
+
+		/**
+		 * The meta object literal for the '<em><b>Ip</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Ip();
+
+		/**
+		 * The meta object literal for the '<em><b>Dns</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Dns();
+
+		/**
+		 * The meta object literal for the '<em><b>Gateway</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Gateway();
+
+		/**
+		 * The meta object literal for the '<em><b>Subnet</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Subnet();
 
 		/**
 		 * The meta object literal for the '{@link iotwearable.model.iotw.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -5796,6 +6012,16 @@ public interface IotwPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum I2CLCD_TYPE = eINSTANCE.getI2CLCDType();
+
+		/**
+		 * The meta object literal for the '{@link iotwearable.model.iotw.ESP8266WiFiMode <em>ESP8266 Wi Fi Mode</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iotwearable.model.iotw.ESP8266WiFiMode
+		 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getESP8266WiFiMode()
+		 * @generated
+		 */
+		EEnum ESP8266_WI_FI_MODE = eINSTANCE.getESP8266WiFiMode();
 
 		/**
 		 * The meta object literal for the '{@link iotwearable.model.iotw.impl.BuzzerImpl <em>Buzzer</em>}' class.

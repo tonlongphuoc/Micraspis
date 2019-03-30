@@ -102,6 +102,8 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 				return createListProtocolFromString(eDataType, initialValue);
 			case IotwPackage.I2CLCD_TYPE:
 				return createI2CLCDTypeFromString(eDataType, initialValue);
+			case IotwPackage.ESP8266_WI_FI_MODE:
+				return createESP8266WiFiModeFromString(eDataType, initialValue);
 			case IotwPackage.RECTANGLE:
 				return createRectangleFromString(eDataType, initialValue);
 			case IotwPackage.POINT:
@@ -137,6 +139,8 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 				return convertListProtocolToString(eDataType, instanceValue);
 			case IotwPackage.I2CLCD_TYPE:
 				return convertI2CLCDTypeToString(eDataType, instanceValue);
+			case IotwPackage.ESP8266_WI_FI_MODE:
+				return convertESP8266WiFiModeToString(eDataType, instanceValue);
 			case IotwPackage.RECTANGLE:
 				return convertRectangleToString(eDataType, instanceValue);
 			case IotwPackage.POINT:
@@ -459,6 +463,26 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * @generated
 	 */
 	public String convertI2CLCDTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ESP8266WiFiMode createESP8266WiFiModeFromString(EDataType eDataType, String initialValue) {
+		ESP8266WiFiMode result = ESP8266WiFiMode.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertESP8266WiFiModeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

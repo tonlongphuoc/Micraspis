@@ -49,6 +49,12 @@
       <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//I2CLCDType/I2CLCD2004"/>
       <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//I2CLCDType/I2CLCD1602"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotw.ecore#//ESP8266WiFiMode">
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ESP8266WiFiMode/WIFI_OFF"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ESP8266WiFiMode/WIFI_AP"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ESP8266WiFiMode/WIFI_STA"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ESP8266WiFiMode/WIFI_AP_STA"/>
+    </genEnums>
     <genDataTypes ecoreDataType="iotw.ecore#//Rectangle"/>
     <genDataTypes ecoreDataType="iotw.ecore#//Point"/>
     <genDataTypes ecoreDataType="iotw.ecore#//Pin"/>
@@ -138,6 +144,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD6"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD7"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD8"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/wifiMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ssid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/dns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/gateway"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/subnet"/>
     </genClasses>
     <genClasses ecoreClass="iotw.ecore#//Keypad4x4">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Keypad4x4/keys"/>

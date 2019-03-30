@@ -97,6 +97,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD6" eType="#//Pin" defaultValueLiteral="D6,IO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD7" eType="#//Pin" defaultValueLiteral="D7,IO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD8" eType="#//Pin" defaultValueLiteral="D8,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wifiMode" eType="#//ESP8266WiFiMode"
+        defaultValueLiteral="WIFI_OFF"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gateway" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subnet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Keypad4x4" eSuperTypes="#//InputDevice">
     <eOperations name="getButton" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
@@ -264,5 +277,11 @@
   <eClassifiers xsi:type="ecore:EEnum" name="I2CLCDType">
     <eLiterals name="I2CLCD2004"/>
     <eLiterals name="I2CLCD1602" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ESP8266WiFiMode">
+    <eLiterals name="WIFI_OFF" literal="WIFI_OFF"/>
+    <eLiterals name="WIFI_AP" value="1"/>
+    <eLiterals name="WIFI_STA" value="2" literal="WIFI_STA"/>
+    <eLiterals name="WIFI_AP_STA" value="3" literal="WIFI_AP_STA"/>
   </eClassifiers>
 </ecore:EPackage>

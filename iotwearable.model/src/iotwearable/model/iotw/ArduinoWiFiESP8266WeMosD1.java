@@ -22,6 +22,13 @@ package iotwearable.model.iotw;
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD6 <em>Pin D6</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD7 <em>Pin D7</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD8 <em>Pin D8</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getWifiMode <em>Wifi Mode</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSsid <em>Ssid</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPassword <em>Password</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getIp <em>Ip</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getDns <em>Dns</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getGateway <em>Gateway</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSubnet <em>Subnet</em>}</li>
  * </ul>
  *
  * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1()
@@ -298,5 +305,196 @@ public interface ArduinoWiFiESP8266WeMosD1 extends Mainboard {
 	 * @generated
 	 */
 	void setPinD8(Pin value);
+
+	/**
+	 * Returns the value of the '<em><b>Wifi Mode</b></em>' attribute.
+	 * The default value is <code>"WIFI_OFF"</code>.
+	 * The literals are from the enumeration {@link iotwearable.model.iotw.ESP8266WiFiMode}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Wifi Mode</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wifi Mode</em>' attribute.
+	 * @see iotwearable.model.iotw.ESP8266WiFiMode
+	 * @see #setWifiMode(ESP8266WiFiMode)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_WifiMode()
+	 * @model default="WIFI_OFF"
+	 * @generated
+	 */
+	ESP8266WiFiMode getWifiMode();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getWifiMode <em>Wifi Mode</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Wifi Mode</em>' attribute.
+	 * @see iotwearable.model.iotw.ESP8266WiFiMode
+	 * @see #getWifiMode()
+	 * @generated
+	 */
+	void setWifiMode(ESP8266WiFiMode value);
+
+	/**
+	 * Returns the value of the '<em><b>Ssid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ssid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ssid</em>' attribute.
+	 * @see #setSsid(String)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_Ssid()
+	 * @model
+	 * @generated
+	 */
+	String getSsid();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSsid <em>Ssid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ssid</em>' attribute.
+	 * @see #getSsid()
+	 * @generated
+	 */
+	void setSsid(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Password</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Password</em>' attribute.
+	 * @see #setPassword(String)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_Password()
+	 * @model default=""
+	 * @generated
+	 */
+	String getPassword();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPassword <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Password</em>' attribute.
+	 * @see #getPassword()
+	 * @generated
+	 */
+	void setPassword(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Ip</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ip</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ip</em>' attribute.
+	 * @see #setIp(String)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_Ip()
+	 * @model default=""
+	 * @generated
+	 */
+	String getIp();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getIp <em>Ip</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Ip</em>' attribute.
+	 * @see #getIp()
+	 * @generated
+	 */
+	void setIp(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Dns</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dns</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dns</em>' attribute.
+	 * @see #setDns(String)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_Dns()
+	 * @model default=""
+	 * @generated
+	 */
+	String getDns();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getDns <em>Dns</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Dns</em>' attribute.
+	 * @see #getDns()
+	 * @generated
+	 */
+	void setDns(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Gateway</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Gateway</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Gateway</em>' attribute.
+	 * @see #setGateway(String)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_Gateway()
+	 * @model default=""
+	 * @generated
+	 */
+	String getGateway();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getGateway <em>Gateway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Gateway</em>' attribute.
+	 * @see #getGateway()
+	 * @generated
+	 */
+	void setGateway(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Subnet</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Subnet</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Subnet</em>' attribute.
+	 * @see #setSubnet(String)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_Subnet()
+	 * @model default=""
+	 * @generated
+	 */
+	String getSubnet();
+
+	/**
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSubnet <em>Subnet</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Subnet</em>' attribute.
+	 * @see #getSubnet()
+	 * @generated
+	 */
+	void setSubnet(String value);
 
 } // ArduinoWiFiESP8266WeMosD1

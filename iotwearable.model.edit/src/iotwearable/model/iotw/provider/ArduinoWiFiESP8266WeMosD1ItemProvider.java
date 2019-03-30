@@ -55,6 +55,13 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 			addPinD6PropertyDescriptor(object);
 			addPinD7PropertyDescriptor(object);
 			addPinD8PropertyDescriptor(object);
+			addWifiModePropertyDescriptor(object);
+			addSsidPropertyDescriptor(object);
+			addPasswordPropertyDescriptor(object);
+			addIpPropertyDescriptor(object);
+			addDnsPropertyDescriptor(object);
+			addGatewayPropertyDescriptor(object);
+			addSubnetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -280,6 +287,160 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Wifi Mode feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addWifiModePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_wifiMode_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_wifiMode_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ssid feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSsidPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_ssid_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_ssid_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Password feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPasswordPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_password_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_password_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Ip feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIpPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_ip_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_ip_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Dns feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDnsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_dns_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_dns_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Gateway feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGatewayPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_gateway_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_gateway_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Subnet feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSubnetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_subnet_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_subnet_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ArduinoWiFiESP8266WeMosD1.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -327,6 +488,13 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}
