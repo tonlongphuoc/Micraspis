@@ -37,11 +37,12 @@ public class DeviceCreateCommand extends Command {
 		String id = getID(device, mainboard);
 		device.setId(id);
 		if(!id.isEmpty()){
-			if(connectDevice()){
+			if(connectDevice(mainboard.getName())){
 				device.setConstraints(constraints);
 				mainboard.addDevice(device);
 			}
 			else{
+				//Delete previously connected pins when one pin is  connected fail
 				for(Pin pinDevice : device.getPinConnecteds()){
 					for(Pin pinMainboard : mainboard.getPinConnecteds()){
 						if(pinDevice.getIdConnect().equals(pinMainboard.getIdConnect())){
@@ -50,15 +51,17 @@ public class DeviceCreateCommand extends Command {
 						}
 					}
 				}
+				MessageWindow.show("Connection pin fail", MessageContent.NoPinSuitable);
 			}
 		}
 	}
 
 	// Get the pins can be used for device from file pinMap.xml
-	private boolean connectDevice() {
+	private boolean connectDevice(String mainboardName) {
 		try {
 			// Read file pinMap.xml
-			File inputFile = new File(FileUtils.getFilePath(this.getClass(), "pinMap.xml"));
+			String fileName = mainboardName.toLowerCase().replace(' ', '-')+"-pin-map.xml";
+			File inputFile = new File(FileUtils.getFilePath(this.getClass(), fileName));
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
 					.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
