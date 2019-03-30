@@ -24,11 +24,11 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.DeviceImpl#getMainboard <em>Mainboard</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.DeviceImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -77,6 +77,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mainboard getMainboard() {
 		if (eContainerFeatureID() != IotwPackage.DEVICE__MAINBOARD) return null;
 		return (Mainboard)eInternalContainer();
@@ -97,6 +98,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMainboard(Mainboard newMainboard) {
 		if (newMainboard != eInternalContainer() || (eContainerFeatureID() != IotwPackage.DEVICE__MAINBOARD && newMainboard != null)) {
 			if (EcoreUtil.isAncestor(this, newMainboard))
@@ -118,6 +120,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -127,6 +130,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -139,6 +143,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Pin> getPins() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -165,6 +170,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void modifyPin(Pin pin) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -311,7 +317,7 @@ public abstract class DeviceImpl extends ComponentImpl implements Device {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

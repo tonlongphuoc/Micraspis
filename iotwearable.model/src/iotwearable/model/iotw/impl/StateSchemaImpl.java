@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.StateSchemaImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.StateSchemaImpl#getConnnections <em>Connnections</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -75,6 +75,7 @@ public class StateSchemaImpl extends MinimalEObjectImpl.Container implements Sta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StateComponent> getComponents() {
 		if (components == null) {
 			components = new EObjectContainmentEList<StateComponent>(StateComponent.class, this, IotwPackage.STATE_SCHEMA__COMPONENTS);
@@ -87,6 +88,7 @@ public class StateSchemaImpl extends MinimalEObjectImpl.Container implements Sta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connection> getConnnections() {
 		if (connnections == null) {
 			connnections = new EObjectContainmentWithInverseEList<Connection>(Connection.class, this, IotwPackage.STATE_SCHEMA__CONNNECTIONS, IotwPackage.CONNECTION__STATE_SCHEMA);

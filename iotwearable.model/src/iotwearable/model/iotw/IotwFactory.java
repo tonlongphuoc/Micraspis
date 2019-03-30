@@ -31,6 +31,15 @@ public interface IotwFactory extends EFactory {
 	ArduinoUNOR3 createArduinoUNOR3();
 
 	/**
+	 * Returns a new object of class '<em>Arduino Wi Fi ESP8266 We Mos D1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arduino Wi Fi ESP8266 We Mos D1</em>'.
+	 * @generated
+	 */
+	ArduinoWiFiESP8266WeMosD1 createArduinoWiFiESP8266WeMosD1();
+
+	/**
 	 * Returns a new object of class '<em>Connection</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

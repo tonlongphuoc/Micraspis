@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getPinGND <em>Pin GND</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getPinVcc <em>Pin Vcc</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getPinSCL <em>Pin SCL</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -157,6 +157,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinGND() {
 		return pinGND;
 	}
@@ -166,6 +167,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinGND(Pin newPinGND) {
 		Pin oldPinGND = pinGND;
 		pinGND = newPinGND;
@@ -178,6 +180,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinVcc() {
 		return pinVcc;
 	}
@@ -187,6 +190,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinVcc(Pin newPinVcc) {
 		Pin oldPinVcc = pinVcc;
 		pinVcc = newPinVcc;
@@ -199,6 +203,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinSDA() {
 		return pinSDA;
 	}
@@ -208,6 +213,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinSDA(Pin newPinSDA) {
 		Pin oldPinSDA = pinSDA;
 		pinSDA = newPinSDA;
@@ -220,6 +226,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinSCL() {
 		return pinSCL;
 	}
@@ -229,6 +236,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinSCL(Pin newPinSCL) {
 		Pin oldPinSCL = pinSCL;
 		pinSCL = newPinSCL;
@@ -241,6 +249,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public I2CLCDType getType() {
 		return type;
 	}
@@ -250,6 +259,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(I2CLCDType newType) {
 		I2CLCDType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -364,7 +374,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pinGND: ");
 		result.append(pinGND);
 		result.append(", pinVcc: ");

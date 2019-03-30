@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoUNOR3Impl#getPin0 <em>Pin0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoUNOR3Impl#getPin1 <em>Pin1</em>}</li>
@@ -41,7 +42,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoUNOR3Impl#getPinA4 <em>Pin A4</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoUNOR3Impl#getPinA5 <em>Pin A5</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -471,6 +471,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin0() {
 		return pin0;
 	}
@@ -480,6 +481,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin0(Pin newPin0) {
 		Pin oldPin0 = pin0;
 		pin0 = newPin0;
@@ -492,6 +494,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin1() {
 		return pin1;
 	}
@@ -501,6 +504,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin1(Pin newPin1) {
 		Pin oldPin1 = pin1;
 		pin1 = newPin1;
@@ -513,6 +517,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin2() {
 		return pin2;
 	}
@@ -522,6 +527,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin2(Pin newPin2) {
 		Pin oldPin2 = pin2;
 		pin2 = newPin2;
@@ -534,6 +540,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin3() {
 		return pin3;
 	}
@@ -543,6 +550,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin3(Pin newPin3) {
 		Pin oldPin3 = pin3;
 		pin3 = newPin3;
@@ -555,6 +563,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin4() {
 		return pin4;
 	}
@@ -564,6 +573,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin4(Pin newPin4) {
 		Pin oldPin4 = pin4;
 		pin4 = newPin4;
@@ -576,6 +586,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin5() {
 		return pin5;
 	}
@@ -585,6 +596,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin5(Pin newPin5) {
 		Pin oldPin5 = pin5;
 		pin5 = newPin5;
@@ -597,6 +609,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin6() {
 		return pin6;
 	}
@@ -606,6 +619,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin6(Pin newPin6) {
 		Pin oldPin6 = pin6;
 		pin6 = newPin6;
@@ -618,6 +632,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin7() {
 		return pin7;
 	}
@@ -627,6 +642,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin7(Pin newPin7) {
 		Pin oldPin7 = pin7;
 		pin7 = newPin7;
@@ -639,6 +655,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin8() {
 		return pin8;
 	}
@@ -648,6 +665,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin8(Pin newPin8) {
 		Pin oldPin8 = pin8;
 		pin8 = newPin8;
@@ -660,6 +678,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin9() {
 		return pin9;
 	}
@@ -669,6 +688,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin9(Pin newPin9) {
 		Pin oldPin9 = pin9;
 		pin9 = newPin9;
@@ -681,6 +701,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin10() {
 		return pin10;
 	}
@@ -690,6 +711,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin10(Pin newPin10) {
 		Pin oldPin10 = pin10;
 		pin10 = newPin10;
@@ -702,6 +724,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin11() {
 		return pin11;
 	}
@@ -711,6 +734,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin11(Pin newPin11) {
 		Pin oldPin11 = pin11;
 		pin11 = newPin11;
@@ -723,6 +747,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin12() {
 		return pin12;
 	}
@@ -732,6 +757,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin12(Pin newPin12) {
 		Pin oldPin12 = pin12;
 		pin12 = newPin12;
@@ -744,6 +770,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin13() {
 		return pin13;
 	}
@@ -753,6 +780,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin13(Pin newPin13) {
 		Pin oldPin13 = pin13;
 		pin13 = newPin13;
@@ -765,6 +793,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinA0() {
 		return pinA0;
 	}
@@ -774,6 +803,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinA0(Pin newPinA0) {
 		Pin oldPinA0 = pinA0;
 		pinA0 = newPinA0;
@@ -786,6 +816,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinA1() {
 		return pinA1;
 	}
@@ -795,6 +826,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinA1(Pin newPinA1) {
 		Pin oldPinA1 = pinA1;
 		pinA1 = newPinA1;
@@ -807,6 +839,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinA2() {
 		return pinA2;
 	}
@@ -816,6 +849,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinA2(Pin newPinA2) {
 		Pin oldPinA2 = pinA2;
 		pinA2 = newPinA2;
@@ -828,6 +862,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinA3() {
 		return pinA3;
 	}
@@ -837,6 +872,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinA3(Pin newPinA3) {
 		Pin oldPinA3 = pinA3;
 		pinA3 = newPinA3;
@@ -849,6 +885,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinA4() {
 		return pinA4;
 	}
@@ -858,6 +895,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinA4(Pin newPinA4) {
 		Pin oldPinA4 = pinA4;
 		pinA4 = newPinA4;
@@ -870,6 +908,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinA5() {
 		return pinA5;
 	}
@@ -879,6 +918,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinA5(Pin newPinA5) {
 		Pin oldPinA5 = pinA5;
 		pinA5 = newPinA5;
@@ -1143,7 +1183,7 @@ public class ArduinoUNOR3Impl extends MainboardImpl implements ArduinoUNOR3 {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pin0: ");
 		result.append(pin0);
 		result.append(", pin1: ");

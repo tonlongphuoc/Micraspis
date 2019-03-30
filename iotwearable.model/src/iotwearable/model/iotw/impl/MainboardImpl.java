@@ -27,11 +27,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.MainboardImpl#getDevices <em>Devices</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.MainboardImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -90,6 +90,7 @@ public abstract class MainboardImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Device> getDevices() {
 		if (devices == null) {
 			devices = new EObjectContainmentWithInverseEList<Device>(Device.class, this, IotwPackage.MAINBOARD__DEVICES, IotwPackage.DEVICE__MAINBOARD);
@@ -102,6 +103,7 @@ public abstract class MainboardImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -111,6 +113,7 @@ public abstract class MainboardImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -159,6 +162,7 @@ public abstract class MainboardImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Pin> getPins() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -185,6 +189,7 @@ public abstract class MainboardImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void modifyPin(Pin pin) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -347,7 +352,7 @@ public abstract class MainboardImpl extends MinimalEObjectImpl.Container impleme
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

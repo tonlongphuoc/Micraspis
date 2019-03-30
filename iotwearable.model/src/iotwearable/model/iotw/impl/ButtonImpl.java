@@ -19,10 +19,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ButtonImpl#getPin1 <em>Pin1</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -72,6 +72,7 @@ public class ButtonImpl extends InputDeviceImpl implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin1() {
 		return pin1;
 	}
@@ -81,6 +82,7 @@ public class ButtonImpl extends InputDeviceImpl implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin1(Pin newPin1) {
 		Pin oldPin1 = pin1;
 		pin1 = newPin1;
@@ -155,7 +157,7 @@ public class ButtonImpl extends InputDeviceImpl implements Button {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pin1: ");
 		result.append(pin1);
 		result.append(')');

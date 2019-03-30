@@ -86,6 +86,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA4" eType="#//Pin" defaultValueLiteral="A4,Input"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA5" eType="#//Pin" defaultValueLiteral="A5,Input"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArduinoWiFiESP8266WeMosD1" eSuperTypes="#//Mainboard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA0" eType="#//Pin" defaultValueLiteral="A0,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD0" eType="#//Pin" defaultValueLiteral="D0,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD1" eType="#//Pin" defaultValueLiteral="D1,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD2" eType="#//Pin" defaultValueLiteral="D2,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD3" eType="#//Pin" defaultValueLiteral="D3,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD4" eType="#//Pin" defaultValueLiteral="D4,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD5" eType="#//Pin" defaultValueLiteral="D5,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD6" eType="#//Pin" defaultValueLiteral="D6,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD7" eType="#//Pin" defaultValueLiteral="D7,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD8" eType="#//Pin" defaultValueLiteral="D8,IO"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Keypad4x4" eSuperTypes="#//InputDevice">
     <eOperations name="getButton" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

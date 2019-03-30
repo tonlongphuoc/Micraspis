@@ -61,6 +61,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 			case IotwPackage.CONNECTION: return createConnection();
 			case IotwPackage.STATE_SCHEMA: return createStateSchema();
 			case IotwPackage.ARDUINO_UNOR3: return createArduinoUNOR3();
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1: return createArduinoWiFiESP8266WeMosD1();
 			case IotwPackage.KEYPAD4X4: return createKeypad4x4();
 			case IotwPackage.BUTTON: return createButton();
 			case IotwPackage.LED: return createLED();
@@ -152,6 +153,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ArduinoUNOR3 createArduinoUNOR3() {
 		ArduinoUNOR3Impl arduinoUNOR3 = new ArduinoUNOR3Impl();
 		return arduinoUNOR3;
@@ -162,6 +164,18 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public ArduinoWiFiESP8266WeMosD1 createArduinoWiFiESP8266WeMosD1() {
+		ArduinoWiFiESP8266WeMosD1Impl arduinoWiFiESP8266WeMosD1 = new ArduinoWiFiESP8266WeMosD1Impl();
+		return arduinoWiFiESP8266WeMosD1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Connection createConnection() {
 		ConnectionImpl connection = new ConnectionImpl();
 		return connection;
@@ -172,6 +186,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Keypad4x4 createKeypad4x4() {
 		Keypad4x4Impl keypad4x4 = new Keypad4x4Impl();
 		return keypad4x4;
@@ -182,6 +197,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateSchema createStateSchema() {
 		StateSchemaImpl stateSchema = new StateSchemaImpl();
 		return stateSchema;
@@ -192,6 +208,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LED createLED() {
 		LEDImpl led = new LEDImpl();
 		return led;
@@ -202,6 +219,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public I2CLCD createI2CLCD() {
 		I2CLCDImpl i2CLCD = new I2CLCDImpl();
 		return i2CLCD;
@@ -212,6 +230,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateFrame createStateFrame() {
 		StateFrameImpl stateFrame = new StateFrameImpl();
 		return stateFrame;
@@ -222,6 +241,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Decision createDecision() {
 		DecisionImpl decision = new DecisionImpl();
 		return decision;
@@ -232,6 +252,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StartPoint createStartPoint() {
 		StartPointImpl startPoint = new StartPointImpl();
 		return startPoint;
@@ -242,6 +263,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EndPoint createEndPoint() {
 		EndPointImpl endPoint = new EndPointImpl();
 		return endPoint;
@@ -252,6 +274,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BluetoothHC06 createBluetoothHC06() {
 		BluetoothHC06Impl bluetoothHC06 = new BluetoothHC06Impl();
 		return bluetoothHC06;
@@ -262,6 +285,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WifiESP8266 createWifiESP8266() {
 		WifiESP8266Impl wifiESP8266 = new WifiESP8266Impl();
 		return wifiESP8266;
@@ -272,6 +296,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Button createButton() {
 		ButtonImpl button = new ButtonImpl();
 		return button;
@@ -442,6 +467,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Buzzer createBuzzer() {
 		BuzzerImpl buzzer = new BuzzerImpl();
 		return buzzer;
@@ -593,6 +619,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IotwPackage getIotwPackage() {
 		return (IotwPackage)getEPackage();
 	}

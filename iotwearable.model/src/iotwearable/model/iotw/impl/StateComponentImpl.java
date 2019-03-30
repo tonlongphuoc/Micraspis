@@ -24,12 +24,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.StateComponentImpl#getIncomings <em>Incomings</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.StateComponentImpl#getOutgoings <em>Outgoings</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.StateComponentImpl#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -98,6 +98,7 @@ public abstract class StateComponentImpl extends ComponentImpl implements StateC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connection> getIncomings() {
 		if (incomings == null) {
 			incomings = new EObjectResolvingEList<Connection>(Connection.class, this, IotwPackage.STATE_COMPONENT__INCOMINGS);
@@ -110,6 +111,7 @@ public abstract class StateComponentImpl extends ComponentImpl implements StateC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connection> getOutgoings() {
 		if (outgoings == null) {
 			outgoings = new EObjectResolvingEList<Connection>(Connection.class, this, IotwPackage.STATE_COMPONENT__OUTGOINGS);
@@ -122,6 +124,7 @@ public abstract class StateComponentImpl extends ComponentImpl implements StateC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -131,6 +134,7 @@ public abstract class StateComponentImpl extends ComponentImpl implements StateC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -228,7 +232,7 @@ public abstract class StateComponentImpl extends ComponentImpl implements StateC
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

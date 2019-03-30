@@ -11,12 +11,12 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.StateComponent#getIncomings <em>Incomings</em>}</li>
  *   <li>{@link iotwearable.model.iotw.StateComponent#getOutgoings <em>Outgoings</em>}</li>
  *   <li>{@link iotwearable.model.iotw.StateComponent#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getStateComponent()
  * @model abstract="true"

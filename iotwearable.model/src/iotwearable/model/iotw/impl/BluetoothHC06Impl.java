@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinTXD <em>Pin TXD</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinRXD <em>Pin RXD</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinGND <em>Pin GND</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinVCC <em>Pin VCC</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -135,6 +135,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinTXD() {
 		return pinTXD;
 	}
@@ -144,6 +145,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinTXD(Pin newPinTXD) {
 		Pin oldPinTXD = pinTXD;
 		pinTXD = newPinTXD;
@@ -156,6 +158,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinRXD() {
 		return pinRXD;
 	}
@@ -165,6 +168,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinRXD(Pin newPinRXD) {
 		Pin oldPinRXD = pinRXD;
 		pinRXD = newPinRXD;
@@ -177,6 +181,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinGND() {
 		return pinGND;
 	}
@@ -186,6 +191,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinGND(Pin newPinGND) {
 		Pin oldPinGND = pinGND;
 		pinGND = newPinGND;
@@ -198,6 +204,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinVCC() {
 		return pinVCC;
 	}
@@ -207,6 +214,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinVCC(Pin newPinVCC) {
 		Pin oldPinVCC = pinVCC;
 		pinVCC = newPinVCC;
@@ -311,7 +319,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pinTXD: ");
 		result.append(pinTXD);
 		result.append(", pinRXD: ");

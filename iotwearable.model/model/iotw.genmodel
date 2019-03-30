@@ -27,6 +27,28 @@
       <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//WifiIDConnection/id_3"/>
       <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//WifiIDConnection/id_4"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotw.ecore#//ListBaud">
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_9600"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_19200"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_38400"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_57600"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_74880"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_115200"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_230400"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListBaud/baud_250000"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotw.ecore#//ListConnectionChannel">
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListConnectionChannel/Single"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListConnectionChannel/Multiple"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotw.ecore#//ListProtocol">
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListProtocol/TCP"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//ListProtocol/UDP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="iotw.ecore#//I2CLCDType">
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//I2CLCDType/I2CLCD2004"/>
+      <genEnumLiterals ecoreEnumLiteral="iotw.ecore#//I2CLCDType/I2CLCD1602"/>
+    </genEnums>
     <genDataTypes ecoreDataType="iotw.ecore#//Rectangle"/>
     <genDataTypes ecoreDataType="iotw.ecore#//Point"/>
     <genDataTypes ecoreDataType="iotw.ecore#//Pin"/>
@@ -105,6 +127,18 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pinA4"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pinA5"/>
     </genClasses>
+    <genClasses ecoreClass="iotw.ecore#//ArduinoWiFiESP8266WeMosD1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinA0"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD0"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD5"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD7"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD8"/>
+    </genClasses>
     <genClasses ecoreClass="iotw.ecore#//Keypad4x4">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Keypad4x4/keys"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Keypad4x4/rows"/>
@@ -144,15 +178,18 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//LED/pin1"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//LED/pin2"/>
     </genClasses>
-    <genClasses ecoreClass="iotw.ecore#//I2CLCD2004">
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD2004/pinGND"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD2004/pinVcc"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD2004/pinSDA"/>
-      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD2004/pinSCL"/>
+    <genClasses ecoreClass="iotw.ecore#//I2CLCD">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD/pinGND"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD/pinVcc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD/pinSDA"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD/pinSCL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//I2CLCD/type"/>
     </genClasses>
     <genClasses ecoreClass="iotw.ecore#//Buzzer">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Buzzer/pin1"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Buzzer/pin2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Buzzer/Tone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Buzzer/Time"/>
     </genClasses>
     <genClasses ecoreClass="iotw.ecore#//BluetoothHC06">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//BluetoothHC06/pinTXD"/>
@@ -168,12 +205,15 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/pinCHPD"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/sSID_ST"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/password_ST"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/sSID_AP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/password_AP"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/host"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/port"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/mode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/idConnection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/password_AccessPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/sSID_AccessPoint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/port"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/iP"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/baud"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/connectedChannel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//WifiESP8266/protocol"/>
     </genClasses>
     <genClasses ecoreClass="iotw.ecore#//StateFrame">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//StateFrame/content"/>

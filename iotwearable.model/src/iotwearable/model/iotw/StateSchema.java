@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.StateSchema#getComponents <em>Components</em>}</li>
  *   <li>{@link iotwearable.model.iotw.StateSchema#getConnnections <em>Connnections</em>}</li>
  * </ul>
- * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getStateSchema()
  * @model

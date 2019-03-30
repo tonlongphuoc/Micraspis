@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getBendpoints <em>Bendpoints</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getRouterKind <em>Router Kind</em>}</li>
@@ -35,7 +36,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getStateSchema <em>State Schema</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -154,6 +154,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Point> getBendpoints() {
 		if (bendpoints == null) {
 			bendpoints = new EDataTypeUniqueEList<Point>(Point.class, this, IotwPackage.CONNECTION__BENDPOINTS);
@@ -166,6 +167,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RouterKind getRouterKind() {
 		return routerKind;
 	}
@@ -175,6 +177,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRouterKind(RouterKind newRouterKind) {
 		RouterKind oldRouterKind = routerKind;
 		routerKind = newRouterKind == null ? ROUTER_KIND_EDEFAULT : newRouterKind;
@@ -187,6 +190,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject)source;
@@ -213,6 +217,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Component newSource) {
 		Component oldSource = source;
 		source = newSource;
@@ -225,6 +230,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject)target;
@@ -251,6 +257,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Component newTarget) {
 		Component oldTarget = target;
 		target = newTarget;
@@ -263,6 +270,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectionKind getKind() {
 		return kind;
 	}
@@ -272,6 +280,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(ConnectionKind newKind) {
 		ConnectionKind oldKind = kind;
 		kind = newKind == null ? KIND_EDEFAULT : newKind;
@@ -284,6 +293,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLabel() {
 		return label;
 	}
@@ -293,6 +303,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLabel(String newLabel) {
 		String oldLabel = label;
 		label = newLabel;
@@ -305,6 +316,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateSchema getStateSchema() {
 		if (eContainerFeatureID() != IotwPackage.CONNECTION__STATE_SCHEMA) return null;
 		return (StateSchema)eInternalContainer();
@@ -325,6 +337,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStateSchema(StateSchema newStateSchema) {
 		if (newStateSchema != eInternalContainer() || (eContainerFeatureID() != IotwPackage.CONNECTION__STATE_SCHEMA && newStateSchema != null)) {
 			if (EcoreUtil.isAncestor(this, newStateSchema))
@@ -516,7 +529,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (bendpoints: ");
 		result.append(bendpoints);
 		result.append(", routerKind: ");

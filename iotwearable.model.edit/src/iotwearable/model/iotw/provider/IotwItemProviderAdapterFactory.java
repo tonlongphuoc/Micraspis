@@ -118,6 +118,29 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArduinoWiFiESP8266WeMosD1ItemProvider arduinoWiFiESP8266WeMosD1ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArduinoWiFiESP8266WeMosD1Adapter() {
+		if (arduinoWiFiESP8266WeMosD1ItemProvider == null) {
+			arduinoWiFiESP8266WeMosD1ItemProvider = new ArduinoWiFiESP8266WeMosD1ItemProvider(this);
+		}
+
+		return arduinoWiFiESP8266WeMosD1ItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link iotwearable.model.iotw.Connection} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -399,6 +422,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComposeableAdapterFactory getRootAdapterFactory() {
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
@@ -409,6 +433,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
@@ -457,6 +482,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void addListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.addListener(notifyChangedListener);
 	}
@@ -467,6 +493,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.removeListener(notifyChangedListener);
 	}
@@ -477,6 +504,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void fireNotifyChanged(Notification notification) {
 		changeNotifier.fireNotifyChanged(notification);
 
@@ -491,10 +519,12 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void dispose() {
 		if (connectionItemProvider != null) connectionItemProvider.dispose();
 		if (stateSchemaItemProvider != null) stateSchemaItemProvider.dispose();
 		if (arduinoUNOR3ItemProvider != null) arduinoUNOR3ItemProvider.dispose();
+		if (arduinoWiFiESP8266WeMosD1ItemProvider != null) arduinoWiFiESP8266WeMosD1ItemProvider.dispose();
 		if (keypad4x4ItemProvider != null) keypad4x4ItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
 		if (ledItemProvider != null) ledItemProvider.dispose();

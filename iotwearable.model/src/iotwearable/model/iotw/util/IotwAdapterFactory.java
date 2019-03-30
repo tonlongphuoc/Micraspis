@@ -112,6 +112,10 @@ public class IotwAdapterFactory extends AdapterFactoryImpl {
 				return createArduinoUNOR3Adapter();
 			}
 			@Override
+			public Adapter caseArduinoWiFiESP8266WeMosD1(ArduinoWiFiESP8266WeMosD1 object) {
+				return createArduinoWiFiESP8266WeMosD1Adapter();
+			}
+			@Override
 			public Adapter caseKeypad4x4(Keypad4x4 object) {
 				return createKeypad4x4Adapter();
 			}
@@ -214,6 +218,20 @@ public class IotwAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createArduinoUNOR3Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1 <em>Arduino Wi Fi ESP8266 We Mos D1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1
+	 * @generated
+	 */
+	public Adapter createArduinoWiFiESP8266WeMosD1Adapter() {
 		return null;
 	}
 

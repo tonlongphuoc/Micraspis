@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getKeys <em>Keys</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getRows <em>Rows</em>}</li>
@@ -49,7 +50,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getNameButtonHash <em>Name Button Hash</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getNameButtonAsterisk <em>Name Button Asterisk</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -619,6 +619,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKeys() {
 		return keys;
 	}
@@ -628,6 +629,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getRows() {
 		return rows;
 	}
@@ -637,6 +639,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getCols() {
 		return cols;
 	}
@@ -646,6 +649,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin1() {
 		return pin1;
 	}
@@ -655,6 +659,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin1(Pin newPin1) {
 		Pin oldPin1 = pin1;
 		pin1 = newPin1;
@@ -667,6 +672,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin2() {
 		return pin2;
 	}
@@ -676,6 +682,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin2(Pin newPin2) {
 		Pin oldPin2 = pin2;
 		pin2 = newPin2;
@@ -688,6 +695,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin3() {
 		return pin3;
 	}
@@ -697,6 +705,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin3(Pin newPin3) {
 		Pin oldPin3 = pin3;
 		pin3 = newPin3;
@@ -709,6 +718,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin4() {
 		return pin4;
 	}
@@ -718,6 +728,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin4(Pin newPin4) {
 		Pin oldPin4 = pin4;
 		pin4 = newPin4;
@@ -730,6 +741,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin5() {
 		return pin5;
 	}
@@ -739,6 +751,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin5(Pin newPin5) {
 		Pin oldPin5 = pin5;
 		pin5 = newPin5;
@@ -751,6 +764,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin6() {
 		return pin6;
 	}
@@ -760,6 +774,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin6(Pin newPin6) {
 		Pin oldPin6 = pin6;
 		pin6 = newPin6;
@@ -772,6 +787,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin7() {
 		return pin7;
 	}
@@ -781,6 +797,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin7(Pin newPin7) {
 		Pin oldPin7 = pin7;
 		pin7 = newPin7;
@@ -793,6 +810,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin8() {
 		return pin8;
 	}
@@ -802,6 +820,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin8(Pin newPin8) {
 		Pin oldPin8 = pin8;
 		pin8 = newPin8;
@@ -814,6 +833,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton1() {
 		return nameButton1;
 	}
@@ -823,6 +843,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton1(String newNameButton1) {
 		String oldNameButton1 = nameButton1;
 		nameButton1 = newNameButton1;
@@ -835,6 +856,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton2() {
 		return nameButton2;
 	}
@@ -844,6 +866,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton2(String newNameButton2) {
 		String oldNameButton2 = nameButton2;
 		nameButton2 = newNameButton2;
@@ -856,6 +879,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton3() {
 		return nameButton3;
 	}
@@ -865,6 +889,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton3(String newNameButton3) {
 		String oldNameButton3 = nameButton3;
 		nameButton3 = newNameButton3;
@@ -877,6 +902,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton4() {
 		return nameButton4;
 	}
@@ -886,6 +912,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton4(String newNameButton4) {
 		String oldNameButton4 = nameButton4;
 		nameButton4 = newNameButton4;
@@ -898,6 +925,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton5() {
 		return nameButton5;
 	}
@@ -907,6 +935,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton5(String newNameButton5) {
 		String oldNameButton5 = nameButton5;
 		nameButton5 = newNameButton5;
@@ -919,6 +948,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton6() {
 		return nameButton6;
 	}
@@ -928,6 +958,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton6(String newNameButton6) {
 		String oldNameButton6 = nameButton6;
 		nameButton6 = newNameButton6;
@@ -940,6 +971,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton7() {
 		return nameButton7;
 	}
@@ -949,6 +981,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton7(String newNameButton7) {
 		String oldNameButton7 = nameButton7;
 		nameButton7 = newNameButton7;
@@ -961,6 +994,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton8() {
 		return nameButton8;
 	}
@@ -970,6 +1004,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton8(String newNameButton8) {
 		String oldNameButton8 = nameButton8;
 		nameButton8 = newNameButton8;
@@ -982,6 +1017,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton9() {
 		return nameButton9;
 	}
@@ -991,6 +1027,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton9(String newNameButton9) {
 		String oldNameButton9 = nameButton9;
 		nameButton9 = newNameButton9;
@@ -1003,6 +1040,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButton0() {
 		return nameButton0;
 	}
@@ -1012,6 +1050,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButton0(String newNameButton0) {
 		String oldNameButton0 = nameButton0;
 		nameButton0 = newNameButton0;
@@ -1024,6 +1063,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButtonA() {
 		return nameButtonA;
 	}
@@ -1033,6 +1073,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButtonA(String newNameButtonA) {
 		String oldNameButtonA = nameButtonA;
 		nameButtonA = newNameButtonA;
@@ -1045,6 +1086,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButtonB() {
 		return nameButtonB;
 	}
@@ -1054,6 +1096,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButtonB(String newNameButtonB) {
 		String oldNameButtonB = nameButtonB;
 		nameButtonB = newNameButtonB;
@@ -1066,6 +1109,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButtonC() {
 		return nameButtonC;
 	}
@@ -1075,6 +1119,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButtonC(String newNameButtonC) {
 		String oldNameButtonC = nameButtonC;
 		nameButtonC = newNameButtonC;
@@ -1087,6 +1132,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButtonD() {
 		return nameButtonD;
 	}
@@ -1096,6 +1142,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButtonD(String newNameButtonD) {
 		String oldNameButtonD = nameButtonD;
 		nameButtonD = newNameButtonD;
@@ -1108,6 +1155,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButtonHash() {
 		return nameButtonHash;
 	}
@@ -1117,6 +1165,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButtonHash(String newNameButtonHash) {
 		String oldNameButtonHash = nameButtonHash;
 		nameButtonHash = newNameButtonHash;
@@ -1129,6 +1178,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNameButtonAsterisk() {
 		return nameButtonAsterisk;
 	}
@@ -1138,6 +1188,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameButtonAsterisk(String newNameButtonAsterisk) {
 		String oldNameButtonAsterisk = nameButtonAsterisk;
 		nameButtonAsterisk = newNameButtonAsterisk;
@@ -1529,7 +1580,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (keys: ");
 		result.append(keys);
 		result.append(", rows: ");

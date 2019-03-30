@@ -1151,6 +1151,196 @@ public interface IotwPackage extends EPackage {
 	int ARDUINO_UNOR3_OPERATION_COUNT = MAINBOARD_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl <em>Arduino Wi Fi ESP8266 We Mos D1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl
+	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1 = 11;
+
+	/**
+	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DEVICES = MAINBOARD__DEVICES;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__NAME = MAINBOARD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pin A0</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0 = MAINBOARD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Pin D0</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0 = MAINBOARD_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Pin D1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1 = MAINBOARD_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Pin D2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2 = MAINBOARD_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Pin D3</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3 = MAINBOARD_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Pin D4</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4 = MAINBOARD_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Pin D5</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5 = MAINBOARD_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Pin D6</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6 = MAINBOARD_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Pin D7</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7 = MAINBOARD_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Pin D8</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = MAINBOARD_FEATURE_COUNT + 9;
+
+	/**
+	 * The number of structural features of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_FEATURE_COUNT = MAINBOARD_FEATURE_COUNT + 10;
+
+	/**
+	 * The operation id for the '<em>Add Device</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___ADD_DEVICE__DEVICE = MAINBOARD___ADD_DEVICE__DEVICE;
+
+	/**
+	 * The operation id for the '<em>Remove Device</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___REMOVE_DEVICE__DEVICE = MAINBOARD___REMOVE_DEVICE__DEVICE;
+
+	/**
+	 * The operation id for the '<em>Get Pins</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___GET_PINS = MAINBOARD___GET_PINS;
+
+	/**
+	 * The operation id for the '<em>Get Pin Connecteds</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___GET_PIN_CONNECTEDS = MAINBOARD___GET_PIN_CONNECTEDS;
+
+	/**
+	 * The operation id for the '<em>Modify Pin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___MODIFY_PIN__PIN = MAINBOARD___MODIFY_PIN__PIN;
+
+	/**
+	 * The operation id for the '<em>Find Pin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___FIND_PIN__PIN = MAINBOARD___FIND_PIN__PIN;
+
+	/**
+	 * The number of operations of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_OPERATION_COUNT = MAINBOARD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.Keypad4x4Impl <em>Keypad4x4</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1158,7 +1348,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getKeypad4x4()
 	 * @generated
 	 */
-	int KEYPAD4X4 = 11;
+	int KEYPAD4X4 = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1501,7 +1691,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getLED()
 	 * @generated
 	 */
-	int LED = 13;
+	int LED = 14;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.StateFrameImpl <em>State Frame</em>}' class.
@@ -1511,7 +1701,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getStateFrame()
 	 * @generated
 	 */
-	int STATE_FRAME = 18;
+	int STATE_FRAME = 19;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.DecisionImpl <em>Decision</em>}' class.
@@ -1521,7 +1711,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getDecision()
 	 * @generated
 	 */
-	int DECISION = 19;
+	int DECISION = 20;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.StartPointImpl <em>Start Point</em>}' class.
@@ -1531,7 +1721,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getStartPoint()
 	 * @generated
 	 */
-	int START_POINT = 20;
+	int START_POINT = 21;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.EndPointImpl <em>End Point</em>}' class.
@@ -1541,7 +1731,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getEndPoint()
 	 * @generated
 	 */
-	int END_POINT = 21;
+	int END_POINT = 22;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.RouterKind <em>Router Kind</em>}' enum.
@@ -1551,7 +1741,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getRouterKind()
 	 * @generated
 	 */
-	int ROUTER_KIND = 23;
+	int ROUTER_KIND = 24;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.WifiMode <em>Wifi Mode</em>}' enum.
@@ -1561,7 +1751,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getWifiMode()
 	 * @generated
 	 */
-	int WIFI_MODE = 24;
+	int WIFI_MODE = 25;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.WifiIDConnection <em>Wifi ID Connection</em>}' enum.
@@ -1571,7 +1761,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getWifiIDConnection()
 	 * @generated
 	 */
-	int WIFI_ID_CONNECTION = 25;
+	int WIFI_ID_CONNECTION = 26;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ListBaud <em>List Baud</em>}' enum.
@@ -1581,7 +1771,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getListBaud()
 	 * @generated
 	 */
-	int LIST_BAUD = 26;
+	int LIST_BAUD = 27;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ListConnectionChannel <em>List Connection Channel</em>}' enum.
@@ -1591,7 +1781,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getListConnectionChannel()
 	 * @generated
 	 */
-	int LIST_CONNECTION_CHANNEL = 27;
+	int LIST_CONNECTION_CHANNEL = 28;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ListProtocol <em>List Protocol</em>}' enum.
@@ -1601,7 +1791,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getListProtocol()
 	 * @generated
 	 */
-	int LIST_PROTOCOL = 28;
+	int LIST_PROTOCOL = 29;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.I2CLCDType <em>I2CLCD Type</em>}' enum.
@@ -1611,7 +1801,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getI2CLCDType()
 	 * @generated
 	 */
-	int I2CLCD_TYPE = 29;
+	int I2CLCD_TYPE = 30;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.BuzzerImpl <em>Buzzer</em>}' class.
@@ -1621,7 +1811,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getBuzzer()
 	 * @generated
 	 */
-	int BUZZER = 15;
+	int BUZZER = 16;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.ButtonImpl <em>Button</em>}' class.
@@ -1631,7 +1821,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getButton()
 	 * @generated
 	 */
-	int BUTTON = 12;
+	int BUTTON = 13;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.BluetoothHC06Impl <em>Bluetooth HC06</em>}' class.
@@ -1641,7 +1831,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getBluetoothHC06()
 	 * @generated
 	 */
-	int BLUETOOTH_HC06 = 16;
+	int BLUETOOTH_HC06 = 17;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.WifiESP8266Impl <em>Wifi ESP8266</em>}' class.
@@ -1651,7 +1841,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getWifiESP8266()
 	 * @generated
 	 */
-	int WIFI_ESP8266 = 17;
+	int WIFI_ESP8266 = 18;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1850,7 +2040,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getI2CLCD()
 	 * @generated
 	 */
-	int I2CLCD = 14;
+	int I2CLCD = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2706,7 +2896,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getConnectionKind()
 	 * @generated
 	 */
-	int CONNECTION_KIND = 22;
+	int CONNECTION_KIND = 23;
 
 	/**
 	 * The meta object id for the '<em>Rectangle</em>' data type.
@@ -2716,7 +2906,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getRectangle()
 	 * @generated
 	 */
-	int RECTANGLE = 30;
+	int RECTANGLE = 31;
 
 
 	/**
@@ -2727,7 +2917,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getPoint()
 	 * @generated
 	 */
-	int POINT = 31;
+	int POINT = 32;
 
 
 	/**
@@ -2738,7 +2928,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getPin()
 	 * @generated
 	 */
-	int PIN = 32;
+	int PIN = 33;
 
 
 	/**
@@ -3094,6 +3284,126 @@ public interface IotwPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArduinoUNOR3_PinA5();
+
+	/**
+	 * Returns the meta object for class '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1 <em>Arduino Wi Fi ESP8266 We Mos D1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arduino Wi Fi ESP8266 We Mos D1</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1
+	 * @generated
+	 */
+	EClass getArduinoWiFiESP8266WeMosD1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinA0 <em>Pin A0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin A0</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinA0()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinA0();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD0 <em>Pin D0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D0</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD0()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD0();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD1 <em>Pin D1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D1</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD1()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD1();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD2 <em>Pin D2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D2</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD2()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD2();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD3 <em>Pin D3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D3</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD3()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD3();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD4 <em>Pin D4</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D4</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD4()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD4();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD5 <em>Pin D5</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D5</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD5()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD5();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD6 <em>Pin D6</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D6</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD6()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD6();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD7 <em>Pin D7</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D7</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD7()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD7();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD8 <em>Pin D8</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D8</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD8()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD8();
 
 	/**
 	 * Returns the meta object for class '{@link iotwearable.model.iotw.Connection <em>Connection</em>}'.
@@ -4544,6 +4854,96 @@ public interface IotwPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARDUINO_UNOR3__PIN_A5 = eINSTANCE.getArduinoUNOR3_PinA5();
+
+		/**
+		 * The meta object literal for the '{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl <em>Arduino Wi Fi ESP8266 We Mos D1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl
+		 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getArduinoWiFiESP8266WeMosD1()
+		 * @generated
+		 */
+		EClass ARDUINO_WI_FI_ESP8266_WE_MOS_D1 = eINSTANCE.getArduinoWiFiESP8266WeMosD1();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin A0</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinA0();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D0</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD0();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD1();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D2</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD2();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D3</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD3();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D4</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD4();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D5</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD5();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D6</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD6();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D7</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD7();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D8</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD8();
 
 		/**
 		 * The meta object literal for the '{@link iotwearable.model.iotw.impl.ConnectionImpl <em>Connection</em>}' class.

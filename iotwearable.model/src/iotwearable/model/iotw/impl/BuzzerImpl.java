@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getPin1 <em>Pin1</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getPin2 <em>Pin2</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getTone <em>Tone</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -134,6 +134,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin1() {
 		return pin1;
 	}
@@ -143,6 +144,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin1(Pin newPin1) {
 		Pin oldPin1 = pin1;
 		pin1 = newPin1;
@@ -155,6 +157,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPin2() {
 		return pin2;
 	}
@@ -164,6 +167,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPin2(Pin newPin2) {
 		Pin oldPin2 = pin2;
 		pin2 = newPin2;
@@ -176,6 +180,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTone() {
 		return tone;
 	}
@@ -185,6 +190,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTone(int newTone) {
 		int oldTone = tone;
 		tone = newTone;
@@ -197,6 +203,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTime() {
 		return time;
 	}
@@ -206,6 +213,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTime(int newTime) {
 		int oldTime = time;
 		time = newTime;
@@ -310,7 +318,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pin1: ");
 		result.append(pin1);
 		result.append(", pin2: ");

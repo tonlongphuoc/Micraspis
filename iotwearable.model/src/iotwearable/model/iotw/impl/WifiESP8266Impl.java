@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getPinTX <em>Pin TX</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getPinRX <em>Pin RX</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getConnectedChannel <em>Connected Channel</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getProtocol <em>Protocol</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -392,6 +392,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinTX() {
 		return pinTX;
 	}
@@ -401,6 +402,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinTX(Pin newPinTX) {
 		Pin oldPinTX = pinTX;
 		pinTX = newPinTX;
@@ -413,6 +415,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinRX() {
 		return pinRX;
 	}
@@ -422,6 +425,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinRX(Pin newPinRX) {
 		Pin oldPinRX = pinRX;
 		pinRX = newPinRX;
@@ -434,6 +438,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinVcc() {
 		return pinVcc;
 	}
@@ -443,6 +448,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinVcc(Pin newPinVcc) {
 		Pin oldPinVcc = pinVcc;
 		pinVcc = newPinVcc;
@@ -455,6 +461,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinGND() {
 		return pinGND;
 	}
@@ -464,6 +471,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinGND(Pin newPinGND) {
 		Pin oldPinGND = pinGND;
 		pinGND = newPinGND;
@@ -476,6 +484,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinCHPD() {
 		return pinCHPD;
 	}
@@ -485,6 +494,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinCHPD(Pin newPinCHPD) {
 		Pin oldPinCHPD = pinCHPD;
 		pinCHPD = newPinCHPD;
@@ -497,6 +507,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSSID_ST() {
 		return sSID_ST;
 	}
@@ -506,6 +517,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSSID_ST(String newSSID_ST) {
 		String oldSSID_ST = sSID_ST;
 		sSID_ST = newSSID_ST;
@@ -518,6 +530,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPassword_ST() {
 		return password_ST;
 	}
@@ -527,6 +540,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPassword_ST(String newPassword_ST) {
 		String oldPassword_ST = password_ST;
 		password_ST = newPassword_ST;
@@ -539,6 +553,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WifiMode getMode() {
 		return mode;
 	}
@@ -548,6 +563,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(WifiMode newMode) {
 		WifiMode oldMode = mode;
 		mode = newMode == null ? MODE_EDEFAULT : newMode;
@@ -560,6 +576,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public WifiIDConnection getIdConnection() {
 		return idConnection;
 	}
@@ -569,6 +586,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIdConnection(WifiIDConnection newIdConnection) {
 		WifiIDConnection oldIdConnection = idConnection;
 		idConnection = newIdConnection == null ? ID_CONNECTION_EDEFAULT : newIdConnection;
@@ -581,6 +599,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPassword_AccessPoint() {
 		return password_AccessPoint;
 	}
@@ -590,6 +609,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPassword_AccessPoint(String newPassword_AccessPoint) {
 		String oldPassword_AccessPoint = password_AccessPoint;
 		password_AccessPoint = newPassword_AccessPoint;
@@ -602,6 +622,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSSID_AccessPoint() {
 		return sSID_AccessPoint;
 	}
@@ -611,6 +632,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSSID_AccessPoint(String newSSID_AccessPoint) {
 		String oldSSID_AccessPoint = sSID_AccessPoint;
 		sSID_AccessPoint = newSSID_AccessPoint;
@@ -623,6 +645,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPort() {
 		return port;
 	}
@@ -632,6 +655,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPort(int newPort) {
 		int oldPort = port;
 		port = newPort;
@@ -644,6 +668,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getIP() {
 		return iP;
 	}
@@ -653,6 +678,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIP(String newIP) {
 		String oldIP = iP;
 		iP = newIP;
@@ -665,6 +691,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListBaud getBaud() {
 		return baud;
 	}
@@ -674,6 +701,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaud(ListBaud newBaud) {
 		ListBaud oldBaud = baud;
 		baud = newBaud == null ? BAUD_EDEFAULT : newBaud;
@@ -686,6 +714,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListConnectionChannel getConnectedChannel() {
 		return connectedChannel;
 	}
@@ -695,6 +724,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConnectedChannel(ListConnectionChannel newConnectedChannel) {
 		ListConnectionChannel oldConnectedChannel = connectedChannel;
 		connectedChannel = newConnectedChannel == null ? CONNECTED_CHANNEL_EDEFAULT : newConnectedChannel;
@@ -707,6 +737,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ListProtocol getProtocol() {
 		return protocol;
 	}
@@ -716,6 +747,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocol(ListProtocol newProtocol) {
 		ListProtocol oldProtocol = protocol;
 		protocol = newProtocol == null ? PROTOCOL_EDEFAULT : newProtocol;
@@ -940,7 +972,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pinTX: ");
 		result.append(pinTX);
 		result.append(", pinRX: ");

@@ -3,6 +3,7 @@
 package iotwearable.model.iotw.impl;
 
 import iotwearable.model.iotw.ArduinoUNOR3;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.BluetoothHC06;
 import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Buzzer;
@@ -71,6 +72,13 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	private EClass arduinoUNOR3EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arduinoWiFiESP8266WeMosD1EClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -310,7 +318,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link IotwPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -324,7 +332,8 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		if (isInited) return (IotwPackage)EPackage.Registry.INSTANCE.getEPackage(IotwPackage.eNS_URI);
 
 		// Obtain or create and register package
-		IotwPackageImpl theIotwPackage = (IotwPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IotwPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IotwPackageImpl());
+		Object registeredIotwPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		IotwPackageImpl theIotwPackage = registeredIotwPackage instanceof IotwPackageImpl ? (IotwPackageImpl)registeredIotwPackage : new IotwPackageImpl();
 
 		isInited = true;
 
@@ -337,7 +346,6 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		// Mark meta-data to indicate it can't be changed
 		theIotwPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(IotwPackage.eNS_URI, theIotwPackage);
 		return theIotwPackage;
@@ -348,6 +356,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getComponent() {
 		return componentEClass;
 	}
@@ -357,6 +366,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComponent_Id() {
 		return (EAttribute)componentEClass.getEStructuralFeatures().get(0);
 	}
@@ -366,6 +376,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getComponent_Constraints() {
 		return (EAttribute)componentEClass.getEStructuralFeatures().get(1);
 	}
@@ -375,6 +386,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMainboard() {
 		return mainboardEClass;
 	}
@@ -384,6 +396,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMainboard_Devices() {
 		return (EReference)mainboardEClass.getEStructuralFeatures().get(0);
 	}
@@ -393,6 +406,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMainboard_Name() {
 		return (EAttribute)mainboardEClass.getEStructuralFeatures().get(1);
 	}
@@ -402,6 +416,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMainboard__AddDevice__Device() {
 		return mainboardEClass.getEOperations().get(0);
 	}
@@ -411,6 +426,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMainboard__RemoveDevice__Device() {
 		return mainboardEClass.getEOperations().get(1);
 	}
@@ -420,6 +436,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMainboard__GetPins() {
 		return mainboardEClass.getEOperations().get(2);
 	}
@@ -429,6 +446,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMainboard__GetPinConnecteds() {
 		return mainboardEClass.getEOperations().get(3);
 	}
@@ -438,6 +456,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMainboard__ModifyPin__Pin() {
 		return mainboardEClass.getEOperations().get(4);
 	}
@@ -447,6 +466,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getMainboard__FindPin__Pin() {
 		return mainboardEClass.getEOperations().get(5);
 	}
@@ -456,6 +476,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getArduinoUNOR3() {
 		return arduinoUNOR3EClass;
 	}
@@ -465,6 +486,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin0() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(0);
 	}
@@ -474,6 +496,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin1() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(1);
 	}
@@ -483,6 +506,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin2() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(2);
 	}
@@ -492,6 +516,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin3() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(3);
 	}
@@ -501,6 +526,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin4() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(4);
 	}
@@ -510,6 +536,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin5() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(5);
 	}
@@ -519,6 +546,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin6() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(6);
 	}
@@ -528,6 +556,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin7() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(7);
 	}
@@ -537,6 +566,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin8() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(8);
 	}
@@ -546,6 +576,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin9() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(9);
 	}
@@ -555,6 +586,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin10() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(10);
 	}
@@ -564,6 +596,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin11() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(11);
 	}
@@ -573,6 +606,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin12() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(12);
 	}
@@ -582,6 +616,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_Pin13() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(13);
 	}
@@ -591,6 +626,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_PinA0() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(14);
 	}
@@ -600,6 +636,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_PinA1() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(15);
 	}
@@ -609,6 +646,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_PinA2() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(16);
 	}
@@ -618,6 +656,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_PinA3() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(17);
 	}
@@ -627,6 +666,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_PinA4() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(18);
 	}
@@ -636,6 +676,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoUNOR3_PinA5() {
 		return (EAttribute)arduinoUNOR3EClass.getEStructuralFeatures().get(19);
 	}
@@ -645,6 +686,117 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
+	public EClass getArduinoWiFiESP8266WeMosD1() {
+		return arduinoWiFiESP8266WeMosD1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinA0() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD0() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD1() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD2() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD3() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD4() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD5() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD6() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD7() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD8() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getConnection() {
 		return connectionEClass;
 	}
@@ -654,6 +806,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Bendpoints() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(0);
 	}
@@ -663,6 +816,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_RouterKind() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(1);
 	}
@@ -672,6 +826,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Source() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(2);
 	}
@@ -681,6 +836,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_Target() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(3);
 	}
@@ -690,6 +846,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Kind() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(4);
 	}
@@ -699,6 +856,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConnection_Label() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(5);
 	}
@@ -708,6 +866,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConnection_StateSchema() {
 		return (EReference)connectionEClass.getEStructuralFeatures().get(6);
 	}
@@ -717,6 +876,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStateSchema() {
 		return stateSchemaEClass;
 	}
@@ -726,6 +886,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStateSchema_Components() {
 		return (EReference)stateSchemaEClass.getEStructuralFeatures().get(0);
 	}
@@ -735,6 +896,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStateSchema_Connnections() {
 		return (EReference)stateSchemaEClass.getEStructuralFeatures().get(1);
 	}
@@ -744,6 +906,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStateComponent() {
 		return stateComponentEClass;
 	}
@@ -753,6 +916,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStateComponent_Incomings() {
 		return (EReference)stateComponentEClass.getEStructuralFeatures().get(0);
 	}
@@ -762,6 +926,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getStateComponent_Outgoings() {
 		return (EReference)stateComponentEClass.getEStructuralFeatures().get(1);
 	}
@@ -771,6 +936,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStateComponent_Name() {
 		return (EAttribute)stateComponentEClass.getEStructuralFeatures().get(2);
 	}
@@ -780,6 +946,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDevice() {
 		return deviceEClass;
 	}
@@ -789,6 +956,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDevice_Mainboard() {
 		return (EReference)deviceEClass.getEStructuralFeatures().get(0);
 	}
@@ -798,6 +966,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDevice_Name() {
 		return (EAttribute)deviceEClass.getEStructuralFeatures().get(1);
 	}
@@ -807,6 +976,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getDevice__GetPins() {
 		return deviceEClass.getEOperations().get(0);
 	}
@@ -816,6 +986,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getDevice__GetPinConnecteds() {
 		return deviceEClass.getEOperations().get(1);
 	}
@@ -825,6 +996,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getDevice__ModifyPin__Pin() {
 		return deviceEClass.getEOperations().get(2);
 	}
@@ -834,6 +1006,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getIODevice() {
 		return ioDeviceEClass;
 	}
@@ -843,6 +1016,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInputDevice() {
 		return inputDeviceEClass;
 	}
@@ -852,6 +1026,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOutputDevice() {
 		return outputDeviceEClass;
 	}
@@ -861,6 +1036,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConnectivity() {
 		return connectivityEClass;
 	}
@@ -870,6 +1046,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getKeypad4x4() {
 		return keypad4x4EClass;
 	}
@@ -879,6 +1056,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Keys() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(0);
 	}
@@ -888,6 +1066,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Rows() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(1);
 	}
@@ -897,6 +1076,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Cols() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(2);
 	}
@@ -906,6 +1086,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin1() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(3);
 	}
@@ -915,6 +1096,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin2() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(4);
 	}
@@ -924,6 +1106,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin3() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(5);
 	}
@@ -933,6 +1116,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin4() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(6);
 	}
@@ -942,6 +1126,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin5() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(7);
 	}
@@ -951,6 +1136,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin6() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(8);
 	}
@@ -960,6 +1146,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin7() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(9);
 	}
@@ -969,6 +1156,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_Pin8() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(10);
 	}
@@ -978,6 +1166,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton1() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(11);
 	}
@@ -987,6 +1176,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton2() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(12);
 	}
@@ -996,6 +1186,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton3() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(13);
 	}
@@ -1005,6 +1196,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton4() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(14);
 	}
@@ -1014,6 +1206,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton5() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(15);
 	}
@@ -1023,6 +1216,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton6() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(16);
 	}
@@ -1032,6 +1226,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton7() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(17);
 	}
@@ -1041,6 +1236,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton8() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(18);
 	}
@@ -1050,6 +1246,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton9() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(19);
 	}
@@ -1059,6 +1256,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButton0() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(20);
 	}
@@ -1068,6 +1266,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButtonA() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(21);
 	}
@@ -1077,6 +1276,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButtonB() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(22);
 	}
@@ -1086,6 +1286,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButtonC() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(23);
 	}
@@ -1095,6 +1296,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButtonD() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(24);
 	}
@@ -1104,6 +1306,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButtonHash() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(25);
 	}
@@ -1113,6 +1316,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getKeypad4x4_NameButtonAsterisk() {
 		return (EAttribute)keypad4x4EClass.getEStructuralFeatures().get(26);
 	}
@@ -1122,6 +1326,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EOperation getKeypad4x4__GetButton__String() {
 		return keypad4x4EClass.getEOperations().get(0);
 	}
@@ -1131,6 +1336,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLED() {
 		return ledEClass;
 	}
@@ -1140,6 +1346,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLED_Pin1() {
 		return (EAttribute)ledEClass.getEStructuralFeatures().get(0);
 	}
@@ -1149,6 +1356,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLED_Pin2() {
 		return (EAttribute)ledEClass.getEStructuralFeatures().get(1);
 	}
@@ -1158,6 +1366,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getI2CLCD() {
 		return i2CLCDEClass;
 	}
@@ -1167,6 +1376,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getI2CLCD_PinGND() {
 		return (EAttribute)i2CLCDEClass.getEStructuralFeatures().get(0);
 	}
@@ -1176,6 +1386,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getI2CLCD_PinVcc() {
 		return (EAttribute)i2CLCDEClass.getEStructuralFeatures().get(1);
 	}
@@ -1185,6 +1396,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getI2CLCD_PinSDA() {
 		return (EAttribute)i2CLCDEClass.getEStructuralFeatures().get(2);
 	}
@@ -1194,6 +1406,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getI2CLCD_PinSCL() {
 		return (EAttribute)i2CLCDEClass.getEStructuralFeatures().get(3);
 	}
@@ -1203,6 +1416,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getI2CLCD_Type() {
 		return (EAttribute)i2CLCDEClass.getEStructuralFeatures().get(4);
 	}
@@ -1212,6 +1426,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStateFrame() {
 		return stateFrameEClass;
 	}
@@ -1221,6 +1436,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getStateFrame_Content() {
 		return (EAttribute)stateFrameEClass.getEStructuralFeatures().get(0);
 	}
@@ -1230,6 +1446,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDecision() {
 		return decisionEClass;
 	}
@@ -1239,6 +1456,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getStartPoint() {
 		return startPointEClass;
 	}
@@ -1248,6 +1466,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getEndPoint() {
 		return endPointEClass;
 	}
@@ -1257,6 +1476,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBluetoothHC06() {
 		return bluetoothHC06EClass;
 	}
@@ -1266,6 +1486,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBluetoothHC06_PinTXD() {
 		return (EAttribute)bluetoothHC06EClass.getEStructuralFeatures().get(0);
 	}
@@ -1275,6 +1496,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBluetoothHC06_PinRXD() {
 		return (EAttribute)bluetoothHC06EClass.getEStructuralFeatures().get(1);
 	}
@@ -1284,6 +1506,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBluetoothHC06_PinGND() {
 		return (EAttribute)bluetoothHC06EClass.getEStructuralFeatures().get(2);
 	}
@@ -1293,6 +1516,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBluetoothHC06_PinVCC() {
 		return (EAttribute)bluetoothHC06EClass.getEStructuralFeatures().get(3);
 	}
@@ -1302,6 +1526,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getWifiESP8266() {
 		return wifiESP8266EClass;
 	}
@@ -1311,6 +1536,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_PinTX() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(0);
 	}
@@ -1320,6 +1546,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_PinRX() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(1);
 	}
@@ -1329,6 +1556,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_PinVcc() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(2);
 	}
@@ -1338,6 +1566,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_PinGND() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(3);
 	}
@@ -1347,6 +1576,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_PinCHPD() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(4);
 	}
@@ -1356,6 +1586,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_SSID_ST() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(5);
 	}
@@ -1365,6 +1596,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_Password_ST() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(6);
 	}
@@ -1374,6 +1606,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_Mode() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(7);
 	}
@@ -1383,6 +1616,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_IdConnection() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(8);
 	}
@@ -1392,6 +1626,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_Password_AccessPoint() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(9);
 	}
@@ -1401,6 +1636,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_SSID_AccessPoint() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(10);
 	}
@@ -1410,6 +1646,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_Port() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(11);
 	}
@@ -1419,6 +1656,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_IP() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(12);
 	}
@@ -1428,6 +1666,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_Baud() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(13);
 	}
@@ -1437,6 +1676,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_ConnectedChannel() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(14);
 	}
@@ -1446,6 +1686,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getWifiESP8266_Protocol() {
 		return (EAttribute)wifiESP8266EClass.getEStructuralFeatures().get(15);
 	}
@@ -1455,6 +1696,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getButton() {
 		return buttonEClass;
 	}
@@ -1464,6 +1706,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getButton_Pin1() {
 		return (EAttribute)buttonEClass.getEStructuralFeatures().get(0);
 	}
@@ -1473,6 +1716,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getConnectionKind() {
 		return connectionKindEEnum;
 	}
@@ -1482,6 +1726,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getRouterKind() {
 		return routerKindEEnum;
 	}
@@ -1491,6 +1736,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getWifiMode() {
 		return wifiModeEEnum;
 	}
@@ -1500,6 +1746,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getWifiIDConnection() {
 		return wifiIDConnectionEEnum;
 	}
@@ -1509,6 +1756,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getListBaud() {
 		return listBaudEEnum;
 	}
@@ -1518,6 +1766,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getListConnectionChannel() {
 		return listConnectionChannelEEnum;
 	}
@@ -1527,6 +1776,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getListProtocol() {
 		return listProtocolEEnum;
 	}
@@ -1536,6 +1786,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getI2CLCDType() {
 		return i2CLCDTypeEEnum;
 	}
@@ -1545,6 +1796,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBuzzer() {
 		return buzzerEClass;
 	}
@@ -1554,6 +1806,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBuzzer_Pin1() {
 		return (EAttribute)buzzerEClass.getEStructuralFeatures().get(0);
 	}
@@ -1563,6 +1816,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBuzzer_Pin2() {
 		return (EAttribute)buzzerEClass.getEStructuralFeatures().get(1);
 	}
@@ -1572,6 +1826,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBuzzer_Tone() {
 		return (EAttribute)buzzerEClass.getEStructuralFeatures().get(2);
 	}
@@ -1581,6 +1836,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBuzzer_Time() {
 		return (EAttribute)buzzerEClass.getEStructuralFeatures().get(3);
 	}
@@ -1590,6 +1846,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getRectangle() {
 		return rectangleEDataType;
 	}
@@ -1599,6 +1856,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getPoint() {
 		return pointEDataType;
 	}
@@ -1608,6 +1866,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getPin() {
 		return pinEDataType;
 	}
@@ -1617,6 +1876,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IotwFactory getIotwFactory() {
 		return (IotwFactory)getEFactoryInstance();
 	}
@@ -1708,6 +1968,18 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN_A3);
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN_A4);
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN_A5);
+
+		arduinoWiFiESP8266WeMosD1EClass = createEClass(ARDUINO_WI_FI_ESP8266_WE_MOS_D1);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8);
 
 		keypad4x4EClass = createEClass(KEYPAD4X4);
 		createEAttribute(keypad4x4EClass, KEYPAD4X4__KEYS);
@@ -1843,6 +2115,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		outputDeviceEClass.getESuperTypes().add(this.getIODevice());
 		connectivityEClass.getESuperTypes().add(this.getDevice());
 		arduinoUNOR3EClass.getESuperTypes().add(this.getMainboard());
+		arduinoWiFiESP8266WeMosD1EClass.getESuperTypes().add(this.getMainboard());
 		keypad4x4EClass.getESuperTypes().add(this.getInputDevice());
 		buttonEClass.getESuperTypes().add(this.getInputDevice());
 		ledEClass.getESuperTypes().add(this.getOutputDevice());
@@ -1938,6 +2211,18 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		initEAttribute(getArduinoUNOR3_PinA3(), this.getPin(), "pinA3", "A3,Input", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArduinoUNOR3_PinA4(), this.getPin(), "pinA4", "A4,Input", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArduinoUNOR3_PinA5(), this.getPin(), "pinA5", "A5,Input", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(arduinoWiFiESP8266WeMosD1EClass, ArduinoWiFiESP8266WeMosD1.class, "ArduinoWiFiESP8266WeMosD1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinA0(), this.getPin(), "pinA0", "A0,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD0(), this.getPin(), "pinD0", "D0,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD1(), this.getPin(), "pinD1", "D1,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD2(), this.getPin(), "pinD2", "D2,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD3(), this.getPin(), "pinD3", "D3,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD4(), this.getPin(), "pinD4", "D4,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD5(), this.getPin(), "pinD5", "D5,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD6(), this.getPin(), "pinD6", "D6,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD7(), this.getPin(), "pinD7", "D7,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD8(), this.getPin(), "pinD8", "D8,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(keypad4x4EClass, Keypad4x4.class, "Keypad4x4", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKeypad4x4_Keys(), ecorePackage.getEString(), "keys", "{\'1\',\'2\',\'3\',\'A\'},{\'4\',\'5\',\'6\',\'B\'},{\'7\',\'8\',\'9\',\'C\'},{\'*\',\'0\',\'#\',\'D\'}", 0, 1, Keypad4x4.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
