@@ -27,7 +27,6 @@ app.post('/', function (req, res) {
             result = array[index].Action;
             break;
         }
-         
     }
     if (result == "") {
         res.status(400).send("Invalid value");
