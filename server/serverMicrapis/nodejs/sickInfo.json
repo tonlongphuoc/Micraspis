@@ -1,0 +1,23 @@
+{
+    "Name" : "Measles",
+    "Status": [
+        {
+            "Name": "Emergency",
+            "Min": 39,
+            "Max": 40,
+            "Action": "Red"
+        },
+        {
+            "Name": "High",
+            "Min": 38,
+            "Max": 39,
+            "Action": "Yellow"
+        },
+        {
+            "Name": "Medium",
+            "Min": 37,
+            "Max": 38,
+            "Action": "Green"
+        }
+    ]
+}
