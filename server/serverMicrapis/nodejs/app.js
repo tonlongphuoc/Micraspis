@@ -16,7 +16,25 @@ app.use(function (req, res, next) {
     });
 });
 
-app.get('/', (res) => res.send('Conected to server'))
+app.get('/', (req, res) => {
+    var temp = req.query.temp;
+    console.log(temp);
+    var array = getInfo.ReadFile().Status;
+    var result = "";
+    for (var index in array) {
+        if (temp >= array[index].Min && temp <= array[index].Max){
+            result = array[index].Action;
+            break;
+        }
+    }
+    if (result == "") {
+        res.status(400).send("Invalid value");
+    }
+    else { 
+        console.log(result);
+        res.send(result);
+    }
+})
 
 app.post('/', function (req, res) {
     var temp = parseInt(req.body);
