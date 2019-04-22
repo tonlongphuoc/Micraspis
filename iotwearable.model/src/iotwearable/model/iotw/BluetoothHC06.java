@@ -10,13 +10,13 @@ package iotwearable.model.iotw;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.BluetoothHC06#getPinTXD <em>Pin TXD</em>}</li>
  *   <li>{@link iotwearable.model.iotw.BluetoothHC06#getPinRXD <em>Pin RXD</em>}</li>
  *   <li>{@link iotwearable.model.iotw.BluetoothHC06#getPinGND <em>Pin GND</em>}</li>
  *   <li>{@link iotwearable.model.iotw.BluetoothHC06#getPinVCC <em>Pin VCC</em>}</li>
  * </ul>
+ * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getBluetoothHC06()
  * @model

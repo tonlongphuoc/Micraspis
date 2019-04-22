@@ -24,12 +24,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.StateComponentImpl#getIncomings <em>Incomings</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.StateComponentImpl#getOutgoings <em>Outgoings</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.StateComponentImpl#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -232,7 +232,7 @@ public abstract class StateComponentImpl extends ComponentImpl implements StateC
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

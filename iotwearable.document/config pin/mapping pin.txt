@@ -1,0 +1,11 @@
+D0 = GPIO 16; // Use only numbers i.e “16”
+D1 = GPIO 5;
+D2 = GPIO 4;
+D3 = GPIO 0;
+D4 = GPIO 2;
+D5 = GPIO 14;
+D6 = GPIO 12;
+D7 = GPIO 13;
+D8 = GPIO 15;
+D9 = GPIO 3;
+D10 = GPIO 1;
