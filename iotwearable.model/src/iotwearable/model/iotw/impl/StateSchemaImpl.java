@@ -22,11 +22,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.StateSchemaImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.StateSchemaImpl#getConnnections <em>Connnections</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

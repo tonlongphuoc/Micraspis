@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.Connection#getBendpoints <em>Bendpoints</em>}</li>
  *   <li>{@link iotwearable.model.iotw.Connection#getRouterKind <em>Router Kind</em>}</li>
@@ -24,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link iotwearable.model.iotw.Connection#getLabel <em>Label</em>}</li>
  *   <li>{@link iotwearable.model.iotw.Connection#getStateSchema <em>State Schema</em>}</li>
  * </ul>
+ * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getConnection()
  * @model

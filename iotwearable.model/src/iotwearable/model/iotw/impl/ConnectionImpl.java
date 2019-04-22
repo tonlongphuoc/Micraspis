@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getBendpoints <em>Bendpoints</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getRouterKind <em>Router Kind</em>}</li>
@@ -36,6 +35,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ConnectionImpl#getStateSchema <em>State Schema</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -529,7 +529,7 @@ public class ConnectionImpl extends MinimalEObjectImpl.Container implements Conn
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (bendpoints: ");
 		result.append(bendpoints);
 		result.append(", routerKind: ");

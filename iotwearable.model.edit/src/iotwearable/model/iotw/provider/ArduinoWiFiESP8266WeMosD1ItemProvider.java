@@ -464,7 +464,7 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 			getString("_UI_ArduinoWiFiESP8266WeMosD1_type") :
 			getString("_UI_ArduinoWiFiESP8266WeMosD1_type") + " " + label;
 	}
-
+	
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

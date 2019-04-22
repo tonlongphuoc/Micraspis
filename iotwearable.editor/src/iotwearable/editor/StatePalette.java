@@ -29,7 +29,7 @@ public class StatePalette extends PaletteRoot {
 	}
 
 	private void addEntry() {
-		CreationToolEntry _frame = new CombinedTemplateCreationEntry("Frame", "Frame",
+		CreationToolEntry _frame = new CombinedTemplateCreationEntry("State", "State",
 				new StateFrameFactory(),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/frame.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/frame.png"));
@@ -47,12 +47,12 @@ public class StatePalette extends PaletteRoot {
 				ImageDescriptor.createFromFile(this.getClass(),"icons/endpoint.png"));
 
 		ConnectionCreationToolEntry _link = new ConnectionCreationToolEntry(
-				"StateFlow", "StateFlow", new StateFlowFactory(),
+				"Internal Flow", "Internal Flow", new StateFlowFactory(),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/link.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/link.png"));
 		
 		ConnectionCreationToolEntry _linkDashed = new ConnectionCreationToolEntry(
-				"Outside Flow", "Outside Flow", new OutsideFlowFactory(),
+				"External Flow", "External Flow", new OutsideFlowFactory(),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/linkDashed.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/linkDashed.png"));
 

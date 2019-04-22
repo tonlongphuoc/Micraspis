@@ -17,10 +17,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.StateFrameImpl#getContent <em>Content</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -154,7 +154,7 @@ public class StateFrameImpl extends StateComponentImpl implements StateFrame {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (content: ");
 		result.append(content);
 		result.append(')');

@@ -10,10 +10,10 @@ package iotwearable.model.iotw;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.Button#getPin1 <em>Pin1</em>}</li>
  * </ul>
+ * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getButton()
  * @model

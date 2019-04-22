@@ -9,18 +9,17 @@ import iotwearable.model.iotw.IotwPackage;
 import iotwearable.model.iotw.Pin;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model object '<em><b>Arduino
- * Wi Fi ESP8266 We Mos D1</b></em>'. <!-- end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Arduino Wi Fi ESP8266 We Mos D1</b></em>'.
+ * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinA0 <em>Pin A0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD0 <em>Pin D0</em>}</li>
@@ -40,13 +39,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getGateway <em>Gateway</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getSubnet <em>Subnet</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
 public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements ArduinoWiFiESP8266WeMosD1 {
 	/**
 	 * The default value of the '{@link #getPinA0() <em>Pin A0</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinA0()
 	 * @generated
 	 * @ordered
@@ -54,9 +55,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_A0_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "A0,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinA0() <em>Pin A0</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinA0() <em>Pin A0</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinA0()
 	 * @generated
 	 * @ordered
@@ -65,7 +66,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD0() <em>Pin D0</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD0()
 	 * @generated
 	 * @ordered
@@ -73,9 +75,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D0_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D0,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD0() <em>Pin D0</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD0() <em>Pin D0</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD0()
 	 * @generated
 	 * @ordered
@@ -84,7 +86,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD1() <em>Pin D1</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD1()
 	 * @generated
 	 * @ordered
@@ -92,9 +95,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D1_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D1,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD1() <em>Pin D1</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD1() <em>Pin D1</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD1()
 	 * @generated
 	 * @ordered
@@ -103,7 +106,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD2() <em>Pin D2</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD2()
 	 * @generated
 	 * @ordered
@@ -111,9 +115,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D2_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D2,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD2() <em>Pin D2</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD2() <em>Pin D2</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD2()
 	 * @generated
 	 * @ordered
@@ -122,7 +126,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD3() <em>Pin D3</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD3()
 	 * @generated
 	 * @ordered
@@ -130,9 +135,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D3_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D3,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD3() <em>Pin D3</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD3() <em>Pin D3</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD3()
 	 * @generated
 	 * @ordered
@@ -141,7 +146,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD4() <em>Pin D4</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD4()
 	 * @generated
 	 * @ordered
@@ -149,9 +155,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D4_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D4,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD4() <em>Pin D4</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD4() <em>Pin D4</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD4()
 	 * @generated
 	 * @ordered
@@ -160,7 +166,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD5() <em>Pin D5</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD5()
 	 * @generated
 	 * @ordered
@@ -168,9 +175,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D5_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D5,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD5() <em>Pin D5</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD5() <em>Pin D5</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD5()
 	 * @generated
 	 * @ordered
@@ -179,7 +186,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD6() <em>Pin D6</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD6()
 	 * @generated
 	 * @ordered
@@ -187,9 +195,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D6_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D6,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD6() <em>Pin D6</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD6() <em>Pin D6</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD6()
 	 * @generated
 	 * @ordered
@@ -198,7 +206,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD7() <em>Pin D7</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD7()
 	 * @generated
 	 * @ordered
@@ -206,9 +215,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D7_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D7,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD7() <em>Pin D7</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD7() <em>Pin D7</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD7()
 	 * @generated
 	 * @ordered
@@ -217,7 +226,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 
 	/**
 	 * The default value of the '{@link #getPinD8() <em>Pin D8</em>}' attribute.
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD8()
 	 * @generated
 	 * @ordered
@@ -225,9 +235,9 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected static final Pin PIN_D8_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D8,IO");
 
 	/**
-	 * The cached value of the '{@link #getPinD8() <em>Pin D8</em>}' attribute. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getPinD8() <em>Pin D8</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #getPinD8()
 	 * @generated
 	 * @ordered
@@ -375,17 +385,17 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected String subnet = SUBNET_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected ArduinoWiFiESP8266WeMosD1Impl() {
 		super();
-		this.name = "Arduino WiFi ESP8266 WeMos D1";
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -394,19 +404,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinA0() {
 		return pinA0;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinA0(Pin newPinA0) {
 		Pin oldPinA0 = pinA0;
 		pinA0 = newPinA0;
@@ -415,19 +425,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD0() {
 		return pinD0;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD0(Pin newPinD0) {
 		Pin oldPinD0 = pinD0;
 		pinD0 = newPinD0;
@@ -436,19 +446,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD1() {
 		return pinD1;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD1(Pin newPinD1) {
 		Pin oldPinD1 = pinD1;
 		pinD1 = newPinD1;
@@ -457,19 +467,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD2() {
 		return pinD2;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD2(Pin newPinD2) {
 		Pin oldPinD2 = pinD2;
 		pinD2 = newPinD2;
@@ -478,19 +488,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD3() {
 		return pinD3;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD3(Pin newPinD3) {
 		Pin oldPinD3 = pinD3;
 		pinD3 = newPinD3;
@@ -499,19 +509,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD4() {
 		return pinD4;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD4(Pin newPinD4) {
 		Pin oldPinD4 = pinD4;
 		pinD4 = newPinD4;
@@ -520,19 +530,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD5() {
 		return pinD5;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD5(Pin newPinD5) {
 		Pin oldPinD5 = pinD5;
 		pinD5 = newPinD5;
@@ -541,19 +551,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD6() {
 		return pinD6;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD6(Pin newPinD6) {
 		Pin oldPinD6 = pinD6;
 		pinD6 = newPinD6;
@@ -562,19 +572,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD7() {
 		return pinD7;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD7(Pin newPinD7) {
 		Pin oldPinD7 = pinD7;
 		pinD7 = newPinD7;
@@ -583,19 +593,19 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Pin getPinD8() {
 		return pinD8;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPinD8(Pin newPinD8) {
 		Pin oldPinD8 = pinD8;
 		pinD8 = newPinD8;
@@ -608,7 +618,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ESP8266WiFiMode getWifiMode() {
 		return wifiMode;
 	}
@@ -618,7 +627,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setWifiMode(ESP8266WiFiMode newWifiMode) {
 		ESP8266WiFiMode oldWifiMode = wifiMode;
 		wifiMode = newWifiMode == null ? WIFI_MODE_EDEFAULT : newWifiMode;
@@ -631,7 +639,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getSsid() {
 		return ssid;
 	}
@@ -641,7 +648,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setSsid(String newSsid) {
 		String oldSsid = ssid;
 		ssid = newSsid;
@@ -654,7 +660,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getPassword() {
 		return password;
 	}
@@ -664,7 +669,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPassword(String newPassword) {
 		String oldPassword = password;
 		password = newPassword;
@@ -677,7 +681,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getIp() {
 		return ip;
 	}
@@ -687,7 +690,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setIp(String newIp) {
 		String oldIp = ip;
 		ip = newIp;
@@ -700,7 +702,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDns() {
 		return dns;
 	}
@@ -710,7 +711,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDns(String newDns) {
 		String oldDns = dns;
 		dns = newDns;
@@ -723,7 +723,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getGateway() {
 		return gateway;
 	}
@@ -733,7 +732,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setGateway(String newGateway) {
 		String oldGateway = gateway;
 		gateway = newGateway;
@@ -746,7 +744,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getSubnet() {
 		return subnet;
 	}
@@ -756,7 +753,6 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setSubnet(String newSubnet) {
 		String oldSubnet = subnet;
 		subnet = newSubnet;
@@ -765,7 +761,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -810,7 +807,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -872,7 +870,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -934,7 +933,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -979,14 +979,15 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (pinA0: ");
 		result.append(pinA0);
 		result.append(", pinD0: ");
@@ -1025,47 +1026,4 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 		return result.toString();
 	}
 
-	@Override
-	public EList<Pin> getPins() {
-		EList<Pin> pins = new BasicEList<Pin>();
-		pins.add(pinA0);
-		pins.add(pinD0);
-		pins.add(pinD1);
-		pins.add(pinD2);
-		pins.add(pinD3);
-		pins.add(pinD4);
-		pins.add(pinD5);
-		pins.add(pinD6);
-		pins.add(pinD7);
-		pins.add(pinD8);
-		return pins;
-	}
-
-	@Override
-	public void modifyPin(Pin pin) {
-		if (pin == null) {
-			return;
-		}
-		if (pin.getName().equals(pinA0.getName())) {
-			setPinA0(pin);
-		} else if (pin.getName().equals(pinD0.getName())) {
-			setPinD0(pin);
-		} else if (pin.getName().equals(pinD1.getName())) {
-			setPinD1(pin);
-		} else if (pin.getName().equals(pinD2.getName())) {
-			setPinD2(pin);
-		} else if (pin.getName().equals(pinD3.getName())) {
-			setPinD3(pin);
-		} else if (pin.getName().equals(pinD4.getName())) {
-			setPinD4(pin);
-		} else if (pin.getName().equals(pinD5.getName())) {
-			setPinD5(pin);
-		} else if (pin.getName().equals(pinD6.getName())) {
-			setPinD6(pin);
-		} else if (pin.getName().equals(pinD7.getName())) {
-			setPinD7(pin);
-		} else if (pin.getName().equals(pinD8.getName())) {
-			setPinD8(pin);
-		}
-	}
-} // ArduinoWiFiESP8266WeMosD1Impl
+} //ArduinoWiFiESP8266WeMosD1Impl
