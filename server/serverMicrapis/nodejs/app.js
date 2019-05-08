@@ -35,7 +35,44 @@ app.get('/', (req, res) => {
         res.send(result);
     }
 })
+app.get('/listPatient', (req, res) => {
+    
+    var result = 
+       {
+           "Emergency" : 3,
+            "Fever": 2,
+            "Incubation": 1,
+            "Recovery": 4
+        };
 
+        console.log(result);
+        res.send(result);
+    
+})
+app.get('/Fever', (req, res) => {
+    var result = [4,5];
+        console.log(result);
+        res.send(result);
+    
+})
+app.get('/Incubation', (req, res) => {
+    var result = [6];
+        console.log(result);
+        res.send(result);
+    
+})
+app.get('/Recovery', (req, res) => {
+    var result = [7, 8, 9, 10];
+        console.log(result);
+        res.send(result);
+    
+})
+app.get('/Emergency', (req, res) => {
+    var result = [1, 2, 3];
+        console.log(result);
+        res.send(result);
+    
+})
 app.post('/', function (req, res) {
     var temp = parseInt(req.body);
     var array = getInfo.ReadFile().Status;
