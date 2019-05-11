@@ -142,7 +142,8 @@ public class StateSchemaAnalyzer {
 			method += _command + "\n";
 		}
 		else{
-			method = analyzeUndifineCommand(method, command.trim());
+			//method = analyzeUndifineCommand(method, command.trim());
+			method += "//" + command +"\n"; 
 		}
 		return method;
 	}
@@ -163,7 +164,6 @@ public class StateSchemaAnalyzer {
 			else{
 				conditionToSetStatus  += " && _" + name+"Status == 1";
 			}
-
 		}
 		else{
 			method += "//Not understand: " + command.trim()+"\n";
