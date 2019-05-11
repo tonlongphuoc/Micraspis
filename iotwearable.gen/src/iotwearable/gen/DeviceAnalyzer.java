@@ -23,6 +23,14 @@ public class DeviceAnalyzer {
 	 * @param codeWriter
 	 */
 	public void analyze(Mainboard mainboard, CodeWriter codeWriter) {
+		
+		DeviceCodeCreationEngine mainboardCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);	
+		codeWriter.write(mainboardCodeCreationEngine.createDefine(), CodeWriter.defineTag);
+		codeWriter.write(mainboardCodeCreationEngine.createInitSetup(), CodeWriter.setupTag);
+		codeWriter.write(mainboardCodeCreationEngine.createInitLoop(), CodeWriter.loopTag);
+		codeWriter.write(mainboardCodeCreationEngine.createPrototype(), CodeWriter.prototypeTag);
+		codeWriter.write(mainboardCodeCreationEngine.createMethodImpl(), CodeWriter.implTag);
+		
 		for (Device device : mainboard.getDevices()) {
 			DeviceCodeCreationEngine codeCreationEngine = CodeCreationEngineFactory.create(device);
 			String include = codeCreationEngine.createInclude();

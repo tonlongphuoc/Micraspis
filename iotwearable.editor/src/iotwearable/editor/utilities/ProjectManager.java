@@ -1,7 +1,7 @@
 package iotwearable.editor.utilities;
 
-import iotwearable.gen.cce.device.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.ArduinoUNOR3;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.StateSchema;
 import iotwearable.utilities.FileUtils;
 

@@ -2,6 +2,7 @@ package iotwearable.gen.comanalyzer;
 
 import iotwearable.gen.cce.device.CodeCreationEngineFactory;
 import iotwearable.gen.cce.device.DeviceCodeCreationEngine;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Device;
 import iotwearable.model.iotw.I2CLCD;
@@ -19,12 +20,13 @@ import java.util.LinkedList;
  */
 public class DefinedCommandParser {
 	private final String keywords = "Show|Display|button pressed"
-			+ "|Hidden|Blink|Beep|push|Delay|times|received|send";
+			+ "|Hidden|Blink|Beep|push|Delay|times|received|send|get from url"
+			+ "|post to url|with data|begin connecting";
 	private LexicalAnalyzer lexer = new LexicalAnalyzer();
 	public DefinedCommandParser() {
 		lexer.tokenizer.add(keywords, TokenType.keyword);
 		lexer.tokenizer.add("[0-9]+", TokenType.integer_literal);
-		lexer.tokenizer.add("\\\".*\\\"", TokenType.string_literal);
+		lexer.tokenizer.add("\\\"(\\\\.|[^\"\\\\])*\\\"", TokenType.string_literal);
 		lexer.tokenizer.add("\\\'[a_zA_Z]\\\'", TokenType.character_literal);
 		lexer.tokenizer.add("\\{|\\}", TokenType.separator);
 		lexer.tokenizer.add("\\+|\\-|\\*|\\/|\\=|\\:", TokenType.operator);
@@ -52,44 +54,73 @@ public class DefinedCommandParser {
 							}
 						}
 					}
-					if(syntax.equals("<String> button pressed")){
+					else if(syntax.equals("<String> button pressed")){
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof Keypad4x4){
 								device = _device;
 							}
 						}
 					}
-					if(syntax.equals("<id> push")){
+					else if(syntax.equals("<id> push")){
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof Button){
 								device = _device;
 							}
 						}
 					}
-					if(syntax.equals("Delay <integer>")){
+					else if(syntax.equals("Delay <integer>")){
 						return "delay("+lexer.getTokens().get(1).instance+");";
 					}
-					if(syntax.equals("<String> received"))
+					else if(syntax.equals("<String> received"))
 					{
+						if(mainboard instanceof ArduinoWiFiESP8266WeMosD1) {
+							codeCreationEngine = CodeCreationEngineFactory.create(mainboard);
+							if(codeCreationEngine != null){
+								result = codeCreationEngine.createFromCommand(syntax, lexer.getTokens());
+								return result;
+							}
+						}
+						
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof WifiESP8266){
 								device = _device;
 							}
 						}
 					}
-					if(syntax.equals("<String> send"))
+					else if(syntax.equals("<String> send"))
 					{
+						if(mainboard instanceof ArduinoWiFiESP8266WeMosD1) {
+							codeCreationEngine = CodeCreationEngineFactory.create(mainboard);
+							if(codeCreationEngine != null){
+								result = codeCreationEngine.createFromCommand(syntax, lexer.getTokens());
+								return result;
+							}
+						}
+						
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof WifiESP8266){
 								device = _device;
 							}
 						}
 					}
-					if(syntax.equals("<id> : Display") || syntax.equals("<id> : Hidden"))
+					else if(syntax.equals("<id> : Display") || syntax.equals("<id> : Hidden"))
 					{
+						
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof LED){
 								device = _device;
+							}
+						}
+					}
+					else if(syntax.equals("begin connecting")
+							|| syntax.equals("get from url <String>")
+							|| syntax.equals("post to url <String> with data <String>"))
+					{
+						if(mainboard instanceof ArduinoWiFiESP8266WeMosD1) {
+							codeCreationEngine = CodeCreationEngineFactory.create(mainboard);
+							if(codeCreationEngine != null){
+								result = codeCreationEngine.createFromCommand(syntax, lexer.getTokens());
+								return result;
 							}
 						}
 					}
