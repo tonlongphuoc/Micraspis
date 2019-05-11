@@ -10,6 +10,11 @@ public enum DeviceLibrary {
 	LiquidCrystal_I2C,
 	SoftwareSerial,
 	SerialCommand,
+	SocketIOClient,
 	ESP8266WiFi,
-	SocketIOClient
+	ESP8266WiFiMulti,
+	ESP8266HTTPClient,
+	WiFiClient,
+	OneWire,
+	DallasTemperature
 }
