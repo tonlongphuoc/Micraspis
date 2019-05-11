@@ -111,6 +111,31 @@
         <genParameters ecoreParameter="iotw.ecore#//Mainboard/findPin/pin"/>
       </genOperations>
     </genClasses>
+    <genClasses ecoreClass="iotw.ecore#//ArduinoWiFiESP8266WeMosD1">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinA0"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD0"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD5"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD6"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD7"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD8"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD9"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD10"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD11"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD12"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD13"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/wifiMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ssid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/password"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/dns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/gateway"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/subnet"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/baud"/>
+    </genClasses>
     <genClasses ecoreClass="iotw.ecore#//ArduinoUNOR3">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pin0"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pin1"/>
@@ -132,25 +157,6 @@
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pinA3"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pinA4"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoUNOR3/pinA5"/>
-    </genClasses>
-    <genClasses ecoreClass="iotw.ecore#//ArduinoWiFiESP8266WeMosD1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinA0"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD0"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD2"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD3"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD4"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD5"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD6"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD7"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD8"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/wifiMode"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ssid"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/password"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ip"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/dns"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/gateway"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/subnet"/>
     </genClasses>
     <genClasses ecoreClass="iotw.ecore#//Keypad4x4">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Keypad4x4/keys"/>

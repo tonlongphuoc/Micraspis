@@ -47,7 +47,7 @@ public class IotwSwitch<T> extends Switch<T> {
 	 * Checks whether this is a switch for the given package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @parameter ePackage the package in question.
+	 * @param ePackage the package in question.
 	 * @return whether this is a switch for the given package.
 	 * @generated
 	 */
@@ -138,17 +138,17 @@ public class IotwSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case IotwPackage.ARDUINO_UNOR3: {
-				ArduinoUNOR3 arduinoUNOR3 = (ArduinoUNOR3)theEObject;
-				T result = caseArduinoUNOR3(arduinoUNOR3);
-				if (result == null) result = caseMainboard(arduinoUNOR3);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1: {
 				ArduinoWiFiESP8266WeMosD1 arduinoWiFiESP8266WeMosD1 = (ArduinoWiFiESP8266WeMosD1)theEObject;
 				T result = caseArduinoWiFiESP8266WeMosD1(arduinoWiFiESP8266WeMosD1);
 				if (result == null) result = caseMainboard(arduinoWiFiESP8266WeMosD1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IotwPackage.ARDUINO_UNOR3: {
+				ArduinoUNOR3 arduinoUNOR3 = (ArduinoUNOR3)theEObject;
+				T result = caseArduinoUNOR3(arduinoUNOR3);
+				if (result == null) result = caseMainboard(arduinoUNOR3);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

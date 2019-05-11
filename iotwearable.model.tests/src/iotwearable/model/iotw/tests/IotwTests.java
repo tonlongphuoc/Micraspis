@@ -31,8 +31,8 @@ public class IotwTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new IotwTests("iotw Tests");
-		suite.addTestSuite(ArduinoUNOR3Test.class);
 		suite.addTestSuite(ArduinoWiFiESP8266WeMosD1Test.class);
+		suite.addTestSuite(ArduinoUNOR3Test.class);
 		suite.addTestSuite(Keypad4x4Test.class);
 		suite.addTestSuite(ButtonTest.class);
 		suite.addTestSuite(LEDTest.class);

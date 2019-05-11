@@ -326,7 +326,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link IotwPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -340,7 +340,8 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		if (isInited) return (IotwPackage)EPackage.Registry.INSTANCE.getEPackage(IotwPackage.eNS_URI);
 
 		// Obtain or create and register package
-		IotwPackageImpl theIotwPackage = (IotwPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IotwPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IotwPackageImpl());
+		Object registeredIotwPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		IotwPackageImpl theIotwPackage = registeredIotwPackage instanceof IotwPackageImpl ? (IotwPackageImpl)registeredIotwPackage : new IotwPackageImpl();
 
 		isInited = true;
 
@@ -353,7 +354,6 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		// Mark meta-data to indicate it can't be changed
 		theIotwPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(IotwPackage.eNS_URI, theIotwPackage);
 		return theIotwPackage;
@@ -805,7 +805,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_WifiMode() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD9() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(10);
 	}
 
@@ -815,7 +815,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_Ssid() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD10() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(11);
 	}
 
@@ -825,7 +825,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_Password() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD11() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(12);
 	}
 
@@ -835,7 +835,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_Ip() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD12() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(13);
 	}
 
@@ -845,7 +845,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_Dns() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_PinD13() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(14);
 	}
 
@@ -855,7 +855,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_Gateway() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_WifiMode() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(15);
 	}
 
@@ -865,8 +865,68 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArduinoWiFiESP8266WeMosD1_Subnet() {
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Ssid() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Password() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Ip() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Dns() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Gateway() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Subnet() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(21);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getArduinoWiFiESP8266WeMosD1_Baud() {
+		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(22);
 	}
 
 	/**
@@ -2035,6 +2095,31 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		createEOperation(mainboardEClass, MAINBOARD___MODIFY_PIN__PIN);
 		createEOperation(mainboardEClass, MAINBOARD___FIND_PIN__PIN);
 
+		arduinoWiFiESP8266WeMosD1EClass = createEClass(ARDUINO_WI_FI_ESP8266_WE_MOS_D1);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET);
+		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__BAUD);
+
 		arduinoUNOR3EClass = createEClass(ARDUINO_UNOR3);
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN0);
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN1);
@@ -2056,25 +2141,6 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN_A3);
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN_A4);
 		createEAttribute(arduinoUNOR3EClass, ARDUINO_UNOR3__PIN_A5);
-
-		arduinoWiFiESP8266WeMosD1EClass = createEClass(ARDUINO_WI_FI_ESP8266_WE_MOS_D1);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY);
-		createEAttribute(arduinoWiFiESP8266WeMosD1EClass, ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET);
 
 		keypad4x4EClass = createEClass(KEYPAD4X4);
 		createEAttribute(keypad4x4EClass, KEYPAD4X4__KEYS);
@@ -2210,8 +2276,8 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		inputDeviceEClass.getESuperTypes().add(this.getIODevice());
 		outputDeviceEClass.getESuperTypes().add(this.getIODevice());
 		connectivityEClass.getESuperTypes().add(this.getDevice());
-		arduinoUNOR3EClass.getESuperTypes().add(this.getMainboard());
 		arduinoWiFiESP8266WeMosD1EClass.getESuperTypes().add(this.getMainboard());
+		arduinoUNOR3EClass.getESuperTypes().add(this.getMainboard());
 		keypad4x4EClass.getESuperTypes().add(this.getInputDevice());
 		buttonEClass.getESuperTypes().add(this.getInputDevice());
 		ledEClass.getESuperTypes().add(this.getOutputDevice());
@@ -2286,6 +2352,31 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		op = initEOperation(getMainboard__FindPin__Pin(), this.getPin(), "findPin", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, this.getPin(), "pin", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEClass(arduinoWiFiESP8266WeMosD1EClass, ArduinoWiFiESP8266WeMosD1.class, "ArduinoWiFiESP8266WeMosD1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinA0(), this.getPin(), "pinA0", "A0,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD0(), this.getPin(), "pinD0", "D0,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD1(), this.getPin(), "pinD1", "D1,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD2(), this.getPin(), "pinD2", "D2,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD3(), this.getPin(), "pinD3", "D3,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD4(), this.getPin(), "pinD4", "D4,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD5(), this.getPin(), "pinD5", "D5,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD6(), this.getPin(), "pinD6", "D6,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD7(), this.getPin(), "pinD7", "D7,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD8(), this.getPin(), "pinD8", "D8,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD9(), this.getPin(), "pinD9", "D9,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD10(), this.getPin(), "pinD10", "D10,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD11(), this.getPin(), "pinD11", "D11,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD12(), this.getPin(), "pinD12", "D12,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD13(), this.getPin(), "pinD13", "D13,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_WifiMode(), this.getESP8266WiFiMode(), "wifiMode", "WIFI_OFF", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Ssid(), ecorePackage.getEString(), "ssid", null, 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Password(), ecorePackage.getEString(), "password", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Ip(), ecorePackage.getEString(), "ip", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Dns(), ecorePackage.getEString(), "dns", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Gateway(), ecorePackage.getEString(), "gateway", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Subnet(), ecorePackage.getEString(), "subnet", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArduinoWiFiESP8266WeMosD1_Baud(), ecorePackage.getEInt(), "baud", "19200", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(arduinoUNOR3EClass, ArduinoUNOR3.class, "ArduinoUNOR3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArduinoUNOR3_Pin0(), this.getPin(), "pin0", "0,IO", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArduinoUNOR3_Pin1(), this.getPin(), "pin1", "1,IO", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2307,25 +2398,6 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		initEAttribute(getArduinoUNOR3_PinA3(), this.getPin(), "pinA3", "A3,Input", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArduinoUNOR3_PinA4(), this.getPin(), "pinA4", "A4,Input", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getArduinoUNOR3_PinA5(), this.getPin(), "pinA5", "A5,Input", 0, 1, ArduinoUNOR3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(arduinoWiFiESP8266WeMosD1EClass, ArduinoWiFiESP8266WeMosD1.class, "ArduinoWiFiESP8266WeMosD1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinA0(), this.getPin(), "pinA0", "A0,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD0(), this.getPin(), "pinD0", "D0,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD1(), this.getPin(), "pinD1", "D1,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD2(), this.getPin(), "pinD2", "D2,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD3(), this.getPin(), "pinD3", "D3,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD4(), this.getPin(), "pinD4", "D4,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD5(), this.getPin(), "pinD5", "D5,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD6(), this.getPin(), "pinD6", "D6,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD7(), this.getPin(), "pinD7", "D7,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_PinD8(), this.getPin(), "pinD8", "D8,IO", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_WifiMode(), this.getESP8266WiFiMode(), "wifiMode", "WIFI_OFF", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_Ssid(), ecorePackage.getEString(), "ssid", null, 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_Password(), ecorePackage.getEString(), "password", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_Ip(), ecorePackage.getEString(), "ip", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_Dns(), ecorePackage.getEString(), "dns", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_Gateway(), ecorePackage.getEString(), "gateway", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getArduinoWiFiESP8266WeMosD1_Subnet(), ecorePackage.getEString(), "subnet", "", 0, 1, ArduinoWiFiESP8266WeMosD1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(keypad4x4EClass, Keypad4x4.class, "Keypad4x4", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getKeypad4x4_Keys(), ecorePackage.getEString(), "keys", "{\'1\',\'2\',\'3\',\'A\'},{\'4\',\'5\',\'6\',\'B\'},{\'7\',\'8\',\'9\',\'C\'},{\'*\',\'0\',\'#\',\'D\'}", 0, 1, Keypad4x4.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -64,6 +64,42 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ArduinoWiFiESP8266WeMosD1" eSuperTypes="#//Mainboard">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA0" eType="#//Pin" defaultValueLiteral="A0,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD0" eType="#//Pin" defaultValueLiteral="D0,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD1" eType="#//Pin" defaultValueLiteral="D1,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD2" eType="#//Pin" defaultValueLiteral="D2,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD3" eType="#//Pin" defaultValueLiteral="D3,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD4" eType="#//Pin" defaultValueLiteral="D4,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD5" eType="#//Pin" defaultValueLiteral="D5,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD6" eType="#//Pin" defaultValueLiteral="D6,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD7" eType="#//Pin" defaultValueLiteral="D7,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD8" eType="#//Pin" defaultValueLiteral="D8,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD9" eType="#//Pin" defaultValueLiteral="D9,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD10" eType="#//Pin"
+        defaultValueLiteral="D10,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD11" eType="#//Pin"
+        defaultValueLiteral="D11,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD12" eType="#//Pin"
+        defaultValueLiteral="D12,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD13" eType="#//Pin"
+        defaultValueLiteral="D13,IO"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wifiMode" eType="#//ESP8266WiFiMode"
+        defaultValueLiteral="WIFI_OFF"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gateway" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subnet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="baud" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="19200"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArduinoUNOR3" eSuperTypes="#//Mainboard">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin0" eType="#//Pin" defaultValueLiteral="0,IO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin1" eType="#//Pin" defaultValueLiteral="1,IO"/>
@@ -85,31 +121,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA3" eType="#//Pin" defaultValueLiteral="A3,Input"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA4" eType="#//Pin" defaultValueLiteral="A4,Input"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA5" eType="#//Pin" defaultValueLiteral="A5,Input"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArduinoWiFiESP8266WeMosD1" eSuperTypes="#//Mainboard">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinA0" eType="#//Pin" defaultValueLiteral="A0,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD0" eType="#//Pin" defaultValueLiteral="D0,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD1" eType="#//Pin" defaultValueLiteral="D1,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD2" eType="#//Pin" defaultValueLiteral="D2,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD3" eType="#//Pin" defaultValueLiteral="D3,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD4" eType="#//Pin" defaultValueLiteral="D4,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD5" eType="#//Pin" defaultValueLiteral="D5,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD6" eType="#//Pin" defaultValueLiteral="D6,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD7" eType="#//Pin" defaultValueLiteral="D7,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD8" eType="#//Pin" defaultValueLiteral="D8,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="wifiMode" eType="#//ESP8266WiFiMode"
-        defaultValueLiteral="WIFI_OFF"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ip" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dns" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="gateway" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subnet" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Keypad4x4" eSuperTypes="#//InputDevice">
     <eOperations name="getButton" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">

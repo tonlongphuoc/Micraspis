@@ -60,8 +60,8 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 		switch (eClass.getClassifierID()) {
 			case IotwPackage.CONNECTION: return createConnection();
 			case IotwPackage.STATE_SCHEMA: return createStateSchema();
-			case IotwPackage.ARDUINO_UNOR3: return createArduinoUNOR3();
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1: return createArduinoWiFiESP8266WeMosD1();
+			case IotwPackage.ARDUINO_UNOR3: return createArduinoUNOR3();
 			case IotwPackage.KEYPAD4X4: return createKeypad4x4();
 			case IotwPackage.BUTTON: return createButton();
 			case IotwPackage.LED: return createLED();

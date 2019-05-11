@@ -10,6 +10,7 @@ package iotwearable.model.iotw;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.Keypad4x4#getKeys <em>Keys</em>}</li>
  *   <li>{@link iotwearable.model.iotw.Keypad4x4#getRows <em>Rows</em>}</li>
@@ -39,7 +40,6 @@ package iotwearable.model.iotw;
  *   <li>{@link iotwearable.model.iotw.Keypad4x4#getNameButtonHash <em>Name Button Hash</em>}</li>
  *   <li>{@link iotwearable.model.iotw.Keypad4x4#getNameButtonAsterisk <em>Name Button Asterisk</em>}</li>
  * </ul>
- * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getKeypad4x4()
  * @model

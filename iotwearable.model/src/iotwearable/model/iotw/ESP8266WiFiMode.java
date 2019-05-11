@@ -144,6 +144,8 @@ public enum ESP8266WiFiMode implements Enumerator {
 	 * Returns the '<em><b>ESP8266 Wi Fi Mode</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ESP8266WiFiMode get(String literal) {
@@ -160,6 +162,8 @@ public enum ESP8266WiFiMode implements Enumerator {
 	 * Returns the '<em><b>ESP8266 Wi Fi Mode</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ESP8266WiFiMode getByName(String name) {
@@ -176,6 +180,8 @@ public enum ESP8266WiFiMode implements Enumerator {
 	 * Returns the '<em><b>ESP8266 Wi Fi Mode</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
 	public static ESP8266WiFiMode get(int value) {
@@ -226,6 +232,7 @@ public enum ESP8266WiFiMode implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 	  return value;
 	}
@@ -235,6 +242,7 @@ public enum ESP8266WiFiMode implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 	  return name;
 	}
@@ -244,6 +252,7 @@ public enum ESP8266WiFiMode implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 	  return literal;
 	}

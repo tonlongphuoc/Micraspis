@@ -523,8 +523,8 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	public void dispose() {
 		if (connectionItemProvider != null) connectionItemProvider.dispose();
 		if (stateSchemaItemProvider != null) stateSchemaItemProvider.dispose();
-		if (arduinoUNOR3ItemProvider != null) arduinoUNOR3ItemProvider.dispose();
 		if (arduinoWiFiESP8266WeMosD1ItemProvider != null) arduinoWiFiESP8266WeMosD1ItemProvider.dispose();
+		if (arduinoUNOR3ItemProvider != null) arduinoUNOR3ItemProvider.dispose();
 		if (keypad4x4ItemProvider != null) keypad4x4ItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
 		if (ledItemProvider != null) ledItemProvider.dispose();
