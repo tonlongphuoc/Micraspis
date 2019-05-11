@@ -143,11 +143,12 @@ public class StateSchemaAnalyzer {
 		}
 		else{
 			//method = analyzeUndifineCommand(method, command.trim());
-			method += "//" + command +"\n"; 
+			method += "//TODO Implement method \"" + command.trim() +"\" \n";
 		}
 		return method;
 	}
 
+	@SuppressWarnings("unused")
 	private String analyzeUndifineCommand(String method, String command){
 		UndefinedCommandParser undefinedCommandParser = new UndefinedCommandParser();
 		String name = undefinedCommandParser.parseToName(command.trim());
@@ -204,8 +205,11 @@ public class StateSchemaAnalyzer {
 									//									String resultSub = "//Event: " + conn.getLabel().trim()+"\n"
 									//											+"state"+ ((StateFrame)conn.getTarget()).getName()+"();\n";
 									//									codeWriter.write(resultSub,"//<case"+component.getId()+">");
-									GenLogger.addLog("Event from " + ((StateFrame)conn.getSource()).getName()
-											+ " to " + ((StateFrame)conn.getTarget()).getName() + " Not defined");
+									String resultSub = "//TODO Implement method \"" +conn.getLabel().trim() +"\" \n";
+									codeWriter.write(resultSub, "//<case"+component.getId()+">");
+									/*GenLogger.addLog("Event from " + ((StateFrame)conn.getSource()).getName()
+											+ " to " + ((StateFrame)conn.getTarget()).getName() + " Not defined");*/
+									
 								}
 
 							}
