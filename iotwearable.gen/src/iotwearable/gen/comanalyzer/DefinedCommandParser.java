@@ -73,13 +73,6 @@ public class DefinedCommandParser {
 					}
 					else if(syntax.equals("<String> received"))
 					{
-						if(mainboard instanceof ArduinoWiFiESP8266WeMosD1) {
-							codeCreationEngine = CodeCreationEngineFactory.create(mainboard);
-							if(codeCreationEngine != null){
-								result = codeCreationEngine.createFromCommand(syntax, lexer.getTokens());
-								return result;
-							}
-						}
 						
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof WifiESP8266){
@@ -89,13 +82,6 @@ public class DefinedCommandParser {
 					}
 					else if(syntax.equals("<String> send"))
 					{
-						if(mainboard instanceof ArduinoWiFiESP8266WeMosD1) {
-							codeCreationEngine = CodeCreationEngineFactory.create(mainboard);
-							if(codeCreationEngine != null){
-								result = codeCreationEngine.createFromCommand(syntax, lexer.getTokens());
-								return result;
-							}
-						}
 						
 						for(Device _device: mainboard.getDevices()){
 							if(_device instanceof WifiESP8266){
