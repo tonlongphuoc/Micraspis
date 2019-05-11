@@ -60,6 +60,8 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 			addPinD11PropertyDescriptor(object);
 			addPinD12PropertyDescriptor(object);
 			addPinD13PropertyDescriptor(object);
+			addPinD14PropertyDescriptor(object);
+			addPinD15PropertyDescriptor(object);
 			addWifiModePropertyDescriptor(object);
 			addSsidPropertyDescriptor(object);
 			addPasswordPropertyDescriptor(object);
@@ -403,6 +405,50 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Pin D14 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPinD14PropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_pinD14_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_pinD14_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Pin D15 feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPinD15PropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ArduinoWiFiESP8266WeMosD1_pinD15_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ArduinoWiFiESP8266WeMosD1_pinD15_feature", "_UI_ArduinoWiFiESP8266WeMosD1_type"),
+				 IotwPackage.Literals.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Wifi Mode feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -631,6 +677,8 @@ public class ArduinoWiFiESP8266WeMosD1ItemProvider extends MainboardItemProvider
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14:
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID:
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD:

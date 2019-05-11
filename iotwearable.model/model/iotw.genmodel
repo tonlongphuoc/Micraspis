@@ -127,6 +127,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD11"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD12"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD13"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD14"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/pinD15"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/wifiMode"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/ssid"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//ArduinoWiFiESP8266WeMosD1/password"/>
