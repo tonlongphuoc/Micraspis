@@ -1584,10 +1584,10 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 			setPinD13(pin);
 		}
 		else if(pin.getName().equals(pinD14.getName())){
-			setPinD12(pin);
+			setPinD14(pin);
 		}
 		else if(pin.getName().equals(pinD15.getName())){
-			setPinD13(pin);
+			setPinD15(pin);
 		}
 	}
 
