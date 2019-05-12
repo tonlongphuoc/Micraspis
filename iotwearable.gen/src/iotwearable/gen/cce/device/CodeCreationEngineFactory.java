@@ -1,5 +1,7 @@
 package iotwearable.gen.cce.device;
 
+import org.omg.IOP.Codec;
+
 import iotwearable.model.iotw.ArduinoUNOR3;
 import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.BluetoothHC06;
@@ -8,6 +10,7 @@ import iotwearable.model.iotw.Buzzer;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
 import iotwearable.model.iotw.LED;
+import iotwearable.model.iotw.LM35;
 import iotwearable.model.iotw.WifiESP8266;
 
 public class CodeCreationEngineFactory {
@@ -31,6 +34,9 @@ public class CodeCreationEngineFactory {
 		else if(component instanceof Button)
 		{
 			codeCreationEngine = new PushButtonCodeCreationEngine((Button) component);
+		}
+		else if(component instanceof LM35) {
+			codeCreationEngine = new LM35CodeCreationEngine((LM35) component);
 		}
 		// area connectivity
 		else if(component instanceof BluetoothHC06)

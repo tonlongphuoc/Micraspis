@@ -24,12 +24,30 @@ public class DeviceAnalyzer {
 	 */
 	public void analyze(Mainboard mainboard, CodeWriter codeWriter) {
 		
-		DeviceCodeCreationEngine mainboardCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);	
-		codeWriter.write(mainboardCodeCreationEngine.createDefine(), CodeWriter.defineTag);
-		codeWriter.write(mainboardCodeCreationEngine.createInitSetup(), CodeWriter.setupTag);
-		codeWriter.write(mainboardCodeCreationEngine.createInitLoop(), CodeWriter.loopTag);
-		codeWriter.write(mainboardCodeCreationEngine.createPrototype(), CodeWriter.prototypeTag);
-		codeWriter.write(mainboardCodeCreationEngine.createMethodImpl(), CodeWriter.implTag);
+		try {
+			DeviceCodeCreationEngine mainboardCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);
+			String include = mainboardCodeCreationEngine.createInclude();
+			if(include.contains("\n")){
+				String[] includes = include.split("\n");
+				for(String _include : includes){
+					if (!codeWriter.getSourceCode().contains(_include)) {
+						codeWriter.write(_include, CodeWriter.includeTag);
+					}
+				}
+			}
+			else{
+				if (!codeWriter.getSourceCode().contains(include)) {
+					codeWriter.write(include, CodeWriter.includeTag);
+				}
+			}
+			codeWriter.write(mainboardCodeCreationEngine.createDefine(), CodeWriter.defineTag);
+			codeWriter.write(mainboardCodeCreationEngine.createInitSetup(), CodeWriter.setupTag);
+			codeWriter.write(mainboardCodeCreationEngine.createInitLoop(), CodeWriter.loopTag);
+			codeWriter.write(mainboardCodeCreationEngine.createPrototype(), CodeWriter.prototypeTag);
+			codeWriter.write(mainboardCodeCreationEngine.createMethodImpl(), CodeWriter.implTag);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		
 		for (Device device : mainboard.getDevices()) {
 			DeviceCodeCreationEngine codeCreationEngine = CodeCreationEngineFactory.create(device);

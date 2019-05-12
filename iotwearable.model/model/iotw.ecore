@@ -180,6 +180,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//InputDevice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin1" eType="#//Pin" defaultValueLiteral="1,IO"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LM35" eSuperTypes="#//InputDevice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin1" eType="#//Pin" defaultValueLiteral="1,IO"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LED" eSuperTypes="#//OutputDevice">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin1" eType="#//Pin" defaultValueLiteral="1,Passive"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pin2" eType="#//Pin" defaultValueLiteral="2,Passive"/>

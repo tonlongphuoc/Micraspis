@@ -8,7 +8,10 @@ import iotwearable.editor.factory.BuzzerFactory;
 import iotwearable.editor.factory.I2CLCDFactory;
 import iotwearable.editor.factory.Keypad4x4Factory;
 import iotwearable.editor.factory.LEDFactory;
+import iotwearable.editor.factory.LM35Factory;
 import iotwearable.editor.factory.WifiESP8266Factory;
+import iotwearable.model.iotw.ArduinoUNOR3;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.BluetoothHC06;
 import iotwearable.model.iotw.Device;
 import iotwearable.model.iotw.I2CLCD;
@@ -30,6 +33,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 	public static final String ID_AddLED = "AddLED";
 	public static final String ID_AddBluetoothHC06 = "AddBluetoothHC06";
 	public static final String ID_AddWifiESP8266 = "AddWifiESP8266";
+	public static final String ID_AddLM35 = "AddML35";
 	public static final String REQUEST = "MainboardContextMenu";
 	public static final boolean EnableBuzzer = true;
 	private ArrayList<String> listPinIO ;
@@ -70,6 +74,10 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 			setId(Id);
 			setText("Add Wifi ESP8266");
 			break;
+		case ID_AddLM35:
+			setId(Id);
+			setText("Add LM35");
+			break;
 		default:
 			throw new IllegalArgumentException("Subkind " + Id + " is not supported.");
 		}
@@ -77,18 +85,36 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 	}
 	private void addListPinIO()
 	{
-		listPinIO.add("2");
-		listPinIO.add("3");
-		listPinIO.add("4");
-		listPinIO.add("5");
-		listPinIO.add("6");
-		listPinIO.add("7");
-		listPinIO.add("8");
-		listPinIO.add("9");
-		listPinIO.add("10");
-		listPinIO.add("11");
-		listPinIO.add("12");
-		listPinIO.add("13");
+		if(mainboard instanceof ArduinoUNOR3) {
+			listPinIO.add("2");
+			listPinIO.add("3");
+			listPinIO.add("4");
+			listPinIO.add("5");
+			listPinIO.add("6");
+			listPinIO.add("7");
+			listPinIO.add("8");
+			listPinIO.add("9");
+			listPinIO.add("10");
+			listPinIO.add("11");
+			listPinIO.add("12");
+			listPinIO.add("13");
+		}
+		else if(mainboard instanceof ArduinoWiFiESP8266WeMosD1) {
+			listPinIO.add("D0");
+			listPinIO.add("D1");
+			listPinIO.add("D2");
+			listPinIO.add("D3");
+			listPinIO.add("D4");
+			listPinIO.add("D5");
+			listPinIO.add("D6");
+			listPinIO.add("D7");
+			listPinIO.add("D8");
+			listPinIO.add("D9");
+			listPinIO.add("D10");
+			listPinIO.add("D11");
+			listPinIO.add("D12");
+			listPinIO.add("D13");
+		}
 
 	}
 	public Request getRequest() {
@@ -124,6 +150,10 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 			tool = new CreationTool((CreationFactory) new WifiESP8266Factory());;
 			editor.getEditDomain().setActiveTool(tool);
 			break;
+		case ID_AddLM35:
+			tool = new CreationTool((CreationFactory) new LM35Factory());
+			editor.getEditDomain().setActiveTool(tool);
+			break;
 		default:
 			break;
 		}
@@ -133,22 +163,26 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 	protected boolean calculateEnabled() {
 		switch (Id) {
 		case ID_AddKeypad4x4:
-			enable = checkCalculateEnabledKeypad4x4();
+			enable = true;//checkCalculateEnabledKeypad4x4();
 			break;
 		case ID_AddLED:
-			enable = checkCalculateEnabledLEDBuzzer();
+			enable = true;//checkCalculateEnabledLEDBuzzer();
 			break;
 		case ID_AddBuzzer:
-			enable = checkCalculateEnabledLEDBuzzer();
+			enable = true;//checkCalculateEnabledLEDBuzzer();
 			break;
 		case ID_AddI2CLCD:
-			enable = checkCalculateEnabledI2CLCD();
+			enable = true;//checkCalculateEnabledI2CLCD();
 			break;
 		case ID_AddBluetoothHC06:
-			enable = checkCalculateEnabledBluetooth();
+			enable = true; //checkCalculateEnabledBluetooth();
 			break;
 		case ID_AddWifiESP8266:
-			enable = checkCalculateEnableWifiESP8266();
+			enable = true;//checkCalculateEnableWifiESP8266();
+			break;
+		case ID_AddLM35:
+			enable = true;
+		default:
 			break;
 		}
 		return enable;

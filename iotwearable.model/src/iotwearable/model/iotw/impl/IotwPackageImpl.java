@@ -212,6 +212,13 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass lm35EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum connectionKindEEnum = null;
 
 	/**
@@ -1875,6 +1882,26 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getLM35() {
+		return lm35EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getLM35_Pin1() {
+		return (EAttribute)lm35EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getConnectionKind() {
 		return connectionKindEEnum;
 	}
@@ -2197,6 +2224,9 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		buttonEClass = createEClass(BUTTON);
 		createEAttribute(buttonEClass, BUTTON__PIN1);
 
+		lm35EClass = createEClass(LM35);
+		createEAttribute(lm35EClass, LM35__PIN1);
+
 		ledEClass = createEClass(LED);
 		createEAttribute(ledEClass, LED__PIN1);
 		createEAttribute(ledEClass, LED__PIN2);
@@ -2302,6 +2332,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		arduinoUNOR3EClass.getESuperTypes().add(this.getMainboard());
 		keypad4x4EClass.getESuperTypes().add(this.getInputDevice());
 		buttonEClass.getESuperTypes().add(this.getInputDevice());
+		lm35EClass.getESuperTypes().add(this.getInputDevice());
 		ledEClass.getESuperTypes().add(this.getOutputDevice());
 		i2CLCDEClass.getESuperTypes().add(this.getOutputDevice());
 		buzzerEClass.getESuperTypes().add(this.getOutputDevice());
@@ -2457,6 +2488,9 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getButton_Pin1(), this.getPin(), "pin1", "1,IO", 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(lm35EClass, iotwearable.model.iotw.LM35.class, "LM35", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLM35_Pin1(), this.getPin(), "pin1", "1,IO", 0, 1, iotwearable.model.iotw.LM35.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ledEClass, iotwearable.model.iotw.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLED_Pin1(), this.getPin(), "pin1", "1,Passive", 0, 1, iotwearable.model.iotw.LED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

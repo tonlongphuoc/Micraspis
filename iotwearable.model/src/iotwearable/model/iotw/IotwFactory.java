@@ -148,6 +148,15 @@ public interface IotwFactory extends EFactory {
 	Button createButton();
 
 	/**
+	 * Returns a new object of class '<em>LM35</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>LM35</em>'.
+	 * @generated
+	 */
+	LM35 createLM35();
+
+	/**
 	 * Returns a new object of class '<em>Buzzer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
