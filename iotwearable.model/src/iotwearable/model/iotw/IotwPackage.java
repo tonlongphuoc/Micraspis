@@ -1826,7 +1826,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getLED()
 	 * @generated
 	 */
-	int LED = 14;
+	int LED = 15;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.StateFrameImpl <em>State Frame</em>}' class.
@@ -1836,7 +1836,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getStateFrame()
 	 * @generated
 	 */
-	int STATE_FRAME = 19;
+	int STATE_FRAME = 20;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.DecisionImpl <em>Decision</em>}' class.
@@ -1846,7 +1846,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getDecision()
 	 * @generated
 	 */
-	int DECISION = 20;
+	int DECISION = 21;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.StartPointImpl <em>Start Point</em>}' class.
@@ -1856,7 +1856,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getStartPoint()
 	 * @generated
 	 */
-	int START_POINT = 21;
+	int START_POINT = 22;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.EndPointImpl <em>End Point</em>}' class.
@@ -1866,7 +1866,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getEndPoint()
 	 * @generated
 	 */
-	int END_POINT = 22;
+	int END_POINT = 23;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.RouterKind <em>Router Kind</em>}' enum.
@@ -1876,7 +1876,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getRouterKind()
 	 * @generated
 	 */
-	int ROUTER_KIND = 24;
+	int ROUTER_KIND = 25;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.WifiMode <em>Wifi Mode</em>}' enum.
@@ -1886,7 +1886,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getWifiMode()
 	 * @generated
 	 */
-	int WIFI_MODE = 25;
+	int WIFI_MODE = 26;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.WifiIDConnection <em>Wifi ID Connection</em>}' enum.
@@ -1896,7 +1896,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getWifiIDConnection()
 	 * @generated
 	 */
-	int WIFI_ID_CONNECTION = 26;
+	int WIFI_ID_CONNECTION = 27;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ListBaud <em>List Baud</em>}' enum.
@@ -1906,7 +1906,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getListBaud()
 	 * @generated
 	 */
-	int LIST_BAUD = 27;
+	int LIST_BAUD = 28;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ListConnectionChannel <em>List Connection Channel</em>}' enum.
@@ -1916,7 +1916,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getListConnectionChannel()
 	 * @generated
 	 */
-	int LIST_CONNECTION_CHANNEL = 28;
+	int LIST_CONNECTION_CHANNEL = 29;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ListProtocol <em>List Protocol</em>}' enum.
@@ -1926,7 +1926,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getListProtocol()
 	 * @generated
 	 */
-	int LIST_PROTOCOL = 29;
+	int LIST_PROTOCOL = 30;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.I2CLCDType <em>I2CLCD Type</em>}' enum.
@@ -1936,7 +1936,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getI2CLCDType()
 	 * @generated
 	 */
-	int I2CLCD_TYPE = 30;
+	int I2CLCD_TYPE = 31;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.ESP8266WiFiMode <em>ESP8266 Wi Fi Mode</em>}' enum.
@@ -1946,7 +1946,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getESP8266WiFiMode()
 	 * @generated
 	 */
-	int ESP8266_WI_FI_MODE = 31;
+	int ESP8266_WI_FI_MODE = 32;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.BuzzerImpl <em>Buzzer</em>}' class.
@@ -1956,7 +1956,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getBuzzer()
 	 * @generated
 	 */
-	int BUZZER = 16;
+	int BUZZER = 17;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.ButtonImpl <em>Button</em>}' class.
@@ -1976,7 +1976,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getBluetoothHC06()
 	 * @generated
 	 */
-	int BLUETOOTH_HC06 = 17;
+	int BLUETOOTH_HC06 = 18;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.WifiESP8266Impl <em>Wifi ESP8266</em>}' class.
@@ -1986,7 +1986,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getWifiESP8266()
 	 * @generated
 	 */
-	int WIFI_ESP8266 = 18;
+	int WIFI_ESP8266 = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2077,6 +2077,106 @@ public interface IotwPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUTTON_OPERATION_COUNT = INPUT_DEVICE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link iotwearable.model.iotw.impl.LM35Impl <em>LM35</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iotwearable.model.iotw.impl.LM35Impl
+	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getLM35()
+	 * @generated
+	 */
+	int LM35 = 14;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35__ID = INPUT_DEVICE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Constraints</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35__CONSTRAINTS = INPUT_DEVICE__CONSTRAINTS;
+
+	/**
+	 * The feature id for the '<em><b>Mainboard</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35__MAINBOARD = INPUT_DEVICE__MAINBOARD;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35__NAME = INPUT_DEVICE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pin1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35__PIN1 = INPUT_DEVICE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>LM35</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35_FEATURE_COUNT = INPUT_DEVICE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Pins</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35___GET_PINS = INPUT_DEVICE___GET_PINS;
+
+	/**
+	 * The operation id for the '<em>Get Pin Connecteds</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35___GET_PIN_CONNECTEDS = INPUT_DEVICE___GET_PIN_CONNECTEDS;
+
+	/**
+	 * The operation id for the '<em>Modify Pin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35___MODIFY_PIN__PIN = INPUT_DEVICE___MODIFY_PIN__PIN;
+
+	/**
+	 * The number of operations of the '<em>LM35</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LM35_OPERATION_COUNT = INPUT_DEVICE_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2185,7 +2285,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getI2CLCD()
 	 * @generated
 	 */
-	int I2CLCD = 15;
+	int I2CLCD = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3041,7 +3141,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getConnectionKind()
 	 * @generated
 	 */
-	int CONNECTION_KIND = 23;
+	int CONNECTION_KIND = 24;
 
 	/**
 	 * The meta object id for the '<em>Rectangle</em>' data type.
@@ -3051,7 +3151,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getRectangle()
 	 * @generated
 	 */
-	int RECTANGLE = 32;
+	int RECTANGLE = 33;
 
 
 	/**
@@ -3062,7 +3162,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getPoint()
 	 * @generated
 	 */
-	int POINT = 33;
+	int POINT = 34;
 
 
 	/**
@@ -3073,7 +3173,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getPin()
 	 * @generated
 	 */
-	int PIN = 34;
+	int PIN = 35;
 
 
 	/**
@@ -4706,6 +4806,27 @@ public interface IotwPackage extends EPackage {
 	EAttribute getButton_Pin1();
 
 	/**
+	 * Returns the meta object for class '{@link iotwearable.model.iotw.LM35 <em>LM35</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>LM35</em>'.
+	 * @see iotwearable.model.iotw.LM35
+	 * @generated
+	 */
+	EClass getLM35();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.LM35#getPin1 <em>Pin1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin1</em>'.
+	 * @see iotwearable.model.iotw.LM35#getPin1()
+	 * @see #getLM35()
+	 * @generated
+	 */
+	EAttribute getLM35_Pin1();
+
+	/**
 	 * Returns the meta object for enum '{@link iotwearable.model.iotw.ConnectionKind <em>Connection Kind</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6156,6 +6277,24 @@ public interface IotwPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BUTTON__PIN1 = eINSTANCE.getButton_Pin1();
+
+		/**
+		 * The meta object literal for the '{@link iotwearable.model.iotw.impl.LM35Impl <em>LM35</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see iotwearable.model.iotw.impl.LM35Impl
+		 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getLM35()
+		 * @generated
+		 */
+		EClass LM35 = eINSTANCE.getLM35();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin1</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LM35__PIN1 = eINSTANCE.getLM35_Pin1();
 
 		/**
 		 * The meta object literal for the '{@link iotwearable.model.iotw.ConnectionKind <em>Connection Kind</em>}' enum.

@@ -172,6 +172,16 @@ public class IotwSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case IotwPackage.LM35: {
+				LM35 lm35 = (LM35)theEObject;
+				T result = caseLM35(lm35);
+				if (result == null) result = caseInputDevice(lm35);
+				if (result == null) result = caseIODevice(lm35);
+				if (result == null) result = caseDevice(lm35);
+				if (result == null) result = caseComponent(lm35);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case IotwPackage.LED: {
 				LED led = (LED)theEObject;
 				T result = caseLED(led);
@@ -583,6 +593,21 @@ public class IotwSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseButton(Button object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>LM35</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>LM35</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLM35(LM35 object) {
 		return null;
 	}
 

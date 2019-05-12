@@ -17,23 +17,23 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	/**
-	 * Creates the default factory implementation. <!-- begin-user-doc --> <!--
+	 * Creates the default factory implementation.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public static IotwFactory init() {
 		try {
-			IotwFactory theIotwFactory = (IotwFactory) EPackage.Registry.INSTANCE.getEFactory(IotwPackage.eNS_URI);
+			IotwFactory theIotwFactory = (IotwFactory)EPackage.Registry.INSTANCE.getEFactory(IotwPackage.eNS_URI);
 			if (theIotwFactory != null) {
 				return theIotwFactory;
 			}
-		} catch (Exception exception) {
+		}
+		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new IotwFactoryImpl();
@@ -51,124 +51,106 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case IotwPackage.CONNECTION:
-			return createConnection();
-		case IotwPackage.STATE_SCHEMA:
-			return createStateSchema();
-		case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1:
-			return createArduinoWiFiESP8266WeMosD1();
-		case IotwPackage.ARDUINO_UNOR3:
-			return createArduinoUNOR3();
-		case IotwPackage.KEYPAD4X4:
-			return createKeypad4x4();
-		case IotwPackage.BUTTON:
-			return createButton();
-		case IotwPackage.LED:
-			return createLED();
-		case IotwPackage.I2CLCD:
-			return createI2CLCD();
-		case IotwPackage.BUZZER:
-			return createBuzzer();
-		case IotwPackage.BLUETOOTH_HC06:
-			return createBluetoothHC06();
-		case IotwPackage.WIFI_ESP8266:
-			return createWifiESP8266();
-		case IotwPackage.STATE_FRAME:
-			return createStateFrame();
-		case IotwPackage.DECISION:
-			return createDecision();
-		case IotwPackage.START_POINT:
-			return createStartPoint();
-		case IotwPackage.END_POINT:
-			return createEndPoint();
-		default:
-			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+			case IotwPackage.CONNECTION: return createConnection();
+			case IotwPackage.STATE_SCHEMA: return createStateSchema();
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1: return createArduinoWiFiESP8266WeMosD1();
+			case IotwPackage.ARDUINO_UNOR3: return createArduinoUNOR3();
+			case IotwPackage.KEYPAD4X4: return createKeypad4x4();
+			case IotwPackage.BUTTON: return createButton();
+			case IotwPackage.LM35: return createLM35();
+			case IotwPackage.LED: return createLED();
+			case IotwPackage.I2CLCD: return createI2CLCD();
+			case IotwPackage.BUZZER: return createBuzzer();
+			case IotwPackage.BLUETOOTH_HC06: return createBluetoothHC06();
+			case IotwPackage.WIFI_ESP8266: return createWifiESP8266();
+			case IotwPackage.STATE_FRAME: return createStateFrame();
+			case IotwPackage.DECISION: return createDecision();
+			case IotwPackage.START_POINT: return createStartPoint();
+			case IotwPackage.END_POINT: return createEndPoint();
+			default:
+				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case IotwPackage.CONNECTION_KIND:
-			return createConnectionKindFromString(eDataType, initialValue);
-		case IotwPackage.ROUTER_KIND:
-			return createRouterKindFromString(eDataType, initialValue);
-		case IotwPackage.WIFI_MODE:
-			return createWifiModeFromString(eDataType, initialValue);
-		case IotwPackage.WIFI_ID_CONNECTION:
-			return createWifiIDConnectionFromString(eDataType, initialValue);
-		case IotwPackage.LIST_BAUD:
-			return createListBaudFromString(eDataType, initialValue);
-		case IotwPackage.LIST_CONNECTION_CHANNEL:
-			return createListConnectionChannelFromString(eDataType, initialValue);
-		case IotwPackage.LIST_PROTOCOL:
-			return createListProtocolFromString(eDataType, initialValue);
-		case IotwPackage.I2CLCD_TYPE:
-			return createI2CLCDTypeFromString(eDataType, initialValue);
-		case IotwPackage.ESP8266_WI_FI_MODE:
-			return createESP8266WiFiModeFromString(eDataType, initialValue);
-		case IotwPackage.RECTANGLE:
-			return createRectangleFromString(eDataType, initialValue);
-		case IotwPackage.POINT:
-			return createPointFromString(eDataType, initialValue);
-		case IotwPackage.PIN:
-			return createPinFromString(eDataType, initialValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case IotwPackage.CONNECTION_KIND:
+				return createConnectionKindFromString(eDataType, initialValue);
+			case IotwPackage.ROUTER_KIND:
+				return createRouterKindFromString(eDataType, initialValue);
+			case IotwPackage.WIFI_MODE:
+				return createWifiModeFromString(eDataType, initialValue);
+			case IotwPackage.WIFI_ID_CONNECTION:
+				return createWifiIDConnectionFromString(eDataType, initialValue);
+			case IotwPackage.LIST_BAUD:
+				return createListBaudFromString(eDataType, initialValue);
+			case IotwPackage.LIST_CONNECTION_CHANNEL:
+				return createListConnectionChannelFromString(eDataType, initialValue);
+			case IotwPackage.LIST_PROTOCOL:
+				return createListProtocolFromString(eDataType, initialValue);
+			case IotwPackage.I2CLCD_TYPE:
+				return createI2CLCDTypeFromString(eDataType, initialValue);
+			case IotwPackage.ESP8266_WI_FI_MODE:
+				return createESP8266WiFiModeFromString(eDataType, initialValue);
+			case IotwPackage.RECTANGLE:
+				return createRectangleFromString(eDataType, initialValue);
+			case IotwPackage.POINT:
+				return createPointFromString(eDataType, initialValue);
+			case IotwPackage.PIN:
+				return createPinFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case IotwPackage.CONNECTION_KIND:
-			return convertConnectionKindToString(eDataType, instanceValue);
-		case IotwPackage.ROUTER_KIND:
-			return convertRouterKindToString(eDataType, instanceValue);
-		case IotwPackage.WIFI_MODE:
-			return convertWifiModeToString(eDataType, instanceValue);
-		case IotwPackage.WIFI_ID_CONNECTION:
-			return convertWifiIDConnectionToString(eDataType, instanceValue);
-		case IotwPackage.LIST_BAUD:
-			return convertListBaudToString(eDataType, instanceValue);
-		case IotwPackage.LIST_CONNECTION_CHANNEL:
-			return convertListConnectionChannelToString(eDataType, instanceValue);
-		case IotwPackage.LIST_PROTOCOL:
-			return convertListProtocolToString(eDataType, instanceValue);
-		case IotwPackage.I2CLCD_TYPE:
-			return convertI2CLCDTypeToString(eDataType, instanceValue);
-		case IotwPackage.ESP8266_WI_FI_MODE:
-			return convertESP8266WiFiModeToString(eDataType, instanceValue);
-		case IotwPackage.RECTANGLE:
-			return convertRectangleToString(eDataType, instanceValue);
-		case IotwPackage.POINT:
-			return convertPointToString(eDataType, instanceValue);
-		case IotwPackage.PIN:
-			return convertPinToString(eDataType, instanceValue);
-		default:
-			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+			case IotwPackage.CONNECTION_KIND:
+				return convertConnectionKindToString(eDataType, instanceValue);
+			case IotwPackage.ROUTER_KIND:
+				return convertRouterKindToString(eDataType, instanceValue);
+			case IotwPackage.WIFI_MODE:
+				return convertWifiModeToString(eDataType, instanceValue);
+			case IotwPackage.WIFI_ID_CONNECTION:
+				return convertWifiIDConnectionToString(eDataType, instanceValue);
+			case IotwPackage.LIST_BAUD:
+				return convertListBaudToString(eDataType, instanceValue);
+			case IotwPackage.LIST_CONNECTION_CHANNEL:
+				return convertListConnectionChannelToString(eDataType, instanceValue);
+			case IotwPackage.LIST_PROTOCOL:
+				return convertListProtocolToString(eDataType, instanceValue);
+			case IotwPackage.I2CLCD_TYPE:
+				return convertI2CLCDTypeToString(eDataType, instanceValue);
+			case IotwPackage.ESP8266_WI_FI_MODE:
+				return convertESP8266WiFiModeToString(eDataType, instanceValue);
+			case IotwPackage.RECTANGLE:
+				return convertRectangleToString(eDataType, instanceValue);
+			case IotwPackage.POINT:
+				return convertPointToString(eDataType, instanceValue);
+			case IotwPackage.PIN:
+				return convertPinToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -179,7 +161,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -190,7 +171,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -201,7 +181,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -212,7 +191,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -223,7 +201,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -234,7 +211,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -245,7 +221,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -256,7 +231,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -267,7 +241,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -278,7 +251,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -289,7 +261,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -300,7 +271,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -311,7 +281,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -321,21 +290,28 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public LM35 createLM35() {
+		LM35Impl lm35 = new LM35Impl();
+		return lm35;
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ConnectionKind createConnectionKindFromString(EDataType eDataType, String initialValue) {
 		ConnectionKind result = ConnectionKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertConnectionKindToString(EDataType eDataType, Object instanceValue) {
@@ -344,20 +320,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public RouterKind createRouterKindFromString(EDataType eDataType, String initialValue) {
 		RouterKind result = RouterKind.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertRouterKindToString(EDataType eDataType, Object instanceValue) {
@@ -366,20 +338,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public WifiMode createWifiModeFromString(EDataType eDataType, String initialValue) {
 		WifiMode result = WifiMode.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertWifiModeToString(EDataType eDataType, Object instanceValue) {
@@ -388,20 +356,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public WifiIDConnection createWifiIDConnectionFromString(EDataType eDataType, String initialValue) {
 		WifiIDConnection result = WifiIDConnection.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertWifiIDConnectionToString(EDataType eDataType, Object instanceValue) {
@@ -410,20 +374,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ListBaud createListBaudFromString(EDataType eDataType, String initialValue) {
 		ListBaud result = ListBaud.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertListBaudToString(EDataType eDataType, Object instanceValue) {
@@ -432,20 +392,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ListConnectionChannel createListConnectionChannelFromString(EDataType eDataType, String initialValue) {
 		ListConnectionChannel result = ListConnectionChannel.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertListConnectionChannelToString(EDataType eDataType, Object instanceValue) {
@@ -454,20 +410,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ListProtocol createListProtocolFromString(EDataType eDataType, String initialValue) {
 		ListProtocol result = ListProtocol.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertListProtocolToString(EDataType eDataType, Object instanceValue) {
@@ -476,20 +428,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public I2CLCDType createI2CLCDTypeFromString(EDataType eDataType, String initialValue) {
 		I2CLCDType result = I2CLCDType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertI2CLCDTypeToString(EDataType eDataType, Object instanceValue) {
@@ -498,20 +446,16 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ESP8266WiFiMode createESP8266WiFiModeFromString(EDataType eDataType, String initialValue) {
 		ESP8266WiFiMode result = ESP8266WiFiMode.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public String convertESP8266WiFiModeToString(EDataType eDataType, Object instanceValue) {
@@ -520,7 +464,6 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -670,17 +613,15 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public IotwPackage getIotwPackage() {
-		return (IotwPackage) getEPackage();
+		return (IotwPackage)getEPackage();
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @deprecated
 	 * @generated
 	 */

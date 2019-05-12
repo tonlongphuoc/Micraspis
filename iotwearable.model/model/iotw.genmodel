@@ -195,6 +195,9 @@
     <genClasses ecoreClass="iotw.ecore#//Button">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//Button/pin1"/>
     </genClasses>
+    <genClasses ecoreClass="iotw.ecore#//LM35">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//LM35/pin1"/>
+    </genClasses>
     <genClasses ecoreClass="iotw.ecore#//LED">
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//LED/pin1"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//LED/pin2"/>

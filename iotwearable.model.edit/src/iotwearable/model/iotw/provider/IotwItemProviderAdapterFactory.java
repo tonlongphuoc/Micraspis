@@ -417,6 +417,29 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link iotwearable.model.iotw.LM35} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LM35ItemProvider lm35ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link iotwearable.model.iotw.LM35}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLM35Adapter() {
+		if (lm35ItemProvider == null) {
+			lm35ItemProvider = new LM35ItemProvider(this);
+		}
+
+		return lm35ItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -527,6 +550,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 		if (arduinoUNOR3ItemProvider != null) arduinoUNOR3ItemProvider.dispose();
 		if (keypad4x4ItemProvider != null) keypad4x4ItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
+		if (lm35ItemProvider != null) lm35ItemProvider.dispose();
 		if (ledItemProvider != null) ledItemProvider.dispose();
 		if (i2CLCDItemProvider != null) i2CLCDItemProvider.dispose();
 		if (buzzerItemProvider != null) buzzerItemProvider.dispose();
