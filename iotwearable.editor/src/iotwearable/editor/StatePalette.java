@@ -36,12 +36,12 @@ public class StatePalette extends PaletteRoot {
 		
 
 		
-		CreationToolEntry _startPoint = new CombinedTemplateCreationEntry("StartPoint",
+		CreationToolEntry _startPoint = new CombinedTemplateCreationEntry("Start Point",
 				"StartPoint", new StartPointFactory(),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/startpoint.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/startpoint.png"));
 		
-		CreationToolEntry _endPoint = new CombinedTemplateCreationEntry("EndPoint",
+		CreationToolEntry _endPoint = new CombinedTemplateCreationEntry("End Point",
 				"EndPoint", new EndPointFactory(),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/endpoint.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/endpoint.png"));

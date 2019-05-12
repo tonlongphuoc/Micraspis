@@ -1,17 +1,18 @@
 package iotwearable.gen.cce.device;
 
 import iotwearable.model.iotw.ArduinoUNOR3;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.BluetoothHC06;
 import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Buzzer;
-import iotwearable.model.iotw.Component;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
 import iotwearable.model.iotw.LED;
 import iotwearable.model.iotw.WifiESP8266;
 
-public class CodeCreationEngineFactory{
-	public static DeviceCodeCreationEngine create(Component component){
+public class CodeCreationEngineFactory {
+	
+	public static <T> DeviceCodeCreationEngine create(T component){
 		DeviceCodeCreationEngine codeCreationEngine = null;
 		//area output
 		if(component instanceof LED){
@@ -44,6 +45,9 @@ public class CodeCreationEngineFactory{
 		else if(component instanceof ArduinoUNOR3)
 		{
 			codeCreationEngine = new  ArduinoCodeCreationEngine();
+		}
+		else if(component instanceof ArduinoWiFiESP8266WeMosD1) {
+			codeCreationEngine = new ArduinoWiFiESP8266WeMosD1CodeCreationEngine((ArduinoWiFiESP8266WeMosD1) component);
 		}
 		return codeCreationEngine;
 	}

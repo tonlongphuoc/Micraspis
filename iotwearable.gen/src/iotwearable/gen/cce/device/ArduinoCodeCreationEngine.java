@@ -4,7 +4,7 @@ import iotwearable.gen.comanalyzer.Token;
 
 import java.util.LinkedList;
 
-public  class ArduinoCodeCreationEngine extends DeviceCodeCreationEngine{
+public class ArduinoCodeCreationEngine extends DeviceCodeCreationEngine{
 
 	@Override
 	public String createFromCommand(String syntax, LinkedList<Token> tokens) {

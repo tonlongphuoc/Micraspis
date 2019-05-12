@@ -108,12 +108,12 @@ public class IotwAdapterFactory extends AdapterFactoryImpl {
 				return createMainboardAdapter();
 			}
 			@Override
-			public Adapter caseArduinoUNOR3(ArduinoUNOR3 object) {
-				return createArduinoUNOR3Adapter();
-			}
-			@Override
 			public Adapter caseArduinoWiFiESP8266WeMosD1(ArduinoWiFiESP8266WeMosD1 object) {
 				return createArduinoWiFiESP8266WeMosD1Adapter();
+			}
+			@Override
+			public Adapter caseArduinoUNOR3(ArduinoUNOR3 object) {
+				return createArduinoUNOR3Adapter();
 			}
 			@Override
 			public Adapter caseKeypad4x4(Keypad4x4 object) {

@@ -193,7 +193,7 @@ public interface IotwPackage extends EPackage {
 	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getArduinoUNOR3()
 	 * @generated
 	 */
-	int ARDUINO_UNOR3 = 10;
+	int ARDUINO_UNOR3 = 11;
 
 	/**
 	 * The feature id for the '<em><b>Bendpoints</b></em>' attribute list.
@@ -881,6 +881,331 @@ public interface IotwPackage extends EPackage {
 	int MAINBOARD_OPERATION_COUNT = 6;
 
 	/**
+	 * The meta object id for the '{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl <em>Arduino Wi Fi ESP8266 We Mos D1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl
+	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1 = 10;
+
+	/**
+	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DEVICES = MAINBOARD__DEVICES;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__NAME = MAINBOARD__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Pin A0</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0 = MAINBOARD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Pin D0</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0 = MAINBOARD_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Pin D1</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1 = MAINBOARD_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Pin D2</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2 = MAINBOARD_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Pin D3</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3 = MAINBOARD_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Pin D4</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4 = MAINBOARD_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Pin D5</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5 = MAINBOARD_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Pin D6</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6 = MAINBOARD_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Pin D7</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7 = MAINBOARD_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Pin D8</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = MAINBOARD_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Pin D9</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9 = MAINBOARD_FEATURE_COUNT + 10;
+
+	/**
+	 * The feature id for the '<em><b>Pin D10</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10 = MAINBOARD_FEATURE_COUNT + 11;
+
+	/**
+	 * The feature id for the '<em><b>Pin D11</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11 = MAINBOARD_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Pin D12</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12 = MAINBOARD_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Pin D13</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13 = MAINBOARD_FEATURE_COUNT + 14;
+
+	/**
+	 * The feature id for the '<em><b>Pin D14</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14 = MAINBOARD_FEATURE_COUNT + 15;
+
+	/**
+	 * The feature id for the '<em><b>Pin D15</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15 = MAINBOARD_FEATURE_COUNT + 16;
+
+	/**
+	 * The feature id for the '<em><b>Wifi Mode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE = MAINBOARD_FEATURE_COUNT + 17;
+
+	/**
+	 * The feature id for the '<em><b>Ssid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID = MAINBOARD_FEATURE_COUNT + 18;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD = MAINBOARD_FEATURE_COUNT + 19;
+
+	/**
+	 * The feature id for the '<em><b>Ip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP = MAINBOARD_FEATURE_COUNT + 20;
+
+	/**
+	 * The feature id for the '<em><b>Dns</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS = MAINBOARD_FEATURE_COUNT + 21;
+
+	/**
+	 * The feature id for the '<em><b>Gateway</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY = MAINBOARD_FEATURE_COUNT + 22;
+
+	/**
+	 * The feature id for the '<em><b>Subnet</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET = MAINBOARD_FEATURE_COUNT + 23;
+
+	/**
+	 * The feature id for the '<em><b>Baud</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__BAUD = MAINBOARD_FEATURE_COUNT + 24;
+
+	/**
+	 * The number of structural features of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_FEATURE_COUNT = MAINBOARD_FEATURE_COUNT + 25;
+
+	/**
+	 * The operation id for the '<em>Add Device</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___ADD_DEVICE__DEVICE = MAINBOARD___ADD_DEVICE__DEVICE;
+
+	/**
+	 * The operation id for the '<em>Remove Device</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___REMOVE_DEVICE__DEVICE = MAINBOARD___REMOVE_DEVICE__DEVICE;
+
+	/**
+	 * The operation id for the '<em>Get Pins</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___GET_PINS = MAINBOARD___GET_PINS;
+
+	/**
+	 * The operation id for the '<em>Get Pin Connecteds</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___GET_PIN_CONNECTEDS = MAINBOARD___GET_PIN_CONNECTEDS;
+
+	/**
+	 * The operation id for the '<em>Modify Pin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___MODIFY_PIN__PIN = MAINBOARD___MODIFY_PIN__PIN;
+
+	/**
+	 * The operation id for the '<em>Find Pin</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___FIND_PIN__PIN = MAINBOARD___FIND_PIN__PIN;
+
+	/**
+	 * The number of operations of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_OPERATION_COUNT = MAINBOARD_OPERATION_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1149,259 +1474,6 @@ public interface IotwPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARDUINO_UNOR3_OPERATION_COUNT = MAINBOARD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl <em>Arduino Wi Fi ESP8266 We Mos D1</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl
-	 * @see iotwearable.model.iotw.impl.IotwPackageImpl#getArduinoWiFiESP8266WeMosD1()
-	 * @generated
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1 = 11;
-
-	/**
-	 * The feature id for the '<em><b>Devices</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DEVICES = MAINBOARD__DEVICES;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__NAME = MAINBOARD__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Pin A0</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_A0 = MAINBOARD_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Pin D0</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D0 = MAINBOARD_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Pin D1</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D1 = MAINBOARD_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Pin D2</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D2 = MAINBOARD_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Pin D3</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D3 = MAINBOARD_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Pin D4</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D4 = MAINBOARD_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Pin D5</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D5 = MAINBOARD_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Pin D6</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D6 = MAINBOARD_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Pin D7</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D7 = MAINBOARD_FEATURE_COUNT + 8;
-
-	/**
-	 * The feature id for the '<em><b>Pin D8</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = MAINBOARD_FEATURE_COUNT + 9;
-
-	/**
-	 * The feature id for the '<em><b>Wifi Mode</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE = MAINBOARD_FEATURE_COUNT + 10;
-
-	/**
-	 * The feature id for the '<em><b>Ssid</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID = MAINBOARD_FEATURE_COUNT + 11;
-
-	/**
-	 * The feature id for the '<em><b>Password</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PASSWORD = MAINBOARD_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Ip</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__IP = MAINBOARD_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Dns</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__DNS = MAINBOARD_FEATURE_COUNT + 14;
-
-	/**
-	 * The feature id for the '<em><b>Gateway</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__GATEWAY = MAINBOARD_FEATURE_COUNT + 15;
-
-	/**
-	 * The feature id for the '<em><b>Subnet</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET = MAINBOARD_FEATURE_COUNT + 16;
-
-	/**
-	 * The number of structural features of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_FEATURE_COUNT = MAINBOARD_FEATURE_COUNT + 17;
-
-	/**
-	 * The operation id for the '<em>Add Device</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___ADD_DEVICE__DEVICE = MAINBOARD___ADD_DEVICE__DEVICE;
-
-	/**
-	 * The operation id for the '<em>Remove Device</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___REMOVE_DEVICE__DEVICE = MAINBOARD___REMOVE_DEVICE__DEVICE;
-
-	/**
-	 * The operation id for the '<em>Get Pins</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___GET_PINS = MAINBOARD___GET_PINS;
-
-	/**
-	 * The operation id for the '<em>Get Pin Connecteds</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___GET_PIN_CONNECTEDS = MAINBOARD___GET_PIN_CONNECTEDS;
-
-	/**
-	 * The operation id for the '<em>Modify Pin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___MODIFY_PIN__PIN = MAINBOARD___MODIFY_PIN__PIN;
-
-	/**
-	 * The operation id for the '<em>Find Pin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1___FIND_PIN__PIN = MAINBOARD___FIND_PIN__PIN;
-
-	/**
-	 * The number of operations of the '<em>Arduino Wi Fi ESP8266 We Mos D1</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARDUINO_WI_FI_ESP8266_WE_MOS_D1_OPERATION_COUNT = MAINBOARD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link iotwearable.model.iotw.impl.Keypad4x4Impl <em>Keypad4x4</em>}' class.
@@ -3479,6 +3551,83 @@ public interface IotwPackage extends EPackage {
 	EAttribute getArduinoWiFiESP8266WeMosD1_PinD8();
 
 	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD9 <em>Pin D9</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D9</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD9()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD9();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD10 <em>Pin D10</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D10</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD10()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD10();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD11 <em>Pin D11</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D11</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD11()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD11();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD12 <em>Pin D12</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D12</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD12()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD12();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD13 <em>Pin D13</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D13</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD13()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD13();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD14 <em>Pin D14</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D14</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD14()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD14();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD15 <em>Pin D15</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pin D15</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD15()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_PinD15();
+
+	/**
 	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getWifiMode <em>Wifi Mode</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3554,6 +3703,17 @@ public interface IotwPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArduinoWiFiESP8266WeMosD1_Subnet();
+
+	/**
+	 * Returns the meta object for the attribute '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getBaud <em>Baud</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Baud</em>'.
+	 * @see iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getBaud()
+	 * @see #getArduinoWiFiESP8266WeMosD1()
+	 * @generated
+	 */
+	EAttribute getArduinoWiFiESP8266WeMosD1_Baud();
 
 	/**
 	 * Returns the meta object for class '{@link iotwearable.model.iotw.Connection <em>Connection</em>}'.
@@ -5106,6 +5266,62 @@ public interface IotwPackage extends EPackage {
 		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD8();
 
 		/**
+		 * The meta object literal for the '<em><b>Pin D9</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD9();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D10</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD10();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D11</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD11();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D12</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD12();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D13</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD13();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D14</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD14();
+
+		/**
+		 * The meta object literal for the '<em><b>Pin D15</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15 = eINSTANCE.getArduinoWiFiESP8266WeMosD1_PinD15();
+
+		/**
 		 * The meta object literal for the '<em><b>Wifi Mode</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5160,6 +5376,14 @@ public interface IotwPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SUBNET = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Subnet();
+
+		/**
+		 * The meta object literal for the '<em><b>Baud</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARDUINO_WI_FI_ESP8266_WE_MOS_D1__BAUD = eINSTANCE.getArduinoWiFiESP8266WeMosD1_Baud();
 
 		/**
 		 * The meta object literal for the '{@link iotwearable.model.iotw.impl.ConnectionImpl <em>Connection</em>}' class.

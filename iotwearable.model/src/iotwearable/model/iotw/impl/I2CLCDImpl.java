@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getPinGND <em>Pin GND</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getPinVcc <em>Pin Vcc</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getPinSCL <em>Pin SCL</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.I2CLCDImpl#getType <em>Type</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -374,7 +374,7 @@ public class I2CLCDImpl extends OutputDeviceImpl implements I2CLCD {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pinGND: ");
 		result.append(pinGND);
 		result.append(", pinVcc: ");

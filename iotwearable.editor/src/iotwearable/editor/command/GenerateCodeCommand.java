@@ -38,7 +38,8 @@ public class GenerateCodeCommand extends Command{
 		{
 			String mainboard = "";
 			String state = "";
-			for(String fileName : project.getFile()){
+			List<String> files = project.getFile();
+			for(String fileName : files){
 				File file = manager.getFile(project.getProjectName(),fileName);
 				if(manager.classify(file).equals("Mainboard")) {
 					mainboard = file.getAbsolutePath();

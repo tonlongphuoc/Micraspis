@@ -163,6 +163,7 @@ public class IotwActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
+		super.contributeToToolBar(toolBarManager);
 		toolBarManager.add(new Separator("iotw-settings"));
 		toolBarManager.add(new Separator("iotw-additions"));
 	}
@@ -199,6 +200,7 @@ public class IotwActionBarContributor
 		//
 		submenuManager.addMenuListener
 			(new IMenuListener() {
+				 @Override
 				 public void menuAboutToShow(IMenuManager menuManager) {
 					 menuManager.updateAll(true);
 				 }

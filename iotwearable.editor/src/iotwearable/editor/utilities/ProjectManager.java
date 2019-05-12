@@ -1,6 +1,7 @@
 package iotwearable.editor.utilities;
 
 import iotwearable.model.iotw.ArduinoUNOR3;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.StateSchema;
 import iotwearable.utilities.FileUtils;
 
@@ -136,7 +137,8 @@ public class ProjectManager {
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			line = bufferedReader.readLine();
 			line = bufferedReader.readLine();
-			if (line.contains(ArduinoUNOR3.class.getSimpleName()) && line.contains("ArduinoUNOR3")) {
+			if ((line.contains(ArduinoUNOR3.class.getSimpleName()) && line.contains("ArduinoUNOR3"))
+				|| line.contains(ArduinoWiFiESP8266WeMosD1.class.getSimpleName()) && line.contains("ArduinoWiFiESP8266WeMosD1")) {
 				type = "Mainboard";
 			} else if (line.contains(StateSchema.class.getSimpleName()) && line.contains("StateSchema")) {
 				type = "StateSchema";

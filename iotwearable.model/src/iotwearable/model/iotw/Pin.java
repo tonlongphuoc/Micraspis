@@ -46,6 +46,11 @@ public class Pin {
 		IO,
 		Passive,
 		Power,
+		SDA,
+		SCL,
+		GND,
+		VIN,
+		RESET
 //		Open,
 //		Collector,
 //		HiZ,
