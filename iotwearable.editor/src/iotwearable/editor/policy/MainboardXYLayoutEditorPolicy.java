@@ -9,6 +9,7 @@ import iotwearable.model.iotw.Device;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
 import iotwearable.model.iotw.LED;
+import iotwearable.model.iotw.LM35;
 import iotwearable.model.iotw.Mainboard;
 import iotwearable.model.iotw.WifiESP8266;
 
@@ -69,6 +70,10 @@ public class MainboardXYLayoutEditorPolicy extends XYLayoutEditPolicy{
 		}
 		else if(request.getNewObjectType().equals(WifiESP8266.class)){
 			DEFAULT_DIMENSION = new Dimension(50, 50);
+			isAllowed = true;
+		}
+		else if(request.getNewObjectType().equals(LM35.class)) {
+			DEFAULT_DIMENSION = new Dimension(50,50);
 			isAllowed = true;
 		}
 		 if(isAllowed){

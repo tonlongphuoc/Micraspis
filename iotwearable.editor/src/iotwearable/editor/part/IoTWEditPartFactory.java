@@ -9,6 +9,7 @@ import iotwearable.model.iotw.EndPoint;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
 import iotwearable.model.iotw.LED;
+import iotwearable.model.iotw.LM35;
 import iotwearable.model.iotw.Mainboard;
 import iotwearable.model.iotw.StartPoint;
 import iotwearable.model.iotw.StateFrame;
@@ -31,6 +32,9 @@ public class IoTWEditPartFactory implements EditPartFactory{
 		}
 		else if(model instanceof Button){
 			part = new ButtonEditPart();
+		}
+		else if(model instanceof LM35) {
+			part = new LM35EditPart();
 		}
 		//area of output controls
 		else if(model instanceof LED){

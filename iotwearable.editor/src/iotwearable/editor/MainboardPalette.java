@@ -7,6 +7,7 @@ import iotwearable.editor.factory.BuzzerFactory;
 import iotwearable.editor.factory.I2CLCDFactory;
 import iotwearable.editor.factory.Keypad4x4Factory;
 import iotwearable.editor.factory.LEDFactory;
+import iotwearable.editor.factory.LM35Factory;
 import iotwearable.editor.factory.WifiESP8266Factory;
 
 import org.eclipse.gef.palette.CombinedTemplateCreationEntry;
@@ -57,8 +58,14 @@ public class MainboardPalette extends PaletteRoot {
 				ImageDescriptor.createFromFile(this.getClass(),"icons/button.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/button.png"));
 		
+		CreationToolEntry _lm35 = new CombinedTemplateCreationEntry("LM35", "LM35",
+				new LM35Factory(),
+				ImageDescriptor.createFromFile(this.getClass(),"icons/lm35.png"),
+				ImageDescriptor.createFromFile(this.getClass(),"icons/lm35.png"));
+		
 		pdInput.add(_keypad4x4);
 		pdInput.add(_button);
+		pdInput.add(_lm35);
 	}
 
 	// area output control

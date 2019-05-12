@@ -8,6 +8,7 @@ import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.actions.ActionFactory;
+
 public class MainboardContextMenu extends ContextMenuProvider {
 	private ActionRegistry actionRegistry;
 	private boolean display;
@@ -57,6 +58,11 @@ public class MainboardContextMenu extends ContextMenuProvider {
 		action = getActionRegistry().getAction(MainboardContextMenuAction.ID_AddWifiESP8266);
 		if(action.isEnabled()&& display)
 			menu.appendToGroup(GEFActionConstants.GROUP_EDIT, action);
+		
+		action = getActionRegistry().getAction(MainboardContextMenuAction.ID_AddLM35);
+		if(action.isEnabled() && display)
+			menu.appendToGroup(GEFActionConstants.GROUP_EDIT, action);
+		
 		action = getActionRegistry().getAction(ActionFactory.SAVE.getId());
 		if( display)
 			menu.appendToGroup(GEFActionConstants.GROUP_SAVE, action);

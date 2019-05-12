@@ -325,6 +325,8 @@ public class MainboardEditor extends GraphicalEditorWithPalette{
 		getActionRegistry().registerAction(action);
 		action = new MainboardContextMenuAction(this,MainboardContextMenuAction.ID_AddWifiESP8266, mainboard);
 		getActionRegistry().registerAction(action);
+		action = new MainboardContextMenuAction(this, MainboardContextMenuAction.ID_AddLM35, mainboard);
+		getActionRegistry().registerAction(action);
 	}
 	@Override
 	public DefaultEditDomain getEditDomain() {
