@@ -17,7 +17,7 @@ public class ArduinoWiFiESP8266WeMosD1CodeCreationEngine extends ArduinoWeMosCod
 	@Override
 	public String createDefine() {
 		// TODO Auto-generated method stub
-		String define = "";
+		String define = "ESP8266WiFiMulti WiFiMulti;\n";
 		
 		if(device.getSsid() != null)
 			if(!device.getSsid().isEmpty())
