@@ -73,7 +73,7 @@ public class MainboardXYLayoutEditorPolicy extends XYLayoutEditPolicy{
 			isAllowed = true;
 		}
 		else if(request.getNewObjectType().equals(LM35.class)) {
-			DEFAULT_DIMENSION = new Dimension(64,64);
+			DEFAULT_DIMENSION = new Dimension(64,70);
 			isAllowed = true;
 		}
 		 if(isAllowed){

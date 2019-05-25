@@ -11,6 +11,7 @@ import iotwearable.model.iotw.Device;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
 import iotwearable.model.iotw.LED;
+import iotwearable.model.iotw.LM35;
 import iotwearable.model.iotw.Mainboard;
 import iotwearable.model.iotw.Pin;
 import iotwearable.model.iotw.WifiESP8266;
@@ -78,6 +79,10 @@ public class Manual {
 			{
 				manual = replaceManual(manual, device.getName() , 2);
 			}
+			if(device instanceof LM35)
+			{
+				manual = replaceManual(manual, device.getName(), 1);
+			}
 		}
 		return manual;
 	}
@@ -114,8 +119,14 @@ public class Manual {
 	private String genListControl()
 	{
 		String listControl="";
-		int countLED=0, countLCD=0, countKeypad=0, countBuzzer=0, countBluetooth =0, countWifi =0, countButton=0, countTransistor=0;
-		String typeLED="", typeLCD="", typeKeypad="", typeBuzzer="", typeBluetooth ="", typeWifi="", typeButton="";
+		int countLED=0, countLCD=0, countKeypad=0,
+				countBuzzer=0, countBluetooth =0, 
+				countWifi =0, countButton=0,
+				countTransistor=0, countLM35 = 0;
+		String typeLED="", typeLCD="", 
+				typeKeypad="", typeBuzzer="",
+				typeBluetooth ="", typeWifi="",
+				typeButton="", typeLM35 = "";
 		for(Device device: mainboard.getDevices())
 		{
 			if(device instanceof LED)
@@ -158,6 +169,12 @@ public class Manual {
 				typeWifi = device.getName();
 				countTransistor++;
 			}
+			else if(device instanceof LM35)
+			{
+				countLM35++;
+				typeLM35 = device.getName();
+				countTransistor++;
+			}
 		}
 		listControl +=  "<tr>\n"
 				+ "<td>"+mainboard.getName()+"</td>\n"
@@ -197,6 +214,11 @@ public class Manual {
 			listControl +=  "<tr>\n"
 					+ "<td>"+typeButton+"</td>\n"
 					+ "<td>"+countButton+"</td>\n"
+					+ "</tr>\n";
+		if(countLM35!=0)
+			listControl +=  "<tr>\n"
+					+ "<td>"+ typeLM35 +"</td>\n"
+					+ "<td>"+ countLM35 +"</td>\n"
 					+ "</tr>\n";
 		if(countTransistor!=0)
 			listControl +=  "<tr>\n"
