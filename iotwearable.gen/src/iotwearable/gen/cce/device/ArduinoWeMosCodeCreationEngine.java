@@ -9,10 +9,10 @@ public abstract class ArduinoWeMosCodeCreationEngine extends DeviceCodeCreationE
 	@Override
 	public String createInclude() {
 		// TODO Auto-generated method stub
-		return "#include " + DeviceLibrary.ESP8266WiFi + ".h>\n"
-				+ "#include " + DeviceLibrary.ESP8266WiFiMulti + ".h>\n"
-				+ "#include " + DeviceLibrary.ESP8266HTTPClient + ".h>\n"
-				+ "#include " + DeviceLibrary.WiFiClient + ".h>\n";
+		return "#include <" + DeviceLibrary.ESP8266WiFi + ".h>\n"
+				+ "#include <" + DeviceLibrary.ESP8266WiFiMulti + ".h>\n"
+				+ "#include <" + DeviceLibrary.ESP8266HTTPClient + ".h>\n"
+				+ "#include <" + DeviceLibrary.WiFiClient + ".h>\n";
 	}
 	
 	@Override
