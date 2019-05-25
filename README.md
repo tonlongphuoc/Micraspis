@@ -1,28 +1,28 @@
 # DSL4W
 
-Đây là công cụ cho phép phát sinh mã nguồn cho các ứng dụng chạy trên thiết bị đeo tay với việc đặc tả ứng dụng đó bằng các thành phần thiết bị và lược đồ trạng thái của ứng dụng http://esp-lab.net/
+This is a tool allowing generate source code for wearable devices by describing devices configuration and state schema  http://esp-lab.net/
 
 -----------------------------------
-Bảng lệnh cho StateFame
+Mapping syntax for States
 
-| stt |	Cú pháp | Mô tả | Thiết bị | Ví dụ |
+| No. |	Syntax | Description | Component | Example |
 |:--|:--------------------------|:------------------------------------|:-----------------------------|:------------------------------|
-|1	| `Display <id>`            |Kích hoạt một thiết bị.			        |LED			                     | `Display` ledRed              |
-|2	| `Hidden <id>`	            |Ngừng hoạt động cho một thiết bị	    |LED			                     | `Hidden` ledRed               |
-|3	| `Blink <id>`		          |Điều khiển thiết bị nhâp nháy		    |LED, I2CLCD	                 | `Blink` lelRed, `Blink` lcd   |
-|4	| `Beep <id>`		            |Phát ra tiếng kêu Beep				        |Buzzer			                   | `Beep` buzzer                 |
-|5	| `Show <String>`	          |Hiển thị chuỗi lên thiết bị hiển thị	|LCD		                       | `Show` "Xin chao"             |    
+|1	| `Display <id>`            |Activate a device.			        |LED			                     | `Display` ledRed              |
+|2	| `Hidden <id>`	            |Order to stop working.	    |LED			                     | `Hidden` ledRed               |
+|3	| `Blink <id>`		          |Control device flashes.		    |LED, I2CLCD	                 | `Blink` lelRed, `Blink` lcd   |
+|4	| `Beep <id>`		            |Emitted a Beep.				        |Buzzer			                   | `Beep` buzzer                 |
+|5	| `Show <String>`	          |Display the string on the display device.	|LCD		                       | `Show` "Xin chao"             |    
 
 
-Lưu ý: Các trạng thái được chuyển tiếp khi và chỉ khi có các event xảy ra. Vì thế các connection/link phải được mô tả sự kiện. Ngoại trừ các kết nối với StartPoint và EndPoint.
+Notes: States will be changed only if an event occurs. So every connection must have an event, except connected to "end point" or "start point".
 
-Bảng lệnh cho Connection/Link
+Mapping syntax for Connection/Link
 
-| stt |	Cú pháp | Mô tả | Thiết bị | Ví dụ |
+| No. |	Syntax | Description | Component | Example |
 |:--|:--------------------------|:------------------------------------|:-----------------------------|:------------------------------|
-|1	| `<string> button pressed`	|Mô tả sự kiện nhấn phím	            |keypad		                     | "Cancel" `button pressed`     |
-|2	| `<id> push`	              |Nhận sự kiện nhấn 1 push button		  |push button	                 | button `push`                 |
-|3	| `<string> send`	          |Gửi dữ liệu qua wifi				          |wifi esp8266	                 | "hello" `send`                |
-|4	| `<string> received`	      |Lắng nghe chuỗi gửi từ wifi khác	    |wifi esp8266	                 | "hello" `received`            |     
-|5	| `<id> : Display`	        |Kiểm tra trạng thái của thiết bị	    |LED	                         | ledRed : `Display`            |
-|6	| `<id> : Hidden`	          |Kiểm tra trạng thái của thiết bị	    |LED	                         | ledRed : `Hidden`             |
+|1	| `<string> button pressed`	|Description of the keypress event.	            |keypad		                     | "Cancel" `button pressed`     |
+|2	| `<id> push`	              |Receive a push-button event.		  |push button	                 | button `push`                 |
+|3	| `<string> send`	          |Send data via wifi.				          |wifi esp8266	                 | "hello" `send`                |
+|4	| `<string> received`	      |Receive to strings sent from other wifi.    |wifi esp8266	                 | "hello" `received`            |     
+|5	| `<id> : Display`	        |Check the status of the device.	    |LED	                         | ledRed : `Display`            |
+|6	| `<id> : Hidden`	          |Check the status of the device.	    |LED	                         | ledRed : `Hidden`             |
