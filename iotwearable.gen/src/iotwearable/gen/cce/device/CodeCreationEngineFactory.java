@@ -1,7 +1,5 @@
 package iotwearable.gen.cce.device;
 
-import org.omg.IOP.Codec;
-
 import iotwearable.model.iotw.ArduinoUNOR3;
 import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.BluetoothHC06;

@@ -14,6 +14,7 @@ public class I2CLCDCodeCreationEngineImpl extends I2CLCDCodeCreationEngine{
 		super();
 		this.i2clcd = i2clcd;
 		getTypeLCD();
+
 	}
 	private void getTypeLCD()
 	{

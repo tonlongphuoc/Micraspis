@@ -3,14 +3,20 @@ package iotwearable.gen.cce.device;
 import java.util.LinkedList;
 
 import iotwearable.gen.comanalyzer.Token;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.LM35;
+import iotwearable.model.iotw.Mainboard;
 
 public class LM35CodeCreationEngine extends DeviceCodeCreationEngine{
 
 	private LM35 device;
-	
+	private ArduinoWiFiESP8266WeMosD1CodeCreationEngine codeCreationEngine;
+	private Mainboard mainboard;
 	public LM35CodeCreationEngine(LM35 device) {
 		this.device = device;
+		mainboard = device.getMainboard();
+		codeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) CodeCreationEngineFactory.create(mainboard);
+
 	}
 	
 	@Override
@@ -22,14 +28,23 @@ public class LM35CodeCreationEngine extends DeviceCodeCreationEngine{
 
 	@Override
 	public String createDefine() {
-		// TODO Auto-generated method stub
-		return "";
+		String pin = mainboard.findPin(device.getPinConnecteds().get(0)).getName();
+		if(mainboard instanceof ArduinoWiFiESP8266WeMosD1)
+		{
+			pin = codeCreationEngine.mapPin(pin);
+	    }
+		return "// Data wire is plugged into pin D1 on the ESP8266 12-E - GPIO "+ pin +" \n"
+				+ "#define ONE_WIRE_BUS " + pin+ "\n"
+				+ "// Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)\n"
+				+ "OneWire oneWire(ONE_WIRE_BUS);\n"
+				+ "// Pass our oneWire reference to Dallas Temperature.\n"
+				+ "DallasTemperature DS18B20(&oneWire);\n";
 	}
 
 	@Override
 	public String createInitSetup() {
-		// TODO Auto-generated method stub
-		return "";
+		
+		return "DS18B20.begin();";
 	}
 
 	@Override

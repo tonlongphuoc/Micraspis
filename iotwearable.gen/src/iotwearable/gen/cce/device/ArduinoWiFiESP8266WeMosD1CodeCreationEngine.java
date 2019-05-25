@@ -67,5 +67,37 @@ public class ArduinoWiFiESP8266WeMosD1CodeCreationEngine extends ArduinoWeMosCod
 		String code = super.createFromCommand(syntax, tokens);
 		return code;
 	}
-
+	public String mapPin(String pin){
+		switch (pin) {
+		case "D0":
+			return "16";
+		case "D1":
+			return "5";
+		case "D2":
+			return "4";
+		case "D3":
+		case "D15":	
+			return "0";
+		case "D4":
+		case "D14":
+			return "2";
+		case "D5":
+		case "D13":
+			return "14";
+		case "D6":
+		case "D12":
+			return "12";
+		case "D7":
+		case "D11":
+			return "13";
+		case "D8":
+			return "15";
+		case "D9":
+			return "3";
+		case "D10":
+			return "1";
+		default:
+			return "";
+		}
+	}
 }

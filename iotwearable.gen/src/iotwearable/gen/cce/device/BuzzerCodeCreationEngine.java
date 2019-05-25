@@ -3,7 +3,9 @@ package iotwearable.gen.cce.device;
 import java.util.LinkedList;
 
 import iotwearable.gen.comanalyzer.Token;
+import iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1;
 import iotwearable.model.iotw.Buzzer;
+import iotwearable.model.iotw.Mainboard;
 /**
  * 
  * Class generate code for Buzzer device.
@@ -11,10 +13,13 @@ import iotwearable.model.iotw.Buzzer;
  */
 public class BuzzerCodeCreationEngine extends DeviceCodeCreationEngine{
 	private Buzzer buzzer;
-	
+	private Mainboard mainboard;
+	private ArduinoWiFiESP8266WeMosD1CodeCreationEngine codeCreationEngine;
 	public BuzzerCodeCreationEngine(Buzzer buzzer) {
 		super();
 		this.buzzer = buzzer;
+		mainboard = buzzer.getMainboard();
+		codeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) CodeCreationEngineFactory.create(mainboard);
 	}
 
 	@Override
@@ -24,8 +29,14 @@ public class BuzzerCodeCreationEngine extends DeviceCodeCreationEngine{
 
 	@Override
 	public String createDefine() {
+		String pin = mainboard.findPin(buzzer.getPinConnecteds().get(0)).getName();
+		if(mainboard instanceof ArduinoWiFiESP8266WeMosD1)
+		{
+			pin = codeCreationEngine.mapPin(pin);
+	    }
+		
 		String content = "// Define "+buzzer.getName()+" output\n"
-		+ "#define " + buzzer.getId()+"  "+buzzer.getMainboard().findPin(buzzer.getPinConnecteds().get(0)).getName();
+		+ "#define " + buzzer.getId()+"  "+ pin;
 		return content;
 	}
 
