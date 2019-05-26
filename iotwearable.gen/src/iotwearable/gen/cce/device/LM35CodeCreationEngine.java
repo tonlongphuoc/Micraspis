@@ -22,8 +22,8 @@ public class LM35CodeCreationEngine extends DeviceCodeCreationEngine{
 	@Override
 	public String createInclude() {
 		// TODO Auto-generated method stub
-		return "#include " + DeviceLibrary.OneWire + ".h>\n"
-		+ "#include " + DeviceLibrary.DallasTemperature + ".h>\n";
+		return "#include <" + DeviceLibrary.OneWire + ".h>\n"
+		+ "#include <" + DeviceLibrary.DallasTemperature + ".h>\n";
 	}
 
 	@Override

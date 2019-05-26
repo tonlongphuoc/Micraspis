@@ -134,9 +134,7 @@ void setup()
 void loop()
 {
   char keypadClientKey = keypad.getKey();
-  Serial.print(currentState);
-  Serial.print(keypadClientKey);
-   checkEmergency();
+  checkEmergency();
   switch (currentState)
   {
     case 0:

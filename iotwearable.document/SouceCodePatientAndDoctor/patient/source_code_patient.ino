@@ -11,9 +11,9 @@
 
 #include <WiFiClient.h>
 
-#include <Keypad.h>
+#include OneWire.h>
 
-#include <LiquidCrystal_I2C.h>
+#include DallasTemperature.h>
 
 
 /*Each state in the application corresponds to one the integer.
@@ -22,17 +22,19 @@ Numbered starting at 0
 
 stateCurrent is a variable that stores the current state of the application.
 
-Ready: 0
+Initing: 0
 
-Emergency: 1
+Starting: 1
 
-Listening: 2
+Emergence: 2
 
 Recovery: 3
 
-Fever: 4
+Incubation: 4
 
-Incubation: 5
+Fever: 5
+
+Erroring: 6
 
 */
 
@@ -45,40 +47,37 @@ int nextState = -1;
 
 ESP8266WiFiMulti WiFiMulti;
 
-const char *ssid = "Ngoc";
+const char *ssid = "ngoc";
 
-const char *password = "24681012";
+const char *password = "2481012";
 
-//Define kepad4x4 - keypad 
+//Define LED - ledRed output
 
+const int ledRed = 4;
 
-/*Button A : Emergency
+//Define LED - ledGreen output
 
-Button B : Fever
+const int ledGreen = 0;
 
-Button C : Incubation
+//Define LED - ledYellow output
 
-Button D : Revcovery
+const int ledYellow = 2;
 
-Button # : Back
+//Define LED - ledOrange output
 
-*/
+const int ledOrange = 14;
 
-char keypad_keys[4][4] ={{'1','2','3','A'},{'4','5','6','B'},{'7','8','9','C'},{'*','0','#','D'}};
+// Data wire is plugged into pin D1 on the ESP8266 12-E - GPIO 12 
 
-byte keypad_rowPins[4] = {16,5,4,0};
+#define ONE_WIRE_BUS 12
 
-byte keypad_columnPins[4] = {2,14,12,13};
+// Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 
-Keypad keypad = Keypad(makeKeymap(keypad_keys), keypad_rowPins, keypad_columnPins, 4, 4);
+OneWire oneWire(ONE_WIRE_BUS);
 
-//Define LED - led output
+// Pass our oneWire reference to Dallas Temperature.
 
-const int led = 15;
-
-// Define LiquidCrystal_I2C - lcd 
-
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+DallasTemperature DS18B20(&oneWire);
 
 
 /*--------------------END Define--------------------*/
@@ -94,24 +93,26 @@ String get(String url);
 
 String post(String url, String data);
 
-void stateReady();
+void stateIniting();
 
-void stateEmergency();
+void stateStarting();
 
-void stateListening();
+void stateEmergence();
 
 void stateRecovery();
 
+void stateIncubation();
+
 void stateFever();
 
-void stateIncubation();
+void stateErroring();
 
 
 /*--------------------END Prototype--------------------*/
 
 
 void setup() {
-	Serial.begin(115200);
+	Serial.begin(19200);
 	for (uint8_t t = 4; t > 0; t--)
 	{
 		Serial.printf("[SETUP] WAIT %d...\n", t);
@@ -120,69 +121,49 @@ void setup() {
 	}
 	WiFi.mode(WIFI_STA);
 	WiFiMulti.addAP(ssid, password);
-	pinMode(led, OUTPUT);
-	lcd.init();
-	lcd.begin(20, 4);
-	lcd.backlight();
+	pinMode(ledRed, OUTPUT);
+	pinMode(ledGreen, OUTPUT);
+	pinMode(ledYellow, OUTPUT);
+	pinMode(ledOrange, OUTPUT);
+	DS18B20.begin();
 	if(currentState == 0){
-		stateReady();
+		stateIniting();
 	}
 }
 
 void loop() {
-	char keypadClientKey = keypad.getKey();
 	switch(currentState){
 		case 0:
-		//TODO Implement method "connected"
+		//TODO Implement method "inited"
 		//<case0>
 		break;
 		case 1:
-		//Event: "Back" button pressed
-		if(keypadClientKey == '#'){
-			stateListening();
-		}
+		//TODO Implement method ""Red" received"
+		//TODO Implement method ""Green" received"
+		//TODO Implement method ""Incubation" received"
+		//TODO Implement method ""Orange" received"
 		//TODO Implement method """ received"
 		//<case1>
 		break;
 		case 2:
-		//Event: "Recovery" button pressed
-		if(keypadClientKey == ''){
-			stateRecovery();
-		}
-		//Event: "Emergency" button pressed
-		if(keypadClientKey == 'A'){
-			stateEmergency();
-		}
-		//Event: "Fever" button pressed
-		if(keypadClientKey == 'B'){
-			stateFever();
-		}
-		//Event: "Incubation" button pressed
-		if(keypadClientKey == 'C'){
-			stateIncubation();
-		}
+		//TODO Implement method "completed"
 		//<case2>
 		break;
 		case 3:
-		//Event: "Back" button pressed
-		if(keypadClientKey == '#'){
-			stateListening();
-		}
+		//TODO Implement method "completed"
 		//<case3>
 		break;
 		case 4:
-		//Event: "Back" button pressed
-		if(keypadClientKey == '#'){
-			stateListening();
-		}
+		//TODO Implement method "completed"
 		//<case4>
 		break;
 		case 5:
-		//Event: "Back" button pressed
-		if(keypadClientKey == '#'){
-			stateListening();
-		}
+		//TODO Implement method "completed"
 		//<case5>
+		break;
+		case 6:
+		//TODO Implement method "completed"
+		//<case6>
 		break;
 		default:
 		break;
@@ -266,7 +247,7 @@ String post(String url, String data){
 	}
 	delay(10000);
 }
-void stateReady(){
+void stateIniting(){
 	while (WiFiMulti.run() != WL_CONNECTED)
 	{
 		delay(500);
@@ -277,40 +258,49 @@ void stateReady(){
 	currentState = 0;
 	delay(200);
 }
-void stateEmergency(){
-	//TODO Implement method "Get patients emergency"
-	//TODO Implement method "Show result"
-	digitalWrite(led, HIGH);
+void stateStarting(){
+	//TODO Implement method "Send request to server"
 	currentState = 1;
 	delay(200);
 }
-void stateListening(){
-	//TODO Implement method "Get patient list status"
-	//TODO Implement method "Show result"
-	//TODO Implement method "check emergency"
-	digitalWrite(led, LOW);
+void stateEmergence(){
+	digitalWrite(ledRed, HIGH);
+	digitalWrite(ledYellow, LOW);
+	digitalWrite(ledGreen, LOW);
+	digitalWrite(ledOrange, LOW);
 	currentState = 2;
 	delay(200);
 }
 void stateRecovery(){
-	//TODO Implement method "Get patients recovery"
-	//TODO Implement method "Show result"
-	//TODO Implement method "check emergency"
+	digitalWrite(ledGreen, HIGH);
+	digitalWrite(ledYellow, LOW);
+	digitalWrite(ledOrange, LOW);
+	digitalWrite(ledRed, LOW);
 	currentState = 3;
 	delay(200);
 }
-void stateFever(){
-	//TODO Implement method "Get patients fever"
-	//TODO Implement method "Show result"
-	//TODO Implement method "check emergency"
+void stateIncubation(){
+	digitalWrite(ledYellow, HIGH);
+	digitalWrite(ledOrange, LOW);
+	digitalWrite(ledGreen, LOW);
+	digitalWrite(ledRed, LOW);
 	currentState = 4;
 	delay(200);
 }
-void stateIncubation(){
-	//TODO Implement method "Get patients incubation"
-	//TODO Implement method "Show result"
-	//TODO Implement method "check emergency"
+void stateFever(){
+	digitalWrite(ledOrange, HIGH);
+	digitalWrite(ledYellow, LOW);
+	digitalWrite(ledGreen, LOW);
+	digitalWrite(ledRed, LOW);
 	currentState = 5;
+	delay(200);
+}
+void stateErroring(){
+	digitalWrite(ledRed, HIGH);
+	delay(1000);
+	digitalWrite(ledRed, LOW);
+	delay(1000);
+	currentState = 6;
 	delay(200);
 }
 

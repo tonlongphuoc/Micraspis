@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iotw:StateSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iotw="http://iotwearable/model">
+  <components xsi:type="iotw:StartPoint" constraints="13,4,30,30" outgoings="//@connnections.5"/>
+  <components xsi:type="iotw:StateFrame" constraints="101,196,177,105" incomings="//@connnections.6 //@connnections.7 //@connnections.8 //@connnections.9 //@connnections.11" outgoings="//@connnections.0 //@connnections.1 //@connnections.2 //@connnections.3 //@connnections.4" name="Listening" content="Get patient list status&#xD;&#xA;Show result&#xD;&#xA;check emergency&#xD;&#xA;Hidden led"/>
+  <components xsi:type="iotw:EndPoint" constraints="29,144,30,30" incomings="//@connnections.0"/>
+  <components xsi:type="iotw:StateFrame" constraints="533,411,154,84" incomings="//@connnections.1" outgoings="//@connnections.6" name="Recovery" content="Get patients recovery&#xD;&#xA;Show result&#xD;&#xA;check emergency"/>
+  <components xsi:type="iotw:StateFrame" constraints="543,36,152,66" incomings="//@connnections.2 //@connnections.10" outgoings="//@connnections.9 //@connnections.11" name="Emergency" content="Get patients emergency&#xD;&#xA;Show result&#xD;&#xA;Display led"/>
+  <components xsi:type="iotw:StateFrame" constraints="541,144,165,77" incomings="//@connnections.3" outgoings="//@connnections.8" name="Fever" content="Get patients fever&#xD;&#xA;Show result&#xD;&#xA;check emergency"/>
+  <components xsi:type="iotw:StateFrame" constraints="529,280,181,76" incomings="//@connnections.4" outgoings="//@connnections.7" name="Incubation" content="Get patients incubation&#xD;&#xA;Show result&#xD;&#xA;check emergency"/>
+  <components xsi:type="iotw:StateFrame" constraints="114,16,179,48" incomings="//@connnections.5" outgoings="//@connnections.10" name="Ready" content="begin connecting&#xD;&#xA;"/>
+  <connnections source="//@components.1" target="//@components.2" label="{Off}"/>
+  <connnections source="//@components.1" target="//@components.3" label="&quot;Recovery&quot; button pressed"/>
+  <connnections source="//@components.1" target="//@components.4" label="&quot;Emergency&quot; button pressed">
+    <bendpoints>525,121</bendpoints>
+  </connnections>
+  <connnections source="//@components.1" target="//@components.5" label="&quot;Fever&quot; button pressed">
+    <bendpoints>473,197</bendpoints>
+  </connnections>
+  <connnections source="//@components.1" target="//@components.6" label="&quot;Incubation&quot; button pressed">
+    <bendpoints>452,290</bendpoints>
+  </connnections>
+  <connnections source="//@components.0" target="//@components.7"/>
+  <connnections source="//@components.3" target="//@components.1" label="&quot;Back&quot; button pressed">
+    <bendpoints>46,299</bendpoints>
+    <bendpoints>46,179</bendpoints>
+  </connnections>
+  <connnections source="//@components.6" target="//@components.1" label="&quot;Back&quot; button pressed">
+    <bendpoints>364,225</bendpoints>
+  </connnections>
+  <connnections source="//@components.5" target="//@components.1" label="&quot;Back&quot; button pressed">
+    <bendpoints>337,188</bendpoints>
+  </connnections>
+  <connnections source="//@components.4" target="//@components.1" label="&quot;Back&quot; button pressed">
+    <bendpoints>338,140</bendpoints>
+  </connnections>
+  <connnections source="//@components.7" target="//@components.4" label="connected"/>
+  <connnections source="//@components.4" target="//@components.1" kind="Outside_Flow" label="&quot;&quot; received">
+    <bendpoints>258,113</bendpoints>
+  </connnections>
+</iotw:StateSchema>

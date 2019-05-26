@@ -43,29 +43,31 @@ int nextState = -1;
 
 /*--------------------Define--------------------*/
 
-const char *ssid = "ngoc";
 ESP8266WiFiMulti WiFiMulti;
+
+const char *ssid = "Ngoc";
+
 const char *password = "2481012";
 
 //Define LED - ledRed output
 
-const int ledRed = 4;
+const int ledRed = 16;
 
 //Define LED - ledGreen output
 
-const int ledGreen = 0;
+const int ledGreen = 2;
 
 //Define LED - ledYellow output
 
-const int ledYellow = 2;
+const int ledYellow = 4;
 
 //Define LED - ledOrange output
 
-const int ledOrange = 14;
+const int ledOrange = 0;
 
 // Data wire is plugged into pin D1 on the ESP8266 12-E - GPIO 12
 
-#define ONE_WIRE_BUS 12
+#define ONE_WIRE_BUS 5
 
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 

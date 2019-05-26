@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iotw:ArduinoWiFiESP8266WeMosD1 xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iotw="http://iotwearable/model" name="Arduino WIFI ESP8266 WEMOS D1" pinA0="A0,IO" pinD2="D2,IO,D2&lt;->1" pinD3="D3,IO,D3&lt;->1" pinD4="D4,IO,D4&lt;->1" pinD5="D5,IO,D5&lt;->1" pinD6="D6,IO,D6&lt;->1" pinD9="D9,IO" wifiMode="WIFI_STA" ssid="ngoc" password="2481012">
+  <devices xsi:type="iotw:LED" id="ledRed" constraints="39,62,50,50" name="LED" pin1="1,Passive,D2&lt;->1"/>
+  <devices xsi:type="iotw:LED" id="ledGreen" constraints="175,58,50,50" name="LED" pin1="1,Passive,D3&lt;->1"/>
+  <devices xsi:type="iotw:LED" id="ledYellow" constraints="312,60,50,50" name="LED" pin1="1,Passive,D4&lt;->1"/>
+  <devices xsi:type="iotw:LED" id="ledOrange" constraints="240,59,50,50" name="LED" pin1="1,Passive,D5&lt;->1"/>
+  <devices xsi:type="iotw:LM35" id="control_0" constraints="100,59,64,70" name="LM35" pin1="1,IO,D6&lt;->1"/>
+</iotw:ArduinoWiFiESP8266WeMosD1>
