@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.Mainboard#getDevices <em>Devices</em>}</li>
  *   <li>{@link iotwearable.model.iotw.Mainboard#getName <em>Name</em>}</li>
  * </ul>
+ * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getMainboard()
  * @model abstract="true"

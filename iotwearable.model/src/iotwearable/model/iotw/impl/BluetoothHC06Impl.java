@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinTXD <em>Pin TXD</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinRXD <em>Pin RXD</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinGND <em>Pin GND</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BluetoothHC06Impl#getPinVCC <em>Pin VCC</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -319,7 +319,7 @@ public class BluetoothHC06Impl extends ConnectivityImpl implements BluetoothHC06
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (pinTXD: ");
 		result.append(pinTXD);
 		result.append(", pinRXD: ");

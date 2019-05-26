@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.LEDImpl#getPin1 <em>Pin1</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.LEDImpl#getPin2 <em>Pin2</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -202,7 +202,7 @@ public class LEDImpl extends OutputDeviceImpl implements LED {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (pin1: ");
 		result.append(pin1);
 		result.append(", pin2: ");

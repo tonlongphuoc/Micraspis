@@ -3,35 +3,35 @@
 <pinMap>
 
 	<Device name="Keypad4x4">
-		<pin name="R1" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
-		<pin name="R2" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
-		<pin name="R3" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
-		<pin name="R4" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D00"/>
-		<pin name="C1" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
-		<pin name="C2" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
-		<pin name="C3" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
-		<pin name="C4" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
+		<pin name="R1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="R2" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="R3" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="R4" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="C1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="C2" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="C3" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+		<pin name="C4" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
 	</Device>
 
 	<Device name="Button">
-		<pin name="1" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
+		<pin name="1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
 	</Device>
 
 	<Device name="LED">
-		<pin name="1" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
+		<pin name="1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
 	</Device>
 	
 	<Device name="Buzzer">
-		<pin name="1" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
+		<pin name="1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
 	</Device>
 
 	<Device name="I2CLCD">
-		<pin name="SDA" value="D14"/>
-		<pin name="SCL" value="D15"/>
+		<pin name="SDA" value="SDA"/>
+		<pin name="SCL" value="SCL"/>
 	</Device>
 	
 	<Device name="LM35">
-		<pin name="1" value="D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D1,D0"/>
+		<pin name="1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
 	</Device>
 <!--
 	<Device name="WifiESP8266">

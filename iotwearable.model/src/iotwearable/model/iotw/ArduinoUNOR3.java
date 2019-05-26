@@ -10,7 +10,6 @@ package iotwearable.model.iotw;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.ArduinoUNOR3#getPin0 <em>Pin0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoUNOR3#getPin1 <em>Pin1</em>}</li>
@@ -33,6 +32,7 @@ package iotwearable.model.iotw;
  *   <li>{@link iotwearable.model.iotw.ArduinoUNOR3#getPinA4 <em>Pin A4</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoUNOR3#getPinA5 <em>Pin A5</em>}</li>
  * </ul>
+ * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getArduinoUNOR3()
  * @model

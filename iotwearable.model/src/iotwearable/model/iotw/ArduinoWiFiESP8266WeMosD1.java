@@ -10,7 +10,6 @@ package iotwearable.model.iotw;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinA0 <em>Pin A0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD0 <em>Pin D0</em>}</li>
@@ -22,13 +21,8 @@ package iotwearable.model.iotw;
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD6 <em>Pin D6</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD7 <em>Pin D7</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD8 <em>Pin D8</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD9 <em>Pin D9</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD10 <em>Pin D10</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD11 <em>Pin D11</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD12 <em>Pin D12</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD13 <em>Pin D13</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD14 <em>Pin D14</em>}</li>
- *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD15 <em>Pin D15</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinSDA <em>Pin SDA</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinSCL <em>Pin SCL</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getWifiMode <em>Wifi Mode</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSsid <em>Ssid</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPassword <em>Password</em>}</li>
@@ -38,6 +32,7 @@ package iotwearable.model.iotw;
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSubnet <em>Subnet</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getBaud <em>Baud</em>}</li>
  * </ul>
+ * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1()
  * @model
@@ -315,193 +310,58 @@ public interface ArduinoWiFiESP8266WeMosD1 extends Mainboard {
 	void setPinD8(Pin value);
 
 	/**
-	 * Returns the value of the '<em><b>Pin D9</b></em>' attribute.
-	 * The default value is <code>"D9,IO"</code>.
+	 * Returns the value of the '<em><b>Pin SDA</b></em>' attribute.
+	 * The default value is <code>"SDA,SDA"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Pin D9</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Pin SDA</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D9</em>' attribute.
-	 * @see #setPinD9(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD9()
-	 * @model default="D9,IO" dataType="iotwearable.model.iotw.Pin"
+	 * @return the value of the '<em>Pin SDA</em>' attribute.
+	 * @see #setPinSDA(Pin)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinSDA()
+	 * @model default="SDA,SDA" dataType="iotwearable.model.iotw.Pin"
 	 * @generated
 	 */
-	Pin getPinD9();
+	Pin getPinSDA();
 
 	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD9 <em>Pin D9</em>}' attribute.
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinSDA <em>Pin SDA</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D9</em>' attribute.
-	 * @see #getPinD9()
+	 * @param value the new value of the '<em>Pin SDA</em>' attribute.
+	 * @see #getPinSDA()
 	 * @generated
 	 */
-	void setPinD9(Pin value);
+	void setPinSDA(Pin value);
 
 	/**
-	 * Returns the value of the '<em><b>Pin D10</b></em>' attribute.
-	 * The default value is <code>"D10,IO"</code>.
+	 * Returns the value of the '<em><b>Pin SCL</b></em>' attribute.
+	 * The default value is <code>"SCL,SCL"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Pin D10</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Pin SCL</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D10</em>' attribute.
-	 * @see #setPinD10(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD10()
-	 * @model default="D10,IO" dataType="iotwearable.model.iotw.Pin"
+	 * @return the value of the '<em>Pin SCL</em>' attribute.
+	 * @see #setPinSCL(Pin)
+	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinSCL()
+	 * @model default="SCL,SCL" dataType="iotwearable.model.iotw.Pin"
 	 * @generated
 	 */
-	Pin getPinD10();
+	Pin getPinSCL();
 
 	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD10 <em>Pin D10</em>}' attribute.
+	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinSCL <em>Pin SCL</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D10</em>' attribute.
-	 * @see #getPinD10()
+	 * @param value the new value of the '<em>Pin SCL</em>' attribute.
+	 * @see #getPinSCL()
 	 * @generated
 	 */
-	void setPinD10(Pin value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin D11</b></em>' attribute.
-	 * The default value is <code>"D11,IO"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pin D11</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D11</em>' attribute.
-	 * @see #setPinD11(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD11()
-	 * @model default="D11,IO" dataType="iotwearable.model.iotw.Pin"
-	 * @generated
-	 */
-	Pin getPinD11();
-
-	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD11 <em>Pin D11</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D11</em>' attribute.
-	 * @see #getPinD11()
-	 * @generated
-	 */
-	void setPinD11(Pin value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin D12</b></em>' attribute.
-	 * The default value is <code>"D12,IO"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pin D12</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D12</em>' attribute.
-	 * @see #setPinD12(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD12()
-	 * @model default="D12,IO" dataType="iotwearable.model.iotw.Pin"
-	 * @generated
-	 */
-	Pin getPinD12();
-
-	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD12 <em>Pin D12</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D12</em>' attribute.
-	 * @see #getPinD12()
-	 * @generated
-	 */
-	void setPinD12(Pin value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin D13</b></em>' attribute.
-	 * The default value is <code>"D13,IO"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pin D13</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D13</em>' attribute.
-	 * @see #setPinD13(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD13()
-	 * @model default="D13,IO" dataType="iotwearable.model.iotw.Pin"
-	 * @generated
-	 */
-	Pin getPinD13();
-
-	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD13 <em>Pin D13</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D13</em>' attribute.
-	 * @see #getPinD13()
-	 * @generated
-	 */
-	void setPinD13(Pin value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin D14</b></em>' attribute.
-	 * The default value is <code>"D14,SDA"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pin D14</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D14</em>' attribute.
-	 * @see #setPinD14(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD14()
-	 * @model default="D14,SDA" dataType="iotwearable.model.iotw.Pin"
-	 * @generated
-	 */
-	Pin getPinD14();
-
-	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD14 <em>Pin D14</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D14</em>' attribute.
-	 * @see #getPinD14()
-	 * @generated
-	 */
-	void setPinD14(Pin value);
-
-	/**
-	 * Returns the value of the '<em><b>Pin D15</b></em>' attribute.
-	 * The default value is <code>"D15,SCL"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pin D15</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pin D15</em>' attribute.
-	 * @see #setPinD15(Pin)
-	 * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1_PinD15()
-	 * @model default="D15,SCL" dataType="iotwearable.model.iotw.Pin"
-	 * @generated
-	 */
-	Pin getPinD15();
-
-	/**
-	 * Sets the value of the '{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD15 <em>Pin D15</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pin D15</em>' attribute.
-	 * @see #getPinD15()
-	 * @generated
-	 */
-	void setPinD15(Pin value);
+	void setPinSCL(Pin value);
 
 	/**
 	 * Returns the value of the '<em><b>Wifi Mode</b></em>' attribute.

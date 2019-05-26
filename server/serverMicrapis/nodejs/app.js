@@ -16,8 +16,10 @@ app.use(function (req, res, next) {
     });
 });
 
-app.get('/', (req, res) => {
+app.get('/patient', (req, res) => {
     var temp = req.query.temp;
+    var time  = req.query.time;
+    console.log(time);
     console.log(temp);
     var array = getInfo.ReadFile().Status;
     var result = "";

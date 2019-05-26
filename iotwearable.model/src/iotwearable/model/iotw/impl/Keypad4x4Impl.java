@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getKeys <em>Keys</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getRows <em>Rows</em>}</li>
@@ -50,6 +49,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getNameButtonHash <em>Name Button Hash</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.Keypad4x4Impl#getNameButtonAsterisk <em>Name Button Asterisk</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -1580,7 +1580,7 @@ public class Keypad4x4Impl extends InputDeviceImpl implements Keypad4x4 {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (keys: ");
 		result.append(keys);
 		result.append(", rows: ");

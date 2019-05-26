@@ -56,7 +56,6 @@ import org.eclipse.swt.dnd.Transfer;
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
@@ -287,7 +286,6 @@ public class IotwEditor
 	 */
 	protected IPartListener partListener =
 		new IPartListener() {
-			@Override
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
@@ -306,19 +304,15 @@ public class IotwEditor
 					handleActivate();
 				}
 			}
-			@Override
 			public void partBroughtToTop(IWorkbenchPart p) {
 				// Ignore.
 			}
-			@Override
 			public void partClosed(IWorkbenchPart p) {
 				// Ignore.
 			}
-			@Override
 			public void partDeactivated(IWorkbenchPart p) {
 				// Ignore.
 			}
-			@Override
 			public void partOpened(IWorkbenchPart p) {
 				// Ignore.
 			}
@@ -372,8 +366,6 @@ public class IotwEditor
 	 */
 	protected EContentAdapter problemIndicationAdapter =
 		new EContentAdapter() {
-			protected boolean dispatching;
-
 			@Override
 			public void notifyChanged(Notification notification) {
 				if (notification.getNotifier() instanceof Resource) {
@@ -389,27 +381,21 @@ public class IotwEditor
 							else {
 								resourceToDiagnosticMap.remove(resource);
 							}
-							dispatchUpdateProblemIndication();
+
+							if (updateProblemIndication) {
+								getSite().getShell().getDisplay().asyncExec
+									(new Runnable() {
+										 public void run() {
+											 updateProblemIndication();
+										 }
+									 });
+							}
 							break;
 						}
 					}
 				}
 				else {
 					super.notifyChanged(notification);
-				}
-			}
-
-			protected void dispatchUpdateProblemIndication() {
-				if (updateProblemIndication && !dispatching) {
-					dispatching = true;
-					getSite().getShell().getDisplay().asyncExec
-						(new Runnable() {
-							 @Override
-							 public void run() {
-								 dispatching = false;
-								 updateProblemIndication();
-							 }
-						 });
 				}
 			}
 
@@ -422,7 +408,14 @@ public class IotwEditor
 			protected void unsetTarget(Resource target) {
 				basicUnsetTarget(target);
 				resourceToDiagnosticMap.remove(target);
-				dispatchUpdateProblemIndication();
+				if (updateProblemIndication) {
+					getSite().getShell().getDisplay().asyncExec
+						(new Runnable() {
+							 public void run() {
+								 updateProblemIndication();
+							 }
+						 });
+				}
 			}
 		};
 
@@ -434,7 +427,6 @@ public class IotwEditor
 	 */
 	protected IResourceChangeListener resourceChangeListener =
 		new IResourceChangeListener() {
-			@Override
 			public void resourceChanged(IResourceChangeEvent event) {
 				IResourceDelta delta = event.getDelta();
 				try {
@@ -443,7 +435,6 @@ public class IotwEditor
 						protected Collection<Resource> changedResources = new ArrayList<Resource>();
 						protected Collection<Resource> removedResources = new ArrayList<Resource>();
 
-						@Override
 						public boolean visit(IResourceDelta delta) {
 							if (delta.getResource().getType() == IResource.FILE) {
 								if (delta.getKind() == IResourceDelta.REMOVED ||
@@ -479,7 +470,6 @@ public class IotwEditor
 					if (!visitor.getRemovedResources().isEmpty()) {
 						getSite().getShell().getDisplay().asyncExec
 							(new Runnable() {
-								 @Override
 								 public void run() {
 									 removedResources.addAll(visitor.getRemovedResources());
 									 if (!isDirty()) {
@@ -492,7 +482,6 @@ public class IotwEditor
 					if (!visitor.getChangedResources().isEmpty()) {
 						getSite().getShell().getDisplay().asyncExec
 							(new Runnable() {
-								 @Override
 								 public void run() {
 									 changedResources.addAll(visitor.getChangedResources());
 									 if (getSite().getPage().getActiveEditor() == IotwEditor.this) {
@@ -551,9 +540,8 @@ public class IotwEditor
 	 */
 	protected void handleChangedResources() {
 		if (!changedResources.isEmpty() && (!isDirty() || handleDirtyConflict())) {
-			ResourceSet resourceSet = editingDomain.getResourceSet();
 			if (isDirty()) {
-				changedResources.addAll(resourceSet.getResources());
+				changedResources.addAll(editingDomain.getResourceSet().getResources());
 			}
 			editingDomain.getCommandStack().flush();
 
@@ -562,7 +550,7 @@ public class IotwEditor
 				if (resource.isLoaded()) {
 					resource.unload();
 					try {
-						resource.load(resourceSet.getLoadOptions());
+						resource.load(Collections.EMPTY_MAP);
 					}
 					catch (IOException exception) {
 						if (!resourceToDiagnosticMap.containsKey(resource)) {
@@ -625,11 +613,14 @@ public class IotwEditor
 			}
 
 			if (markerHelper.hasMarkers(editingDomain.getResourceSet())) {
-				try {
-					markerHelper.updateMarkers(diagnostic);
-				}
-				catch (CoreException exception) {
-					IotwEditorPlugin.INSTANCE.log(exception);
+				markerHelper.deleteMarkers(editingDomain.getResourceSet());
+				if (diagnostic.getSeverity() != Diagnostic.OK) {
+					try {
+						markerHelper.createMarkers(diagnostic);
+					}
+					catch (CoreException exception) {
+						IotwEditorPlugin.INSTANCE.log(exception);
+					}
 				}
 			}
 		}
@@ -683,11 +674,9 @@ public class IotwEditor
 		//
 		commandStack.addCommandStackListener
 			(new CommandStackListener() {
-				 @Override
 				 public void commandStackChanged(final EventObject event) {
 					 getContainer().getDisplay().asyncExec
 						 (new Runnable() {
-							  @Override
 							  public void run() {
 								  firePropertyChange(IEditorPart.PROP_DIRTY);
 
@@ -740,7 +729,6 @@ public class IotwEditor
 		if (theSelection != null && !theSelection.isEmpty()) {
 			Runnable runnable =
 				new Runnable() {
-					@Override
 					public void run() {
 						// Try to select the items in the current content viewer of the editor.
 						//
@@ -858,7 +846,6 @@ public class IotwEditor
 					new ISelectionChangedListener() {
 						// This just notifies those things that are affected by the section.
 						//
-						@Override
 						public void selectionChanged(SelectionChangedEvent selectionChangedEvent) {
 							setSelection(selectionChangedEvent.getSelection());
 						}
@@ -926,7 +913,7 @@ public class IotwEditor
 	 * @generated
 	 */
 	public void createModel() {
-		URI resourceURI = EditUIUtil.getURI(getEditorInput(), editingDomain.getResourceSet().getURIConverter());
+		URI resourceURI = EditUIUtil.getURI(getEditorInput());
 		Exception exception = null;
 		Resource resource = null;
 		try {
@@ -954,11 +941,10 @@ public class IotwEditor
 	 * @generated
 	 */
 	public Diagnostic analyzeResourceProblems(Resource resource, Exception exception) {
-		boolean hasErrors = !resource.getErrors().isEmpty();
-		if (hasErrors || !resource.getWarnings().isEmpty()) {
+		if (!resource.getErrors().isEmpty() || !resource.getWarnings().isEmpty()) {
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
-					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
+					(Diagnostic.ERROR,
 					 "iotwearable.model.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
@@ -1016,7 +1002,6 @@ public class IotwEditor
 
 				selectionViewer = (TreeViewer)viewerPane.getViewer();
 				selectionViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
-				selectionViewer.setUseHashlookup(true);
 
 				selectionViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 				selectionViewer.setInput(editingDomain.getResourceSet());
@@ -1199,11 +1184,8 @@ public class IotwEditor
 
 			getSite().getShell().getDisplay().asyncExec
 				(new Runnable() {
-					 @Override
 					 public void run() {
-						 if (!getContainer().isDisposed()) {
-							 setActivePage(0);
-						 }
+						 setActivePage(0);
 					 }
 				 });
 		}
@@ -1226,7 +1208,6 @@ public class IotwEditor
 
 		getSite().getShell().getDisplay().asyncExec
 			(new Runnable() {
-				 @Override
 				 public void run() {
 					 updateProblemIndication();
 				 }
@@ -1244,9 +1225,9 @@ public class IotwEditor
 		if (getPageCount() <= 1) {
 			setPageText(0, "");
 			if (getContainer() instanceof CTabFolder) {
+				((CTabFolder)getContainer()).setTabHeight(1);
 				Point point = getContainer().getSize();
-				Rectangle clientArea = getContainer().getClientArea();
-				getContainer().setSize(point.x,  2 * point.y - clientArea.height - clientArea.y);
+				getContainer().setSize(point.x, point.y + 6);
 			}
 		}
 	}
@@ -1262,9 +1243,9 @@ public class IotwEditor
 		if (getPageCount() > 1) {
 			setPageText(0, getString("_UI_SelectionPage_label"));
 			if (getContainer() instanceof CTabFolder) {
+				((CTabFolder)getContainer()).setTabHeight(SWT.DEFAULT);
 				Point point = getContainer().getSize();
-				Rectangle clientArea = getContainer().getClientArea();
-				getContainer().setSize(point.x, clientArea.height + clientArea.y);
+				getContainer().setSize(point.x, point.y - 6);
 			}
 		}
 	}
@@ -1292,15 +1273,15 @@ public class IotwEditor
 	 */
 	@SuppressWarnings("rawtypes")
 	@Override
-	public <T> T getAdapter(Class<T> key) {
+	public Object getAdapter(Class key) {
 		if (key.equals(IContentOutlinePage.class)) {
-			return showOutlineView() ? key.cast(getContentOutlinePage()) : null;
+			return showOutlineView() ? getContentOutlinePage() : null;
 		}
 		else if (key.equals(IPropertySheetPage.class)) {
-			return key.cast(getPropertySheetPage());
+			return getPropertySheetPage();
 		}
 		else if (key.equals(IGotoMarker.class)) {
-			return key.cast(this);
+			return this;
 		}
 		else {
 			return super.getAdapter(key);
@@ -1326,7 +1307,6 @@ public class IotwEditor
 
 					// Set up the tree viewer.
 					//
-					contentOutlineViewer.setUseHashlookup(true);
 					contentOutlineViewer.setContentProvider(new AdapterFactoryContentProvider(adapterFactory));
 					contentOutlineViewer.setLabelProvider(new AdapterFactoryLabelProvider(adapterFactory));
 					contentOutlineViewer.setInput(editingDomain.getResourceSet());
@@ -1363,7 +1343,6 @@ public class IotwEditor
 				(new ISelectionChangedListener() {
 					 // This ensures that we handle selections correctly.
 					 //
-					 @Override
 					 public void selectionChanged(SelectionChangedEvent event) {
 						 handleContentOutlineSelection(event.getSelection());
 					 }
@@ -1381,7 +1360,7 @@ public class IotwEditor
 	 */
 	public IPropertySheetPage getPropertySheetPage() {
 		PropertySheetPage propertySheetPage =
-			new ExtendedPropertySheetPage(editingDomain, ExtendedPropertySheetPage.Decoration.NONE, null, 0, false) {
+			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
 					IotwEditor.this.setSelectionToViewer(selection);
@@ -1475,9 +1454,7 @@ public class IotwEditor
 					// Save the resources to the file system.
 					//
 					boolean first = true;
-					List<Resource> resources = editingDomain.getResourceSet().getResources();
-					for (int i = 0; i < resources.size(); ++i) {
-						Resource resource = resources.get(i);
+					for (Resource resource : editingDomain.getResourceSet().getResources()) {
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinA0 <em>Pin A0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD0 <em>Pin D0</em>}</li>
@@ -33,13 +32,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD6 <em>Pin D6</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD7 <em>Pin D7</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD8 <em>Pin D8</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD9 <em>Pin D9</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD10 <em>Pin D10</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD11 <em>Pin D11</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD12 <em>Pin D12</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD13 <em>Pin D13</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD14 <em>Pin D14</em>}</li>
- *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD15 <em>Pin D15</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinSDA <em>Pin SDA</em>}</li>
+ *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinSCL <em>Pin SCL</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getWifiMode <em>Wifi Mode</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getSsid <em>Ssid</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPassword <em>Password</em>}</li>
@@ -49,6 +43,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getSubnet <em>Subnet</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getBaud <em>Baud</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
@@ -254,144 +249,44 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	protected Pin pinD8 = PIN_D8_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPinD9() <em>Pin D9</em>}' attribute.
+	 * The default value of the '{@link #getPinSDA() <em>Pin SDA</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPinD9()
+	 * @see #getPinSDA()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Pin PIN_D9_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D9,IO");
+	protected static final Pin PIN_SDA_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "SDA,SDA");
 
 	/**
-	 * The cached value of the '{@link #getPinD9() <em>Pin D9</em>}' attribute.
+	 * The cached value of the '{@link #getPinSDA() <em>Pin SDA</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPinD9()
+	 * @see #getPinSDA()
 	 * @generated
 	 * @ordered
 	 */
-	protected Pin pinD9 = PIN_D9_EDEFAULT;
+	protected Pin pinSDA = PIN_SDA_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPinD10() <em>Pin D10</em>}' attribute.
+	 * The default value of the '{@link #getPinSCL() <em>Pin SCL</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPinD10()
+	 * @see #getPinSCL()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Pin PIN_D10_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D10,IO");
+	protected static final Pin PIN_SCL_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "SCL,SCL");
 
 	/**
-	 * The cached value of the '{@link #getPinD10() <em>Pin D10</em>}' attribute.
+	 * The cached value of the '{@link #getPinSCL() <em>Pin SCL</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPinD10()
+	 * @see #getPinSCL()
 	 * @generated
 	 * @ordered
 	 */
-	protected Pin pinD10 = PIN_D10_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPinD11() <em>Pin D11</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD11()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Pin PIN_D11_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D11,IO");
-
-	/**
-	 * The cached value of the '{@link #getPinD11() <em>Pin D11</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD11()
-	 * @generated
-	 * @ordered
-	 */
-	protected Pin pinD11 = PIN_D11_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPinD12() <em>Pin D12</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD12()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Pin PIN_D12_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D12,IO");
-
-	/**
-	 * The cached value of the '{@link #getPinD12() <em>Pin D12</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD12()
-	 * @generated
-	 * @ordered
-	 */
-	protected Pin pinD12 = PIN_D12_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPinD13() <em>Pin D13</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD13()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Pin PIN_D13_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D13,IO");
-
-	/**
-	 * The cached value of the '{@link #getPinD13() <em>Pin D13</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD13()
-	 * @generated
-	 * @ordered
-	 */
-	protected Pin pinD13 = PIN_D13_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPinD14() <em>Pin D14</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD14()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Pin PIN_D14_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D14,SDA");
-
-	/**
-	 * The cached value of the '{@link #getPinD14() <em>Pin D14</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD14()
-	 * @generated
-	 * @ordered
-	 */
-	protected Pin pinD14 = PIN_D14_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPinD15() <em>Pin D15</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD15()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Pin PIN_D15_EDEFAULT = (Pin)IotwFactory.eINSTANCE.createFromString(IotwPackage.eINSTANCE.getPin(), "D15,SCL");
-
-	/**
-	 * The cached value of the '{@link #getPinD15() <em>Pin D15</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPinD15()
-	 * @generated
-	 * @ordered
-	 */
-	protected Pin pinD15 = PIN_D15_EDEFAULT;
+	protected Pin pinSCL = PIN_SCL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getWifiMode() <em>Wifi Mode</em>}' attribute.
@@ -808,9 +703,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Pin getPinD9() {
-		return pinD9;
+	public Pin getPinSDA() {
+		return pinSDA;
 	}
 
 	/**
@@ -818,12 +712,11 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setPinD9(Pin newPinD9) {
-		Pin oldPinD9 = pinD9;
-		pinD9 = newPinD9;
+	public void setPinSDA(Pin newPinSDA) {
+		Pin oldPinSDA = pinSDA;
+		pinSDA = newPinSDA;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9, oldPinD9, pinD9));
+			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SDA, oldPinSDA, pinSDA));
 	}
 
 	/**
@@ -831,9 +724,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Pin getPinD10() {
-		return pinD10;
+	public Pin getPinSCL() {
+		return pinSCL;
 	}
 
 	/**
@@ -841,127 +733,11 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setPinD10(Pin newPinD10) {
-		Pin oldPinD10 = pinD10;
-		pinD10 = newPinD10;
+	public void setPinSCL(Pin newPinSCL) {
+		Pin oldPinSCL = pinSCL;
+		pinSCL = newPinSCL;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10, oldPinD10, pinD10));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Pin getPinD11() {
-		return pinD11;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPinD11(Pin newPinD11) {
-		Pin oldPinD11 = pinD11;
-		pinD11 = newPinD11;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11, oldPinD11, pinD11));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Pin getPinD12() {
-		return pinD12;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPinD12(Pin newPinD12) {
-		Pin oldPinD12 = pinD12;
-		pinD12 = newPinD12;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12, oldPinD12, pinD12));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Pin getPinD13() {
-		return pinD13;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPinD13(Pin newPinD13) {
-		Pin oldPinD13 = pinD13;
-		pinD13 = newPinD13;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13, oldPinD13, pinD13));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Pin getPinD14() {
-		return pinD14;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPinD14(Pin newPinD14) {
-		Pin oldPinD14 = pinD14;
-		pinD14 = newPinD14;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14, oldPinD14, pinD14));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Pin getPinD15() {
-		return pinD15;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setPinD15(Pin newPinD15) {
-		Pin oldPinD15 = pinD15;
-		pinD15 = newPinD15;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15, oldPinD15, pinD15));
+			eNotify(new ENotificationImpl(this, Notification.SET, IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SCL, oldPinSCL, pinSCL));
 	}
 
 	/**
@@ -1176,20 +952,10 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 				return getPinD7();
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8:
 				return getPinD8();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9:
-				return getPinD9();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10:
-				return getPinD10();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11:
-				return getPinD11();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12:
-				return getPinD12();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13:
-				return getPinD13();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14:
-				return getPinD14();
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15:
-				return getPinD15();
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SDA:
+				return getPinSDA();
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SCL:
+				return getPinSCL();
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE:
 				return getWifiMode();
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID:
@@ -1248,26 +1014,11 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8:
 				setPinD8((Pin)newValue);
 				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9:
-				setPinD9((Pin)newValue);
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SDA:
+				setPinSDA((Pin)newValue);
 				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10:
-				setPinD10((Pin)newValue);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11:
-				setPinD11((Pin)newValue);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12:
-				setPinD12((Pin)newValue);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13:
-				setPinD13((Pin)newValue);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14:
-				setPinD14((Pin)newValue);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15:
-				setPinD15((Pin)newValue);
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SCL:
+				setPinSCL((Pin)newValue);
 				return;
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE:
 				setWifiMode((ESP8266WiFiMode)newValue);
@@ -1335,26 +1086,11 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8:
 				setPinD8(PIN_D8_EDEFAULT);
 				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9:
-				setPinD9(PIN_D9_EDEFAULT);
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SDA:
+				setPinSDA(PIN_SDA_EDEFAULT);
 				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10:
-				setPinD10(PIN_D10_EDEFAULT);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11:
-				setPinD11(PIN_D11_EDEFAULT);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12:
-				setPinD12(PIN_D12_EDEFAULT);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13:
-				setPinD13(PIN_D13_EDEFAULT);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14:
-				setPinD14(PIN_D14_EDEFAULT);
-				return;
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15:
-				setPinD15(PIN_D15_EDEFAULT);
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SCL:
+				setPinSCL(PIN_SCL_EDEFAULT);
 				return;
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE:
 				setWifiMode(WIFI_MODE_EDEFAULT);
@@ -1412,20 +1148,10 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 				return PIN_D7_EDEFAULT == null ? pinD7 != null : !PIN_D7_EDEFAULT.equals(pinD7);
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D8:
 				return PIN_D8_EDEFAULT == null ? pinD8 != null : !PIN_D8_EDEFAULT.equals(pinD8);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D9:
-				return PIN_D9_EDEFAULT == null ? pinD9 != null : !PIN_D9_EDEFAULT.equals(pinD9);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D10:
-				return PIN_D10_EDEFAULT == null ? pinD10 != null : !PIN_D10_EDEFAULT.equals(pinD10);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D11:
-				return PIN_D11_EDEFAULT == null ? pinD11 != null : !PIN_D11_EDEFAULT.equals(pinD11);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D12:
-				return PIN_D12_EDEFAULT == null ? pinD12 != null : !PIN_D12_EDEFAULT.equals(pinD12);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D13:
-				return PIN_D13_EDEFAULT == null ? pinD13 != null : !PIN_D13_EDEFAULT.equals(pinD13);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D14:
-				return PIN_D14_EDEFAULT == null ? pinD14 != null : !PIN_D14_EDEFAULT.equals(pinD14);
-			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_D15:
-				return PIN_D15_EDEFAULT == null ? pinD15 != null : !PIN_D15_EDEFAULT.equals(pinD15);
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SDA:
+				return PIN_SDA_EDEFAULT == null ? pinSDA != null : !PIN_SDA_EDEFAULT.equals(pinSDA);
+			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__PIN_SCL:
+				return PIN_SCL_EDEFAULT == null ? pinSCL != null : !PIN_SCL_EDEFAULT.equals(pinSCL);
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__WIFI_MODE:
 				return wifiMode != WIFI_MODE_EDEFAULT;
 			case IotwPackage.ARDUINO_WI_FI_ESP8266_WE_MOS_D1__SSID:
@@ -1455,7 +1181,7 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (pinA0: ");
 		result.append(pinA0);
 		result.append(", pinD0: ");
@@ -1476,20 +1202,10 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 		result.append(pinD7);
 		result.append(", pinD8: ");
 		result.append(pinD8);
-		result.append(", pinD9: ");
-		result.append(pinD9);
-		result.append(", pinD10: ");
-		result.append(pinD10);
-		result.append(", pinD11: ");
-		result.append(pinD11);
-		result.append(", pinD12: ");
-		result.append(pinD12);
-		result.append(", pinD13: ");
-		result.append(pinD13);
-		result.append(", pinD14: ");
-		result.append(pinD14);
-		result.append(", pinD15: ");
-		result.append(pinD15);
+		result.append(", pinSDA: ");
+		result.append(pinSDA);
+		result.append(", pinSCL: ");
+		result.append(pinSCL);
 		result.append(", wifiMode: ");
 		result.append(wifiMode);
 		result.append(", ssid: ");
@@ -1523,13 +1239,8 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 		pins.add(pinD6);
 		pins.add(pinD7);
 		pins.add(pinD8);
-		pins.add(pinD9);
-		pins.add(pinD10);
-		pins.add(pinD11);
-		pins.add(pinD12);
-		pins.add(pinD13);
-		pins.add(pinD14);
-		pins.add(pinD15);
+		pins.add(pinSDA);
+		pins.add(pinSCL);
 		return pins;
 	}
 	
@@ -1568,27 +1279,13 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 		else if(pin.getName().equals(pinD8.getName())){
 			setPinD8(pin);
 		}
-		else if(pin.getName().equals(pinD9.getName())){
-			setPinD9(pin);
+		else if(pin.getName().equals(pinSDA.getName())){
+			setPinSDA(pin);
 		}
-		else if(pin.getName().equals(pinD10.getName())){
-			setPinD10(pin);
+		else if(pin.getName().equals(pinSCL.getName())){
+			setPinSCL(pin);
 		}
-		else if(pin.getName().equals(pinD11.getName())){
-			setPinD11(pin);
-		}
-		else if(pin.getName().equals(pinD12.getName())){
-			setPinD12(pin);
-		}
-		else if(pin.getName().equals(pinD13.getName())){
-			setPinD13(pin);
-		}
-		else if(pin.getName().equals(pinD14.getName())){
-			setPinD14(pin);
-		}
-		else if(pin.getName().equals(pinD15.getName())){
-			setPinD15(pin);
-		}
+		
 	}
 
 } //ArduinoWiFiESP8266WeMosD1Impl

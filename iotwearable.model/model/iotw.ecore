@@ -75,19 +75,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD6" eType="#//Pin" defaultValueLiteral="D6,IO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD7" eType="#//Pin" defaultValueLiteral="D7,IO"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD8" eType="#//Pin" defaultValueLiteral="D8,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD9" eType="#//Pin" defaultValueLiteral="D9,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD10" eType="#//Pin"
-        defaultValueLiteral="D10,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD11" eType="#//Pin"
-        defaultValueLiteral="D11,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD12" eType="#//Pin"
-        defaultValueLiteral="D12,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD13" eType="#//Pin"
-        defaultValueLiteral="D13,IO"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD14" eType="#//Pin"
-        defaultValueLiteral="D14,SDA"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinD15" eType="#//Pin"
-        defaultValueLiteral="D15,SCL"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinSDA" eType="#//Pin"
+        defaultValueLiteral="SDA,SDA"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pinSCL" eType="#//Pin"
+        defaultValueLiteral="SCL,SCL"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wifiMode" eType="#//ESP8266WiFiMode"
         defaultValueLiteral="WIFI_OFF"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ssid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
