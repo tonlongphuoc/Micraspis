@@ -126,7 +126,7 @@ public abstract class ArduinoWeMosCodeCreationEngine extends DeviceCodeCreationE
 		// TODO Auto-generated method stub
 		String code = "";
 		
-		if(syntax.equals("begin connecting")) {
+		if(syntax.equals("begin connection")) {
 			code = "  while (WiFiMulti.run() != WL_CONNECTED)\n" + 
 					"  {\n" + 
 					"    delay(500);\n" + 

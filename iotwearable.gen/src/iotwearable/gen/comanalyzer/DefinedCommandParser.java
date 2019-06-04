@@ -21,7 +21,7 @@ import java.util.LinkedList;
 public class DefinedCommandParser {
 	private final String keywords = "Show|Display|button pressed"
 			+ "|Hidden|Blink|Beep|push|Delay|times|received|send|get from url"
-			+ "|post to url|with data|begin connecting";
+			+ "|post to url|with data|begin connection";
 	private LexicalAnalyzer lexer = new LexicalAnalyzer();
 	public DefinedCommandParser() {
 		lexer.tokenizer.add(keywords, TokenType.keyword);
@@ -98,7 +98,7 @@ public class DefinedCommandParser {
 							}
 						}
 					}
-					else if(syntax.equals("begin connecting")
+					else if(syntax.equals("begin connection")
 							|| syntax.equals("get from url <String>")
 							|| syntax.equals("post to url <String> with data <String>"))
 					{
