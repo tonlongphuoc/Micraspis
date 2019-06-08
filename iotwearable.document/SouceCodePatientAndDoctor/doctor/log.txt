@@ -1,2 +1,0 @@
-Generate code for doctor: 2019/05/26 13:49:20 by ESP-LAP WAGEN Tools
-Generate code completed.

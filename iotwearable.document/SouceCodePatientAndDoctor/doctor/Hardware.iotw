@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<iotw:ArduinoWiFiESP8266WeMosD1 xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iotw="http://iotwearable/model" name="Arduino WIFI ESP8266 WEMOS D1" pinD0="D0,IO,D0&lt;->R1" pinD1="D1,IO,D1&lt;->R2" pinD2="D2,IO,D2&lt;->R3" pinD3="D3,IO,D3&lt;->R4" pinD4="D4,IO,D4&lt;->C1" pinD5="D5,IO,D5&lt;->C2" pinD6="D6,IO,D6&lt;->C3" pinD7="D7,IO,D7&lt;->C4" pinD8="D8,IO,D8&lt;->1" pinSDA="SDA,SDA,SDA&lt;->SDA" pinSCL="SCL,SCL,SCL&lt;->SCL" wifiMode="WIFI_STA" ssid="Ngoc" password="24681012" baud="115200">
-  <devices xsi:type="iotw:Keypad4x4" id="keypad" constraints="140,100,100,100" name="Keypad 4x4" pin1="R1,IO,D0&lt;->R1" pin2="R2,IO,D1&lt;->R2" pin3="R3,IO,D2&lt;->R3" pin4="R4,IO,D3&lt;->R4" pin5="C1,IO,D4&lt;->C1" pin6="C2,IO,D5&lt;->C2" pin7="C3,IO,D6&lt;->C3" pin8="C4,IO,D7&lt;->C4" nameButtonA="Emergency" nameButtonB="Fever" nameButtonC="Incubation" nameButtonD="Revcovery" nameButtonHash="Back"/>
-  <devices xsi:type="iotw:LED" id="led" constraints="356,249,50,50" name="LED" pin1="1,Passive,D8&lt;->1"/>
-  <devices xsi:type="iotw:I2CLCD" id="lcd" constraints="341,85,197,98" name="I2C LCD" pinSDA="SDA,IO,SDA&lt;->SDA" pinSCL="SCL,IO,SCL&lt;->SCL"/>
-</iotw:ArduinoWiFiESP8266WeMosD1>
