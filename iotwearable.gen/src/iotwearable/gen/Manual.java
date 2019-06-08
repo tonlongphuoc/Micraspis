@@ -2,6 +2,8 @@ package iotwearable.gen;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 
 import iotwearable.gen.utilities.GenLogger;
 import iotwearable.model.iotw.BluetoothHC06;
@@ -25,11 +27,10 @@ public class Manual {
 		this.html="";
 	}
 	public String createManual(String title){
-		String path = this.getClass().getProtectionDomain().getCodeSource()
-				.getLocation().getPath()
-				+ "\\src\\iotwearable\\gen\\manual.html";
+		Path path = FileSystems.getDefault().getPath(this.getClass().getProtectionDomain().getCodeSource()
+				.getLocation().getPath(),"src", "iotwearable","gen","manual.html");
 		try {
-			html = FileUtils.readFile(path);
+			html = FileUtils.readFile(path.toAbsolutePath().toString());
 		} catch (IOException e) {
 			GenLogger.addLog("Error: Not found manual code template.");
 		}
@@ -176,8 +177,12 @@ public class Manual {
 				countTransistor++;
 			}
 		}
+		String mainboardName = mainboard.getName().equals("Arduino WIFI ESP8266 WEMOS D1")?
+				mainboard.getName() + " R2": mainboard.getName();
 		listControl +=  "<tr>\n"
-				+ "<td>"+mainboard.getName()+"</td>\n"
+				+ "<td>"
+				+ mainboardName	
+				+"</td>\n"
 				+ "<td>"+1+"</td>\n"
 				+ "</tr>\n";
 		if(countBuzzer!=0)
