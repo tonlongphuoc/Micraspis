@@ -1,4 +1,4 @@
-# DSL4W
+# Micraspis
 
 This is a tool allowing generate source code for wearable devices by describing devices configuration and state schema  http://esp-lab.net/
 
