@@ -33,6 +33,7 @@ import org.eclipse.gef.RequestConstants;
 import org.eclipse.gef.editparts.AbstractConnectionEditPart;
 import org.eclipse.gef.editpolicies.ConnectionEndpointEditPolicy;
 import org.eclipse.gef.requests.DirectEditRequest;
+import org.eclipse.swt.SWT;
 
 public class ConnectionEditPart extends AbstractConnectionEditPart {
 	private ConnectionAdapter adapter;
@@ -148,7 +149,8 @@ public class ConnectionEditPart extends AbstractConnectionEditPart {
 			connection.setTargetDecoration(new PolylineDecoration());
 			break;
 		case OUTSIDE_FLOW:
-			connection.setLineDash(new float[] {4});
+			connection.setLineStyle(SWT.LINE_CUSTOM);
+			connection.setLineDash(new float[] { 5.0f, 2.0f });
 			connection.setTargetDecoration(new PolylineDecoration());
 			break;
 		default:

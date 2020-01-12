@@ -11,11 +11,11 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.Device#getMainboard <em>Mainboard</em>}</li>
  *   <li>{@link iotwearable.model.iotw.Device#getName <em>Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getDevice()
  * @model abstract="true"
