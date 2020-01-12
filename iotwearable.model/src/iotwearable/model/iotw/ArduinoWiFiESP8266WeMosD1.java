@@ -10,6 +10,7 @@ package iotwearable.model.iotw;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinA0 <em>Pin A0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getPinD0 <em>Pin D0</em>}</li>
@@ -32,7 +33,6 @@ package iotwearable.model.iotw;
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getSubnet <em>Subnet</em>}</li>
  *   <li>{@link iotwearable.model.iotw.ArduinoWiFiESP8266WeMosD1#getBaud <em>Baud</em>}</li>
  * </ul>
- * </p>
  *
  * @see iotwearable.model.iotw.IotwPackage#getArduinoWiFiESP8266WeMosD1()
  * @model

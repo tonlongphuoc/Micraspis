@@ -333,7 +333,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link IotwPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -347,7 +347,8 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		if (isInited) return (IotwPackage)EPackage.Registry.INSTANCE.getEPackage(IotwPackage.eNS_URI);
 
 		// Obtain or create and register package
-		IotwPackageImpl theIotwPackage = (IotwPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IotwPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IotwPackageImpl());
+		Object registeredIotwPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		IotwPackageImpl theIotwPackage = registeredIotwPackage instanceof IotwPackageImpl ? (IotwPackageImpl)registeredIotwPackage : new IotwPackageImpl();
 
 		isInited = true;
 
@@ -360,7 +361,6 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		// Mark meta-data to indicate it can't be changed
 		theIotwPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(IotwPackage.eNS_URI, theIotwPackage);
 		return theIotwPackage;
@@ -811,6 +811,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoWiFiESP8266WeMosD1_PinSDA() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(10);
 	}
@@ -820,6 +821,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getArduinoWiFiESP8266WeMosD1_PinSCL() {
 		return (EAttribute)arduinoWiFiESP8266WeMosD1EClass.getEStructuralFeatures().get(11);
 	}

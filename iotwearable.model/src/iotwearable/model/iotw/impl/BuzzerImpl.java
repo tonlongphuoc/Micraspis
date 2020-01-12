@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getPin1 <em>Pin1</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getPin2 <em>Pin2</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getTone <em>Tone</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.BuzzerImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -318,7 +318,7 @@ public class BuzzerImpl extends OutputDeviceImpl implements Buzzer {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pin1: ");
 		result.append(pin1);
 		result.append(", pin2: ");

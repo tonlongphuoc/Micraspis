@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinA0 <em>Pin A0</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getPinD0 <em>Pin D0</em>}</li>
@@ -43,7 +44,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getSubnet <em>Subnet</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.ArduinoWiFiESP8266WeMosD1Impl#getBaud <em>Baud</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -703,6 +703,7 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinSDA() {
 		return pinSDA;
 	}
@@ -712,6 +713,7 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinSDA(Pin newPinSDA) {
 		Pin oldPinSDA = pinSDA;
 		pinSDA = newPinSDA;
@@ -724,6 +726,7 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pin getPinSCL() {
 		return pinSCL;
 	}
@@ -733,6 +736,7 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPinSCL(Pin newPinSCL) {
 		Pin oldPinSCL = pinSCL;
 		pinSCL = newPinSCL;
@@ -1181,7 +1185,7 @@ public class ArduinoWiFiESP8266WeMosD1Impl extends MainboardImpl implements Ardu
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pinA0: ");
 		result.append(pinA0);
 		result.append(", pinD0: ");

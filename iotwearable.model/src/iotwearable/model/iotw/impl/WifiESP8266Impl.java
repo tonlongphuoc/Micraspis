@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getPinTX <em>Pin TX</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getPinRX <em>Pin RX</em>}</li>
@@ -42,7 +43,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getConnectedChannel <em>Connected Channel</em>}</li>
  *   <li>{@link iotwearable.model.iotw.impl.WifiESP8266Impl#getProtocol <em>Protocol</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -972,7 +972,7 @@ public class WifiESP8266Impl extends ConnectivityImpl implements WifiESP8266 {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (pinTX: ");
 		result.append(pinTX);
 		result.append(", pinRX: ");
