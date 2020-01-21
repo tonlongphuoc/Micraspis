@@ -187,6 +187,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 		}
 		return enable;
 	}
+	@SuppressWarnings("unused")
 	private boolean checkCalculateEnabledKeypad4x4()
 	{
 		int countTypePin=0;
@@ -206,6 +207,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 			return false;
 		return true;
 	}
+	@SuppressWarnings("unused")
 	private boolean checkCalculateEnabledI2CLCD()
 	{
 		for(Device device : mainboard.getDevices())
@@ -217,6 +219,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 		}
 		return true;
 	}
+	@SuppressWarnings("unused")
 	private boolean checkCalculateEnabledLEDBuzzer()
 	{
 		int count =0;
@@ -229,6 +232,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 			return false;
 		return true;
 	}
+	@SuppressWarnings("unused")
 	private boolean checkCalculateEnabledBluetooth()
 	{
 		int count =0;
@@ -246,6 +250,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 		}
 		return true;
 	}
+	@SuppressWarnings("unused")
 	private boolean checkCalculateEnableWifiESP8266()
 	{
 		for(Pin pin: mainboard.getPinConnecteds())

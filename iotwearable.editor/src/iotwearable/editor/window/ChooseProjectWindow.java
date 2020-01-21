@@ -91,9 +91,11 @@ public class ChooseProjectWindow  {
 				CheckBoxNode checkBoxNode = new CheckBoxNode(fileName.getName(), false) ;
 				list.add(checkBoxNode);
 			}
+			@SuppressWarnings("rawtypes")
 			Vector projectName = new NamedVector(project.getParrent(),list);
 			rootNodes.add(projectName);
 		}
+		@SuppressWarnings("rawtypes")
 		Vector	rootVector = new NamedVector("Root", rootNodes);
 		JTree	tree = new JTree(rootVector);
 
