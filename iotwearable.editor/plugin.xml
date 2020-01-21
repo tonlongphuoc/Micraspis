@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?eclipse version="3.4"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<?eclipse version="3.4" ?>
 <plugin>
-<extension
-         name="Main Menu Contributions"
-         point="org.eclipse.ui.menus">
-</extension>
    <extension
          point="org.eclipse.ui.editors">
       <editor
             class="iotwearable.editor.MainboardEditor"
             contributorClass="iotwearable.editor.MainboardEditorActionBarContributor"
-            default="true"
             extensions="iotw"
-            icon="src/iotwearable/editor/icons/mainboard_icon_24x24.png"
+            icon="icons/mainboard_icon_24x24.png"
             id="iotwearable.gef.mainboardEditor"
             name="IoTWMainboard Editor">
       </editor>
@@ -21,42 +16,57 @@
             contributorClass="iotwearable.editor.StateSchemaEditorActionBarContributor"
             default="true"
             extensions="iotw"
-            icon="src/iotwearable/editor/icons/state_icon.png"
+            icon="icons/state_icon.png"
             id="iotwearable.gef.stateEditor"
             name="IoTWStateSchema Editor">
       </editor>
    </extension>
    <extension
-         point="org.eclipse.ui.actionSets">
-    <actionSet
-            id="iotwearable.gef.actionSet"
-            label="IoTW"
-            visible="true">
-         <menu
-               id="iotwMenu"
-               label="IoTW">
-            <separator
-                  name="iotwGroup">
-            </separator>
-         </menu>
-         <action
-               class="iotwearable.editor.action.CodeGeneratorAction"
-               icon="src/iotwearable/editor/icons/gen.png"
-               id="iotwearable.gef.GenerateCodeAction"
-               label="Generate code"
-               menubarPath="iotwMenu/iotwGroup"
-               toolbarPath="iotwGroup"
-               tooltip="Generate code">
-         </action>
-          <action
-               class="iotwearable.editor.action.GrammarCheckerAction"
-               icon="src/iotwearable/editor/icons/check_grammar.png"
-               id="iotwearable.gef.GenerateCodeAction"
-               label="Generate code"
-               menubarPath="iotwMenu/iotwGroup"
-               toolbarPath="iotwGroup"
-               tooltip="Generate code">
-         </action>
-      </actionSet>
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="iotwearable.editor.commands.category"
+            defaultHandler="iotwearable.editor.handlers.GenerateCodeHandler"
+            id="iotwearable.editor.commands.generateCode"
+            name="Generate code">
+      </command>
+      <command
+            categoryId="iotwearable.editor.commands.category"
+            defaultHandler="iotwearable.editor.handlers.CheckHandler"
+            id="iotwearable.editor.commands.check"
+            name="Check">
+      </command>
+      <category
+            id="iotwearable.editor.commands.category"
+            name="iotwearable.editor.commands.category">
+      </category>
    </extension>
+      <extension name="IoTWearable" point="org.eclipse.ui.menus">
+            <menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+                  <menu id="iotwearable.editor.menus" label="IoTWearable" mnemonic="M">
+                        <command
+                              commandId="iotwearable.editor.commands.generateCode"
+                              icon="icons/gen.png"
+                              id="iotwearable.editor.menus.generateCode"
+                              mnemonic="S"></command>
+                         
+                        <command
+                              commandId="iotwearable.editor.commands.check"
+                              icon="icons/check_grammar.png"
+                              id="iotwearable.editor.menus.check"
+                              mnemonic="S"></command>
+                  </menu>
+            </menuContribution>
+            <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+                  <toolbar id="iotwearable.editor.toolbars.generateCode">
+                        <command commandId="iotwearable.editor.commands.generateCode"
+                         icon="icons/gen.png" id="iotwearable.editor.toolbars.generateCode"
+                          tooltip="Generate code"></command>
+                  </toolbar>
+                   <toolbar id="iotwearable.editor.toolbars.check">
+                        <command commandId="iotwearable.editor.commands.check"
+                         icon="icons/check_grammar.png" id="iotwearable.editor.toolbars.check"
+                          tooltip="Check"></command>
+                  </toolbar>
+            </menuContribution>
+      </extension>
 </plugin>
