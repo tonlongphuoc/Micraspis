@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: iotwearable.model;singleton:=true
 Automatic-Module-Name: iotwearable.model
-Bundle-Version: 1.0
+Bundle-Version: 0.1.0
 Bundle-ClassPath: .
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,

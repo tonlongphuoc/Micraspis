@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: iotwearable.model.edit;singleton:=true
 Automatic-Module-Name: iotwearable.model.edit
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 0.1.0
 Bundle-ClassPath: .
 Bundle-Activator: iotwearable.model.iotw.provider.IotwEditPlugin$Implementation
 Bundle-Vendor: %providerName
