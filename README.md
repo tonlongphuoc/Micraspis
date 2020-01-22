@@ -9,6 +9,18 @@
 
 This is a tool allowing generate source code for wearable devices by describing devices configuration and state schema  http://esp-lab.net/
 
+Gen Engine
+
+![gen.png]
+
+Mainboard Editor
+
+![mainboard_editor_gui.png]
+
+StatesSchema Editor
+
+![stateschema_editor_gui.png]
+
 ## Command syntax
 
 | No. |	Syntax | Description | Component | Example |
@@ -33,7 +45,13 @@ Notes: States will be changed only if an event occurs. So every connection must 
 |5	| `<id> : Display`	        |Check the status of the device.	    |LED	                         | ledRed : `Display`            |
 |6	| `<id> : Hidden`	          |Check the status of the device.	    |LED	                         | ledRed : `Hidden`             |
 
+<!--Local-->
 [overview]: #overview
 [command-syntax]: #command-syntax
 [connection-command-syntax]: #connection-command-syntax
 [examples]: iotwearable.examples
+
+<!--Images-->
+[gen.png]: iotwearable.docs/images/gen.png
+[mainboard_editor_gui.png]: iotwearable.docs/images/Mainboard_Editor_GUI.png
+[stateschema_editor_gui.png]: iotwearable.docs/images/StateSchema_Editor_GUI.png
