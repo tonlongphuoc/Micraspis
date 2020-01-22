@@ -9,14 +9,14 @@ import java.util.LinkedList;
 
 public class PushButtonCodeCreationEngine extends DeviceCodeCreationEngine{
 	private Button button;
-	private ArduinoWiFiESP8266WeMosD1CodeCreationEngine codeCreationEngine;
 	private Mainboard mainboard;
+	private DeviceCodeCreationEngine deviceCodeCreationEngine;
+	
 	public PushButtonCodeCreationEngine(Button button) {
 		super();
 		this.button = button;
 		mainboard = button.getMainboard();
-		codeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) CodeCreationEngineFactory.create(mainboard);
-
+		deviceCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);
 	}
 
 	@Override
@@ -29,7 +29,8 @@ public class PushButtonCodeCreationEngine extends DeviceCodeCreationEngine{
 		String pin = mainboard.findPin(button.getPinConnecteds().get(0)).getName();
 		if(mainboard instanceof ArduinoWiFiESP8266WeMosD1)
 		{
-			pin = codeCreationEngine.mapPin(pin);
+			ArduinoWiFiESP8266WeMosD1CodeCreationEngine _deviceCodeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) deviceCodeCreationEngine;
+			pin = _deviceCodeCreationEngine.mapPin(pin);
 	    }
 		StringBuilder content = new StringBuilder();
 		 content.append("// Define "+button.getName()+"  output\n");

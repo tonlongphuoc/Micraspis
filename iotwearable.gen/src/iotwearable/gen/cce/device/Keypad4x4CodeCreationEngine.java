@@ -9,13 +9,13 @@ import iotwearable.model.iotw.Mainboard;
 
 public class Keypad4x4CodeCreationEngine extends KeypadCodeCreationEngine {
 	private Keypad4x4 keypad;
-	private ArduinoWiFiESP8266WeMosD1CodeCreationEngine codeCreationEngine;
 	private Mainboard mainboard;
+	private DeviceCodeCreationEngine deviceCodeCreationEngine;
+	
 	public Keypad4x4CodeCreationEngine(Keypad4x4 keypad) {
 		this.keypad = keypad;
 		mainboard = keypad.getMainboard();
-		codeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) CodeCreationEngineFactory.create(mainboard);
-
+		deviceCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);
 	}
 
 	@Override
@@ -39,14 +39,16 @@ public class Keypad4x4CodeCreationEngine extends KeypadCodeCreationEngine {
 		String pin8 = keypad.getMainboard().findPin(keypad.getPin8()).getName();
 		if(mainboard instanceof ArduinoWiFiESP8266WeMosD1)
 		{
-			pin1 = codeCreationEngine.mapPin(pin1);
-			pin2 = codeCreationEngine.mapPin(pin2);
-			pin3 = codeCreationEngine.mapPin(pin3);
-			pin4 = codeCreationEngine.mapPin(pin4);
-			pin5 = codeCreationEngine.mapPin(pin5);
-			pin6 = codeCreationEngine.mapPin(pin6);
-			pin7 = codeCreationEngine.mapPin(pin7);
-			pin8 = codeCreationEngine.mapPin(pin8);
+			ArduinoWiFiESP8266WeMosD1CodeCreationEngine _deviceCodeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) deviceCodeCreationEngine;
+			
+			pin1 = _deviceCodeCreationEngine.mapPin(pin1);
+			pin2 = _deviceCodeCreationEngine.mapPin(pin2);
+			pin3 = _deviceCodeCreationEngine.mapPin(pin3);
+			pin4 = _deviceCodeCreationEngine.mapPin(pin4);
+			pin5 = _deviceCodeCreationEngine.mapPin(pin5);
+			pin6 = _deviceCodeCreationEngine.mapPin(pin6);
+			pin7 = _deviceCodeCreationEngine.mapPin(pin7);
+			pin8 = _deviceCodeCreationEngine.mapPin(pin8);
 			
 	    }
 		content = content.replaceAll("<row>", keypad.getRows()+"");

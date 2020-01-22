@@ -1,9 +1,11 @@
 package iotwearable.gen;
 
 import iotwearable.gen.utilities.GenLogger;
-import iotwearable.utilities.FileUtils;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * Write the code to the marked position.
@@ -60,9 +62,15 @@ public class CodeWriter {
 	
 	private String getCodeTemplate() {
 		try {
-			String path = this.getClass().getProtectionDomain().getCodeSource()
-					.getLocation().getPath();
-			return FileUtils.readFile(path	+ "/src/iotwearable/gen/arduino_code_template.txt");
+			String line = null;
+			String result = "";
+			InputStream in = getClass().getResourceAsStream("/templates/arduino_code_template.txt"); 
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
+			while ((line = bufferedReader.readLine()) != null) {
+				result += line + "\n";
+			}
+			bufferedReader.close();
+			return result;
 		} catch (IOException e) {
 			GenLogger.addLog("Error: Not found Arduino code template.");
 		}

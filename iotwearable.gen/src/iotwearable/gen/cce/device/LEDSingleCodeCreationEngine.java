@@ -6,12 +6,13 @@ import iotwearable.model.iotw.Mainboard;
 
 public class LEDSingleCodeCreationEngine extends LEDCodeCreationEngine{
 	LED led;
-	private ArduinoWiFiESP8266WeMosD1CodeCreationEngine codeCreationEngine;
 	private Mainboard mainboard;
+	private DeviceCodeCreationEngine deviceCodeCreationEngine;
+	
 	public LEDSingleCodeCreationEngine(LED led) {
 		this.led = led;
 		mainboard = led.getMainboard();
-		codeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) CodeCreationEngineFactory.create(mainboard);
+		deviceCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);
 	}
 
 	@Override
@@ -28,7 +29,8 @@ public class LEDSingleCodeCreationEngine extends LEDCodeCreationEngine{
 		String pin = mainboard.findPin(led.getPinConnecteds().get(0)).getName();
 		if(mainboard instanceof ArduinoWiFiESP8266WeMosD1)
 		{
-			pin = codeCreationEngine.mapPin(pin);
+			ArduinoWiFiESP8266WeMosD1CodeCreationEngine _deviceCodeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) deviceCodeCreationEngine;
+			pin = _deviceCodeCreationEngine.mapPin(pin);
 	    }
 		return super.createDefine()
 				.replaceAll("<id>", led.getId())

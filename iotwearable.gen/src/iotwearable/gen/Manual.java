@@ -1,10 +1,11 @@
 package iotwearable.gen;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.nio.file.FileSystems;
-import java.nio.file.Path;
 
 import iotwearable.gen.utilities.GenLogger;
 import iotwearable.model.iotw.BluetoothHC06;
@@ -18,7 +19,6 @@ import iotwearable.model.iotw.LM35;
 import iotwearable.model.iotw.Mainboard;
 import iotwearable.model.iotw.Pin;
 import iotwearable.model.iotw.WifiESP8266;
-import iotwearable.utilities.FileUtils;
 
 public class Manual {
 	private Mainboard mainboard;
@@ -30,32 +30,14 @@ public class Manual {
 	}
 
 	public String createManual(String title) {
-		String os = System.getProperty("os.name").toLowerCase();
-		String _path = "";
-		if (isWindows(os)) {
-			_path = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath()
-					+ "\\src\\iotwearable\\gen\\manual.html";
-		} else if (isMac(os)) {
-			Path path = FileSystems.getDefault().getPath(
-					this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath(), "src", "iotwearable",
-					"gen", "manual.html");
-			_path = path.toAbsolutePath().toString();
-		} else if (isUnix(os)) {
-			Path path = FileSystems.getDefault().getPath(
-					this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath(), "src", "iotwearable",
-					"gen", "manual.html");
-			_path = path.toAbsolutePath().toString();
-		} else if (isSolaris(os)) {
-			Path path = FileSystems.getDefault().getPath(
-					this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath(), "src", "iotwearable",
-					"gen", "manual.html");
-			_path = path.toAbsolutePath().toString();
-		} else {
-			System.out.println("Your OS is not support!!");
-		}
-
 		try {
-			html = FileUtils.readFile(_path);
+			String line = null;
+			InputStream in = getClass().getResourceAsStream("/templates/manual.html"); 
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in));
+			while ((line = bufferedReader.readLine()) != null) {
+				html += line + "\n";
+			}
+			bufferedReader.close();
 		} catch (IOException e) {
 			GenLogger.addLog("Error: Not found manual code template.");
 		}
