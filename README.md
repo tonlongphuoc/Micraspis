@@ -1,10 +1,15 @@
 # Micraspis
 
+* [Overview][overview]
+* [Command syntax][command-syntax]
+* [Connection command syntax][connection-command-syntax]
+* [Examples][examples]
 
+## Overview
 
 This is a tool allowing generate source code for wearable devices by describing devices configuration and state schema  http://esp-lab.net/
 
-## Syntax for States
+## Command syntax
 
 | No. |	Syntax | Description | Component | Example |
 |:--|:--------------------------|:------------------------------------|:-----------------------------|:------------------------------|
@@ -17,7 +22,7 @@ This is a tool allowing generate source code for wearable devices by describing 
 
 Notes: States will be changed only if an event occurs. So every connection must have an event, except connected to "end point" or "start point".
 
-## Syntax for Connection/Link
+## Connection command syntax
 
 | No. |	Syntax | Description | Component | Example |
 |:--|:--------------------------|:------------------------------------|:-----------------------------|:------------------------------|
@@ -27,3 +32,8 @@ Notes: States will be changed only if an event occurs. So every connection must 
 |4	| `<string> received`	      |Receive to strings sent from other wifi.    |wifi esp8266	                 | "hello" `received`            |
 |5	| `<id> : Display`	        |Check the status of the device.	    |LED	                         | ledRed : `Display`            |
 |6	| `<id> : Hidden`	          |Check the status of the device.	    |LED	                         | ledRed : `Hidden`             |
+
+[overview]: #overview
+[command-syntax]: #command-syntax
+[connection-command-syntax]: #connection-command-syntax
+[examples]: iotwearable.examples
