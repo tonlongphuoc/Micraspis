@@ -128,6 +128,10 @@ public class IotwAdapterFactory extends AdapterFactoryImpl {
 				return createLM35Adapter();
 			}
 			@Override
+			public Adapter caseCDS(CDS object) {
+				return createCDSAdapter();
+			}
+			@Override
 			public Adapter caseLED(LED object) {
 				return createLEDAdapter();
 			}
@@ -502,6 +506,20 @@ public class IotwAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLM35Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link iotwearable.model.iotw.CDS <em>CDS</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see iotwearable.model.iotw.CDS
+	 * @generated
+	 */
+	public Adapter createCDSAdapter() {
 		return null;
 	}
 

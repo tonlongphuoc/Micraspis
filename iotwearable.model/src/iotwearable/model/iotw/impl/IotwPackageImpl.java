@@ -219,6 +219,13 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass cdsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum connectionKindEEnum = null;
 
 	/**
@@ -1852,6 +1859,46 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getCDS() {
+		return cdsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCDS_PinGND() {
+		return (EAttribute)cdsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCDS_PinVcc() {
+		return (EAttribute)cdsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getCDS_PinD0() {
+		return (EAttribute)cdsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EEnum getConnectionKind() {
 		return connectionKindEEnum;
 	}
@@ -2172,6 +2219,11 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		lm35EClass = createEClass(LM35);
 		createEAttribute(lm35EClass, LM35__PIN1);
 
+		cdsEClass = createEClass(CDS);
+		createEAttribute(cdsEClass, CDS__PIN_GND);
+		createEAttribute(cdsEClass, CDS__PIN_VCC);
+		createEAttribute(cdsEClass, CDS__PIN_D0);
+
 		ledEClass = createEClass(LED);
 		createEAttribute(ledEClass, LED__PIN1);
 		createEAttribute(ledEClass, LED__PIN2);
@@ -2278,6 +2330,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		keypad4x4EClass.getESuperTypes().add(this.getInputDevice());
 		buttonEClass.getESuperTypes().add(this.getInputDevice());
 		lm35EClass.getESuperTypes().add(this.getInputDevice());
+		cdsEClass.getESuperTypes().add(this.getInputDevice());
 		ledEClass.getESuperTypes().add(this.getOutputDevice());
 		i2CLCDEClass.getESuperTypes().add(this.getOutputDevice());
 		buzzerEClass.getESuperTypes().add(this.getOutputDevice());
@@ -2431,6 +2484,11 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 
 		initEClass(lm35EClass, iotwearable.model.iotw.LM35.class, "LM35", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLM35_Pin1(), this.getPin(), "pin1", "1,IO", 0, 1, iotwearable.model.iotw.LM35.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(cdsEClass, iotwearable.model.iotw.CDS.class, "CDS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCDS_PinGND(), this.getPin(), "pinGND", "GND,IO", 0, 1, iotwearable.model.iotw.CDS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCDS_PinVcc(), this.getPin(), "pinVcc", "Vcc,IO", 0, 1, iotwearable.model.iotw.CDS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCDS_PinD0(), this.getPin(), "pinD0", "D0,IO", 0, 1, iotwearable.model.iotw.CDS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ledEClass, iotwearable.model.iotw.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLED_Pin1(), this.getPin(), "pin1", "1,Passive", 0, 1, iotwearable.model.iotw.LED.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

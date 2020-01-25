@@ -182,6 +182,16 @@ public class IotwSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case IotwPackage.CDS: {
+				CDS cds = (CDS)theEObject;
+				T result = caseCDS(cds);
+				if (result == null) result = caseInputDevice(cds);
+				if (result == null) result = caseIODevice(cds);
+				if (result == null) result = caseDevice(cds);
+				if (result == null) result = caseComponent(cds);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case IotwPackage.LED: {
 				LED led = (LED)theEObject;
 				T result = caseLED(led);
@@ -608,6 +618,21 @@ public class IotwSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLM35(LM35 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>CDS</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>CDS</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCDS(CDS object) {
 		return null;
 	}
 

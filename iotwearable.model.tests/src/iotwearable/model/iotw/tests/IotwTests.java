@@ -36,6 +36,7 @@ public class IotwTests extends TestSuite {
 		suite.addTestSuite(Keypad4x4Test.class);
 		suite.addTestSuite(ButtonTest.class);
 		suite.addTestSuite(LM35Test.class);
+		suite.addTestSuite(CDSTest.class);
 		suite.addTestSuite(LEDTest.class);
 		suite.addTestSuite(I2CLCDTest.class);
 		suite.addTestSuite(BuzzerTest.class);

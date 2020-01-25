@@ -157,6 +157,15 @@ public interface IotwFactory extends EFactory {
 	LM35 createLM35();
 
 	/**
+	 * Returns a new object of class '<em>CDS</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>CDS</em>'.
+	 * @generated
+	 */
+	CDS createCDS();
+
+	/**
 	 * Returns a new object of class '<em>Buzzer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

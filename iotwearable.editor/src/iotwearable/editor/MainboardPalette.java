@@ -4,6 +4,7 @@ package iotwearable.editor;
 import iotwearable.editor.factory.BluetoothHC06Factory;
 import iotwearable.editor.factory.ButtonFactory;
 import iotwearable.editor.factory.BuzzerFactory;
+import iotwearable.editor.factory.CDSFactory;
 import iotwearable.editor.factory.I2CLCDFactory;
 import iotwearable.editor.factory.Keypad4x4Factory;
 import iotwearable.editor.factory.LEDFactory;
@@ -63,9 +64,15 @@ public class MainboardPalette extends PaletteRoot {
 				ImageDescriptor.createFromFile(this.getClass(),"icons/lm35.png"),
 				ImageDescriptor.createFromFile(this.getClass(),"icons/lm35.png"));
 		
+		CreationToolEntry _cds = new CombinedTemplateCreationEntry("CDS", "CDS",
+				new CDSFactory(),
+				ImageDescriptor.createFromFile(this.getClass(),"icons/cds.png"),
+				ImageDescriptor.createFromFile(this.getClass(),"icons/cds.png"));
+		
 		pdInput.add(_keypad4x4);
 		pdInput.add(_button);
 		pdInput.add(_lm35);
+		pdInput.add(_cds);
 	}
 
 	// area output control

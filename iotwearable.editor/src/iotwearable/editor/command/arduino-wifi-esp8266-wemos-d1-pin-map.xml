@@ -33,6 +33,10 @@
 	<Device name="LM35">
 		<pin name="1" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
 	</Device>
+	
+	<Device name="CDS">
+		<pin name="D0" value="D0,D1,D2,D3,D4,D5,D6,D7,D8"/>
+	</Device>
 <!--
 	<Device name="WifiESP8266">
 		<pin name="TX" value="2,3,4,5,6,7,8,9,10,11,12,13"/>

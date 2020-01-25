@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import iotwearable.editor.MainboardEditor;
 import iotwearable.editor.factory.BluetoothHC06Factory;
 import iotwearable.editor.factory.BuzzerFactory;
+import iotwearable.editor.factory.CDSFactory;
 import iotwearable.editor.factory.I2CLCDFactory;
 import iotwearable.editor.factory.Keypad4x4Factory;
 import iotwearable.editor.factory.LEDFactory;
@@ -34,6 +35,7 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 	public static final String ID_AddBluetoothHC06 = "AddBluetoothHC06";
 	public static final String ID_AddWifiESP8266 = "AddWifiESP8266";
 	public static final String ID_AddLM35 = "AddML35";
+	public static final String ID_AddCDS = "AddCDS";
 	public static final String REQUEST = "MainboardContextMenu";
 	public static final boolean EnableBuzzer = true;
 	private ArrayList<String> listPinIO ;
@@ -77,6 +79,10 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 		case ID_AddLM35:
 			setId(Id);
 			setText("Add LM35");
+			break;
+		case ID_AddCDS:
+			setId(Id);
+			setText("Add CDS");
 			break;
 		default:
 			throw new IllegalArgumentException("Subkind " + Id + " is not supported.");
@@ -154,6 +160,10 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 			tool = new CreationTool((CreationFactory) new LM35Factory());
 			editor.getEditDomain().setActiveTool(tool);
 			break;
+		case ID_AddCDS:
+			tool = new CreationTool((CreationFactory) new CDSFactory());
+			editor.getEditDomain().setActiveTool(tool);
+			break;
 		default:
 			break;
 		}
@@ -182,6 +192,10 @@ public class MainboardContextMenuAction extends WorkbenchPartAction {
 			break;
 		case ID_AddLM35:
 			enable = true;
+			break;
+		case ID_AddCDS:
+			enable = true;
+			break;	
 		default:
 			break;
 		}

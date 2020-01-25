@@ -197,6 +197,11 @@ public class MainboardItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(IotwPackage.Literals.MAINBOARD__DEVICES,
+				 IotwFactory.eINSTANCE.createCDS()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(IotwPackage.Literals.MAINBOARD__DEVICES,
 				 IotwFactory.eINSTANCE.createLED()));
 
 		newChildDescriptors.add

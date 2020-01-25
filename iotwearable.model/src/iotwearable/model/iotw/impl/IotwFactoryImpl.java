@@ -63,6 +63,7 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 			case IotwPackage.KEYPAD4X4: return createKeypad4x4();
 			case IotwPackage.BUTTON: return createButton();
 			case IotwPackage.LM35: return createLM35();
+			case IotwPackage.CDS: return createCDS();
 			case IotwPackage.LED: return createLED();
 			case IotwPackage.I2CLCD: return createI2CLCD();
 			case IotwPackage.BUZZER: return createBuzzer();
@@ -298,6 +299,17 @@ public class IotwFactoryImpl extends EFactoryImpl implements IotwFactory {
 	public LM35 createLM35() {
 		LM35Impl lm35 = new LM35Impl();
 		return lm35;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public CDS createCDS() {
+		CDSImpl cds = new CDSImpl();
+		return cds;
 	}
 
 	/**

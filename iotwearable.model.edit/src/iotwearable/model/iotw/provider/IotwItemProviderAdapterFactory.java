@@ -440,6 +440,29 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link iotwearable.model.iotw.CDS} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CDSItemProvider cdsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link iotwearable.model.iotw.CDS}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCDSAdapter() {
+		if (cdsItemProvider == null) {
+			cdsItemProvider = new CDSItemProvider(this);
+		}
+
+		return cdsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -551,6 +574,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 		if (keypad4x4ItemProvider != null) keypad4x4ItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
 		if (lm35ItemProvider != null) lm35ItemProvider.dispose();
+		if (cdsItemProvider != null) cdsItemProvider.dispose();
 		if (ledItemProvider != null) ledItemProvider.dispose();
 		if (i2CLCDItemProvider != null) i2CLCDItemProvider.dispose();
 		if (buzzerItemProvider != null) buzzerItemProvider.dispose();

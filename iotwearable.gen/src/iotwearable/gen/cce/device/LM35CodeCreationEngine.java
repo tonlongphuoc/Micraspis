@@ -10,13 +10,13 @@ import iotwearable.model.iotw.Mainboard;
 public class LM35CodeCreationEngine extends DeviceCodeCreationEngine{
 
 	private LM35 device;
-	private ArduinoWiFiESP8266WeMosD1CodeCreationEngine codeCreationEngine;
 	private Mainboard mainboard;
+	private DeviceCodeCreationEngine deviceCodeCreationEngine;
+	
 	public LM35CodeCreationEngine(LM35 device) {
 		this.device = device;
 		mainboard = device.getMainboard();
-		codeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) CodeCreationEngineFactory.create(mainboard);
-
+		deviceCodeCreationEngine = CodeCreationEngineFactory.create(mainboard);
 	}
 	
 	@Override
@@ -31,7 +31,8 @@ public class LM35CodeCreationEngine extends DeviceCodeCreationEngine{
 		String pin = mainboard.findPin(device.getPinConnecteds().get(0)).getName();
 		if(mainboard instanceof ArduinoWiFiESP8266WeMosD1)
 		{
-			pin = codeCreationEngine.mapPin(pin);
+			ArduinoWiFiESP8266WeMosD1CodeCreationEngine _deviceCodeCreationEngine = (ArduinoWiFiESP8266WeMosD1CodeCreationEngine) deviceCodeCreationEngine;
+			pin = _deviceCodeCreationEngine.mapPin(pin);
 	    }
 		return "// Data wire is plugged into pin D1 on the ESP8266 12-E - GPIO "+ pin +" \n"
 				+ "#define ONE_WIRE_BUS " + pin+ "\n"

@@ -3,6 +3,7 @@ package iotwearable.editor.part;
 import iotwearable.model.iotw.BluetoothHC06;
 import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Buzzer;
+import iotwearable.model.iotw.CDS;
 import iotwearable.model.iotw.Connection;
 import iotwearable.model.iotw.Decision;
 import iotwearable.model.iotw.EndPoint;
@@ -35,6 +36,9 @@ public class IoTWEditPartFactory implements EditPartFactory{
 		}
 		else if(model instanceof LM35) {
 			part = new LM35EditPart();
+		}
+		else if(model instanceof CDS) {
+			part = new CDSEditPart();
 		}
 		//area of output controls
 		else if(model instanceof LED){
