@@ -50,13 +50,19 @@ Notes: States will be changed only if an event occurs. So every connection must 
 ### Requirement
 
   * JavaSE-1.8 or higher
-  * Eclipse Modeling Tools - Version 2019-12 (4.14.0) or higher
-  * Micraspis pluging v0.1.0
+  * [Eclipse Modeling Tools - Version 2019-12 (4.14.0) or higher](https://www.eclipse.org/downloads/packages/release/2019-12/r/eclipse-modeling-tools)
+  * Micraspis plugin v0.1.0, [download here](#version)
 
+### Install plugin
+
+* Extract zip file
+* Copy all files in plugs folder
+* Pase to the eclipse installation folder: eclipse/plugins/
+* Restart eclipse
 
 ## Version
 
-### 0.1.0
+* [0.1.0](releases/v0.1.0.zip)
 
 
 <!--Local-->
