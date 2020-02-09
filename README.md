@@ -55,10 +55,10 @@ Notes: States will be changed only if an event occurs. So every connection must 
 
 ### Install plugin
 
-* Extract zip file
-* Copy all files in plugs folder
-* Pase to the eclipse installation folder: eclipse/plugins/
-* Restart eclipse
+* Extract zip file (v.0.1.zip)
+* Copy all files in Plugs folder
+* Paste all files above to the Plugins folder: Eclipse/plugins/
+* Restart Eclipse
 
 ## Version
 
