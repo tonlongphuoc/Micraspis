@@ -182,6 +182,16 @@ public class IotwSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case IotwPackage.DHT11: {
+				DHT11 dht11 = (DHT11)theEObject;
+				T result = caseDHT11(dht11);
+				if (result == null) result = caseInputDevice(dht11);
+				if (result == null) result = caseIODevice(dht11);
+				if (result == null) result = caseDevice(dht11);
+				if (result == null) result = caseComponent(dht11);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case IotwPackage.CDS: {
 				CDS cds = (CDS)theEObject;
 				T result = caseCDS(cds);
@@ -618,6 +628,21 @@ public class IotwSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLM35(LM35 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DHT11</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DHT11</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDHT11(DHT11 object) {
 		return null;
 	}
 

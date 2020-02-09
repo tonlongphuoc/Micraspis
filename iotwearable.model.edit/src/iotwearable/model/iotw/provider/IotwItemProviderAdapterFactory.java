@@ -440,6 +440,29 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link iotwearable.model.iotw.DHT11} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DHT11ItemProvider dht11ItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link iotwearable.model.iotw.DHT11}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDHT11Adapter() {
+		if (dht11ItemProvider == null) {
+			dht11ItemProvider = new DHT11ItemProvider(this);
+		}
+
+		return dht11ItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link iotwearable.model.iotw.CDS} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -574,6 +597,7 @@ public class IotwItemProviderAdapterFactory extends IotwAdapterFactory implement
 		if (keypad4x4ItemProvider != null) keypad4x4ItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
 		if (lm35ItemProvider != null) lm35ItemProvider.dispose();
+		if (dht11ItemProvider != null) dht11ItemProvider.dispose();
 		if (cdsItemProvider != null) cdsItemProvider.dispose();
 		if (ledItemProvider != null) ledItemProvider.dispose();
 		if (i2CLCDItemProvider != null) i2CLCDItemProvider.dispose();

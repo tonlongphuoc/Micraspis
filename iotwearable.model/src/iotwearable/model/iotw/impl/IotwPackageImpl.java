@@ -219,6 +219,13 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass dht11EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass cdsEClass = null;
 
 	/**
@@ -1859,6 +1866,46 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 	 * @generated
 	 */
 	@Override
+	public EClass getDHT11() {
+		return dht11EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDHT11_PinGND() {
+		return (EAttribute)dht11EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDHT11_PinVcc() {
+		return (EAttribute)dht11EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getDHT11_PinData() {
+		return (EAttribute)dht11EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getCDS() {
 		return cdsEClass;
 	}
@@ -2219,6 +2266,11 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		lm35EClass = createEClass(LM35);
 		createEAttribute(lm35EClass, LM35__PIN1);
 
+		dht11EClass = createEClass(DHT11);
+		createEAttribute(dht11EClass, DHT11__PIN_GND);
+		createEAttribute(dht11EClass, DHT11__PIN_VCC);
+		createEAttribute(dht11EClass, DHT11__PIN_DATA);
+
 		cdsEClass = createEClass(CDS);
 		createEAttribute(cdsEClass, CDS__PIN_GND);
 		createEAttribute(cdsEClass, CDS__PIN_VCC);
@@ -2330,6 +2382,7 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 		keypad4x4EClass.getESuperTypes().add(this.getInputDevice());
 		buttonEClass.getESuperTypes().add(this.getInputDevice());
 		lm35EClass.getESuperTypes().add(this.getInputDevice());
+		dht11EClass.getESuperTypes().add(this.getInputDevice());
 		cdsEClass.getESuperTypes().add(this.getInputDevice());
 		ledEClass.getESuperTypes().add(this.getOutputDevice());
 		i2CLCDEClass.getESuperTypes().add(this.getOutputDevice());
@@ -2484,6 +2537,11 @@ public class IotwPackageImpl extends EPackageImpl implements IotwPackage {
 
 		initEClass(lm35EClass, iotwearable.model.iotw.LM35.class, "LM35", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLM35_Pin1(), this.getPin(), "pin1", "1,IO", 0, 1, iotwearable.model.iotw.LM35.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dht11EClass, iotwearable.model.iotw.DHT11.class, "DHT11", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDHT11_PinGND(), this.getPin(), "pinGND", "GND,IO", 0, 1, iotwearable.model.iotw.DHT11.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDHT11_PinVcc(), this.getPin(), "pinVcc", "Vcc,IO", 0, 1, iotwearable.model.iotw.DHT11.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDHT11_PinData(), this.getPin(), "pinData", "Data,IO", 0, 1, iotwearable.model.iotw.DHT11.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(cdsEClass, iotwearable.model.iotw.CDS.class, "CDS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCDS_PinGND(), this.getPin(), "pinGND", "GND,IO", 0, 1, iotwearable.model.iotw.CDS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

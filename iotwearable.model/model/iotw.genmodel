@@ -193,6 +193,11 @@
     <genClasses ecoreClass="iotw.ecore#//LM35">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//LM35/pin1"/>
     </genClasses>
+    <genClasses ecoreClass="iotw.ecore#//DHT11">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//DHT11/pinGND"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//DHT11/pinVcc"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//DHT11/pinData"/>
+    </genClasses>
     <genClasses ecoreClass="iotw.ecore#//CDS">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//CDS/pinGND"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iotw.ecore#//CDS/pinVcc"/>

@@ -157,6 +157,15 @@ public interface IotwFactory extends EFactory {
 	LM35 createLM35();
 
 	/**
+	 * Returns a new object of class '<em>DHT11</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>DHT11</em>'.
+	 * @generated
+	 */
+	DHT11 createDHT11();
+
+	/**
 	 * Returns a new object of class '<em>CDS</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
