@@ -6,6 +6,7 @@ import iotwearable.model.iotw.BluetoothHC06;
 import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Buzzer;
 import iotwearable.model.iotw.CDS;
+import iotwearable.model.iotw.DHT11;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
 import iotwearable.model.iotw.LED;
@@ -39,6 +40,9 @@ public class CodeCreationEngineFactory {
 		}
 		else if(component instanceof CDS) {
 			codeCreationEngine = new CDSCodeCreationEngine((CDS) component);
+		}
+		else if(component instanceof DHT11) {
+			codeCreationEngine = new DHT11CodeCreationEngine((DHT11) component);
 		}
 		// area connectivity
 		else if(component instanceof BluetoothHC06)

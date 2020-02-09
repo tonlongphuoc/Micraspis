@@ -6,6 +6,7 @@ package iotwearable.gen.cce.device;
  *
  */
 public enum LibraryName {
+	DHT,
 	Keypad,
 	LiquidCrystal_I2C,
 	SoftwareSerial,
