@@ -5,6 +5,7 @@ import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Buzzer;
 import iotwearable.model.iotw.CDS;
 import iotwearable.model.iotw.Connection;
+import iotwearable.model.iotw.DHT11;
 import iotwearable.model.iotw.Decision;
 import iotwearable.model.iotw.EndPoint;
 import iotwearable.model.iotw.I2CLCD;
@@ -39,6 +40,9 @@ public class IoTWEditPartFactory implements EditPartFactory{
 		}
 		else if(model instanceof CDS) {
 			part = new CDSEditPart();
+		}
+		else if(model instanceof DHT11) {
+			part = new DHT11EditPart();
 		}
 		//area of output controls
 		else if(model instanceof LED){

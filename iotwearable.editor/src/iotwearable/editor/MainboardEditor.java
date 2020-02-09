@@ -329,6 +329,8 @@ public class MainboardEditor extends GraphicalEditorWithPalette{
 		getActionRegistry().registerAction(action);
 		action = new MainboardContextMenuAction(this, MainboardContextMenuAction.ID_AddCDS, mainboard);
 		getActionRegistry().registerAction(action);
+		action = new MainboardContextMenuAction(this, MainboardContextMenuAction.ID_AddDHT11, mainboard);
+		getActionRegistry().registerAction(action);		
 	}
 	@Override
 	public DefaultEditDomain getEditDomain() {

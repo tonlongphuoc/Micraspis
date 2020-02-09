@@ -67,6 +67,10 @@ public class MainboardContextMenu extends ContextMenuProvider {
 		if(action.isEnabled() && display)
 			menu.appendToGroup(GEFActionConstants.GROUP_EDIT, action);
 		
+		action = getActionRegistry().getAction(MainboardContextMenuAction.ID_AddDHT11);
+		if(action.isEnabled() && display)
+			menu.appendToGroup(GEFActionConstants.GROUP_EDIT, action);
+		
 		action = getActionRegistry().getAction(ActionFactory.SAVE.getId());
 		if( display)
 			menu.appendToGroup(GEFActionConstants.GROUP_SAVE, action);

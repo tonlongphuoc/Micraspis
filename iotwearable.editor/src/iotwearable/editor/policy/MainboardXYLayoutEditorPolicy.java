@@ -6,6 +6,7 @@ import iotwearable.model.iotw.BluetoothHC06;
 import iotwearable.model.iotw.Button;
 import iotwearable.model.iotw.Buzzer;
 import iotwearable.model.iotw.CDS;
+import iotwearable.model.iotw.DHT11;
 import iotwearable.model.iotw.Device;
 import iotwearable.model.iotw.I2CLCD;
 import iotwearable.model.iotw.Keypad4x4;
@@ -81,7 +82,10 @@ public class MainboardXYLayoutEditorPolicy extends XYLayoutEditPolicy{
 			DEFAULT_DIMENSION = new Dimension(50,50);
 			isAllowed = true;
 		}
-		
+		else if(request.getNewObjectType().equals(DHT11.class)) {
+			DEFAULT_DIMENSION = new Dimension(64,64);
+			isAllowed = true;
+		}
 		
 		 if(isAllowed){
 			DeviceCreateCommand createCommand = new DeviceCreateCommand();
